@@ -1,0 +1,197 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 60;
+  color: var(--bone);
+  mix-blend-mode: difference;
+  transition: transform 700ms var(--ease-out);
+  pointer-events: none;
+}
+.header[data-hidden] {
+  transform: translateY(-110%);
+}
+.header[data-open] {
+  mix-blend-mode: normal;
+}
+.bar {
+  height: var(--header-h);
+  padding-inline: var(--gutter);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+.bar > * {
+  pointer-events: auto;
+}
+.logoLink {
+  justify-self: center;
+  display: inline-flex;
+  padding: 8px;
+}
+.logo {
+  height: 46px;
+}
+.menuBtn {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 44px;
+  font-size: var(--fs-small);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.burger {
+  position: relative;
+  width: 28px;
+  height: 10px;
+  display: inline-block;
+}
+.burger i {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: currentColor;
+  transition:
+    transform 500ms var(--ease-out),
+    top 500ms var(--ease-out),
+    width 500ms var(--ease-out);
+}
+.burger i:first-child {
+  top: 0;
+}
+.burger i:last-child {
+  top: 9px;
+  width: 70%;
+}
+.menuBtn:hover .burger i:last-child {
+  width: 100%;
+}
+[aria-expanded="true"] .burger i:first-child {
+  top: 5px;
+  transform: rotate(20deg);
+}
+[aria-expanded="true"] .burger i:last-child {
+  top: 5px;
+  width: 100%;
+  transform: rotate(-20deg);
+}
+.right {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.hotline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid color-mix(in srgb, currentColor 40%, transparent);
+  border-radius: 999px;
+  font-size: var(--fs-small);
+  font-weight: 500;
+  font-feature-settings: "tnum" 1;
+  transition: border-color var(--dur-ui) var(--ease-out);
+}
+.hotline:hover {
+  border-color: currentColor;
+}
+.housesLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--fs-small);
+  font-weight: 500;
+  min-height: 44px;
+}
+.plus {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: currentColor;
+  position: relative;
+}
+.plus::before,
+.plus::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 1px;
+  background: var(--ink);
+  transform: translate(-50%, -50%);
+}
+.plus::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* Phone pill: hidden from tablet up */
+.pill {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .bar {
+    grid-template-columns: auto 1fr;
+    height: 64px;
+  }
+  .menuBtn,
+  .right {
+    display: none;
+  }
+  .logoLink {
+    justify-self: start;
+    padding: 4px 0;
+  }
+  .logo {
+    height: 36px;
+  }
+  .pill {
+    position: fixed;
+    z-index: 70;
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    display: flex;
+    align-items: stretch;
+    background: var(--ink);
+    color: var(--bone);
+    border-radius: 999px;
+    box-shadow:
+      0 10px 30px rgb(0 0 0 / 0.28),
+      inset 0 0 0 1px rgb(255 255 255 / 0.08);
+    overflow: hidden;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  .pill[data-open] {
+    background: var(--bone);
+    color: var(--ink);
+  }
+  .pillCall,
+  .pillMenu {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 0 18px;
+  }
+  .pillCall {
+    border-right: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1179px) {
+  .logo {
+    height: 40px;
+  }
+  .right {
+    gap: 16px;
+  }
+  .housesLink {
+    display: none;
+  }
+}

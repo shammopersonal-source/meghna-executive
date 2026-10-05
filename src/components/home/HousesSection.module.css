@@ -1,0 +1,75 @@
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  align-items: center;
+}
+.band {
+  position: relative;
+  padding-block: clamp(80px, 10vw, 160px);
+}
+.split {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+}
+.merge {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+.sectors {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 56px var(--col-gap);
+}
+.sector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding-inline: 8px;
+}
+.sectorNum {
+  font-family: var(--font-serif-stack);
+  font-style: italic;
+  font-feature-settings: "onum" 1;
+  color: var(--fg-muted);
+}
+.sectorName {
+  font-size: var(--fs-h3);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  background: var(--bg);
+  padding: 4px 10px;
+  position: relative;
+  z-index: 7;
+}
+.sectorLine {
+  font-size: var(--fs-small);
+  color: var(--fg-muted);
+  max-width: 24ch;
+  background: var(--bg);
+  position: relative;
+  z-index: 7;
+}
+.sectorCount {
+  font-size: var(--fs-label);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--bg);
+  position: relative;
+  z-index: 7;
+}
+@media (min-width: 768px) {
+  .sectors {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.indexAnchor {
+  display: block;
+  height: 1px;
+}

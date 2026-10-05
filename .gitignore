@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+*.tsbuildinfo
+next-env.d.ts
+.env*.local
+.DS_Store
+/qa/tmp
+/public/__qa-media
+/qa/out
+/qa/lighthouse/*-nofps.json
+/qa/lighthouse/*-mobile-[0-9].json
+/qa/lighthouse/*.json
+!/qa/lighthouse/scores.json

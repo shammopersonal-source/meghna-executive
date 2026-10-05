@@ -1,17 +1,19 @@
 # Meghna Executive Holdings: Image and Media Manifest
 
-Every image, video and SVG found on https://meghna-executive.com (crawled 5 Oct 2026: home, about, units, the four trading-brand pages, sustainability, CSR, career, media center, contact).
+Every image, video, SVG and document found on https://meghna-executive.com (crawled 5 Oct 2026). Pages crawled: home, about, units, all 15 house pages, sustainability, CSR, career, media center, all 7 articles, contact.
 
 The owner has confirmed full permission to reuse all of these assets in the redesign.
+
+The rebuilt site references these by id through `src/content/media-registry.ts`, which is generated from the same crawl.
 
 **Tier** is based on the pixel width actually served:
 - **HERO**: 1600px wide or more. Safe for full-bleed.
 - **FEATURE**: 1000 to 1599px. Use for half-width or contained blocks.
 - **CARD**: 400 to 999px. Cards and thumbnails only.
 - **THUMB**: under 400px. Small UI only. Ask the CMS for the original before using it any larger.
-- **VECTOR / VIDEO**: logos, icons, and motion.
+- **VECTOR / VIDEO / DOC**: logos, icons, motion, PDFs.
 
-Total unique assets: 245
+Total unique assets: 426
 
 ## page/home-page
 
@@ -129,11 +131,16 @@ Total unique assets: 245
 | VECTOR | — | https://cms.meghna-executive.com/admin/uploads/page/contact-us/1730396736i8zB5.svg |
 | FEATURE | 1366×564 | https://cms.meghna-executive.com/admin/uploads/page/contact-us/1737663666wpS2I.webp |
 
-## unit/executive-gourmet-ltd (Slaw Bistro) — CMS folder id c69bbb79
+## unit/executive-gourmet-ltd (Slaw Bistro): CMS folder id c69bbb79
 
 | Tier | Size (px) | URL |
 |---|---|---|
 | HERO | 1672×941 | https://cms.meghna-executive.com/admin/uploads/unit/c69bbb79/1785140168rqczE.webp |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/c69bbb79/1785143604Bxay0.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/c69bbb79/1785143711FLkxR.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/c69bbb79/1785143757Mu040.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/c69bbb79/1785144203tIuLp.svg |
+| CARD | 726×883 | https://cms.meghna-executive.com/admin/uploads/unit/c69bbb79/1786613424JcURj.webp |
 | CARD | 900×1200 | https://cms.meghna-executive.com/admin/uploads/unit/c69bbb79/1786622661Y3RaH.webp |
 | THUMB | 200×255 | https://cms.meghna-executive.com/admin/uploads/unit/c69bbb79/1786972266VTqMW.webp |
 
@@ -142,21 +149,48 @@ Total unique assets: 245
 | Tier | Size (px) | URL |
 |---|---|---|
 | HERO | 2050×1155 | https://cms.meghna-executive.com/admin/uploads/unit/executive-greentex/1733818981sG0hv.webp |
+| CARD | 600×720 | https://cms.meghna-executive.com/admin/uploads/unit/executive-greentex/1733819025hzgJy.webp |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-greentex/173381904034CVO.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-greentex/1733819040TZikp.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-greentex/1733819040cq6jL.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-greentex/1733819040lRjQi.svg |
+| FEATURE | 1005×1225 | https://cms.meghna-executive.com/admin/uploads/unit/executive-greentex/1733819170mXHgb.webp |
 | CARD | 555×750 | https://cms.meghna-executive.com/admin/uploads/unit/executive-greentex/1733987456LsLoa.webp |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-greentex/1737662195drXdY.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-greentex/1737662207EmDrw.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-greentex/17376622193Tber.svg |
 
 ## unit/executive-hi-fashions
 
 | Tier | Size (px) | URL |
 |---|---|---|
 | HERO | 2050×1155 | https://cms.meghna-executive.com/admin/uploads/unit/executive-hi-fashions/1733818115c1cFj.webp |
+| CARD | 600×720 | https://cms.meghna-executive.com/admin/uploads/unit/executive-hi-fashions/1733818182UQfqm.webp |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-hi-fashions/1733818200BDVY9.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-hi-fashions/1733818200Bbe7n.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-hi-fashions/1733818200Ojoha.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-hi-fashions/1733818200dKWXD.svg |
+| FEATURE | 1005×1225 | https://cms.meghna-executive.com/admin/uploads/unit/executive-hi-fashions/1733818304igDl6.webp |
 | CARD | 555×750 | https://cms.meghna-executive.com/admin/uploads/unit/executive-hi-fashions/1733987377oWFnG.webp |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-hi-fashions/1737661882mDhst.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-hi-fashions/1737661918Alhlz.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-hi-fashions/17376619322yegR.svg |
 
 ## unit/executive-intimates
 
 | Tier | Size (px) | URL |
 |---|---|---|
 | HERO | 2050×1155 | https://cms.meghna-executive.com/admin/uploads/unit/executive-intimates/1733815470BY8e5.webp |
+| CARD | 600×720 | https://cms.meghna-executive.com/admin/uploads/unit/executive-intimates/1733815575drFvW.webp |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-intimates/17338155971DwCG.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-intimates/1733815597Sl8S0.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-intimates/1733815597X1HRW.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-intimates/1733815597uUCMH.svg |
+| FEATURE | 1005×1225 | https://cms.meghna-executive.com/admin/uploads/unit/executive-intimates/1733815741NijId.webp |
 | CARD | 555×750 | https://cms.meghna-executive.com/admin/uploads/unit/executive-intimates/1733987899o35Bg.webp |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-intimates/1737662099oBnra.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-intimates/1737662111LVTTo.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-intimates/17376621336Ismr.svg |
 
 ## unit/executive-lifestyles-ltd
 
@@ -254,14 +288,40 @@ Total unique assets: 245
 | Tier | Size (px) | URL |
 |---|---|---|
 | HERO | 2050×1155 | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/17338192563CqnO.webp |
+| CARD | 600×720 | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1733819443GmT9s.webp |
+| HERO | 1920×800 | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/17338195042O6kt.webp |
+| HERO | 1920×800 | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1733819504QIVae.webp |
+| HERO | 1920×800 | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1733819504Qbbeg.webp |
+| HERO | 1920×800 | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1733819504k7Ktn.webp |
+| HERO | 1920×800 | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1733819504krJ7g.webp |
+| HERO | 1920×800 | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1733819515LS5D5.webp |
+| HERO | 1920×800 | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1733819515NGusw.webp |
+| HERO | 1920×800 | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1733819515VLOif.webp |
+| HERO | 1920×800 | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1733819515d682u.webp |
+| HERO | 1920×800 | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1733819515p3Fp0.webp |
+| FEATURE | 1440×696 | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1733819538lvaHx.webp |
+| FEATURE | 1440×696 | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1733819538nC8Kd.webp |
+| FEATURE | 1400×788 | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1733819599Nius7.webp |
+| HERO | 1920×1280 | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1733819599ZDSgH.webp |
+| HERO | 1920×800 | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1733819599cQTVt.webp |
+| HERO | 2000×1334 | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1733819599fF3vb.webp |
+| HERO | 1920×1280 | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1733819599vCPz6.webp |
 | CARD | 555×750 | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1733987573WZLZx.webp |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1737662993kcAOm.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1737663055Hh723.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/executive-woodworks/1737663117jTPUG.svg |
 
 ## unit/meghna-bearing-industries-limited
 
 | Tier | Size (px) | URL |
 |---|---|---|
 | HERO | 1920×1080 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-bearing-industries-limited/17851375978OmCd.webp |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-bearing-industries-limited/1785137779yagUp.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-bearing-industries-limited/1785137817vY2r2.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-bearing-industries-limited/1785137842sdNZ4.svg |
+| CARD | 900×1080 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-bearing-industries-limited/1785138147CEBRY.webp |
 | CARD | 555×750 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-bearing-industries-limited/17851390912TdFX.webp |
+| CARD | 800×1067 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-bearing-industries-limited/1786622230OUIG6.webp |
 | CARD | 600×800 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-bearing-industries-limited/1786963573laTfo.webp |
 
 ## unit/meghna-dresses-ltd
@@ -269,23 +329,86 @@ Total unique assets: 245
 | Tier | Size (px) | URL |
 |---|---|---|
 | HERO | 2050×1155 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-dresses-ltd/1733314137mbqfz.webp |
+| CARD | 900×1080 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-dresses-ltd/1733314441EFAAv.webp |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-dresses-ltd/1733314488Fj0kT.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-dresses-ltd/1733314488JVU8B.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-dresses-ltd/1733314488dTQJe.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-dresses-ltd/1733314488uEF47.svg |
+| FEATURE | 1005×1225 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-dresses-ltd/1733314633zgHZE.webp |
 | CARD | 555×750 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-dresses-ltd/1733987287iAq71.webp |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-dresses-ltd/1737661594s5vq6.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-dresses-ltd/1737661667rvJRs.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-dresses-ltd/1737661705GDZbE.svg |
 
 ## unit/meghna-knit-composite-ltd
 
 | Tier | Size (px) | URL |
 |---|---|---|
+| CARD | 598×720 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1730193272e1X4f.webp |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/17301933624tjQb.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/17301933625ftm5.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1730193362CVKZp.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1730193362DgHSR.svg |
+| THUMB | 140×23 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/17301937809ZxNP.webp |
+| THUMB | 155×36 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1730193780ZhkYf.webp |
+| THUMB | 148×38 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1730193780dnbLP.webp |
+| THUMB | 170×17 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1730193780v1TVb.webp |
+| THUMB | 160×86 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/17301937916Ppkj.webp |
+| THUMB | 160×102 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1730193791TppRv.webp |
+| THUMB | 164×31 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1730193791a7CQP.webp |
+| THUMB | 126×36 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1730193791x5ls7.webp |
+| THUMB | 146×39 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1730193791zW7MR.webp |
+| THUMB | 112×80 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1730193799OIHED.webp |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1730193851fshSa.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1730193864Iw4oD.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1730193878LcVBX.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/17303575310je43.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1730357531H0KnE.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1730357531OyUe8.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1730357531vkLl7.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1730357531ytnqL.svg |
 | HERO | 2049×1152 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/17333062260s6Fl.webp |
+| FEATURE | 1005×1225 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1733310566ecnJt.webp |
+| FEATURE | 1005×1225 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1733310622Pv0qL.webp |
+| FEATURE | 1005×1225 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1733310844QUtpb.webp |
+| FEATURE | 1005×1225 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1733310883c4qsC.webp |
 | CARD | 555×750 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/17339870742shc6.webp |
 | CARD | 988×616 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1736318296ci0hw.webp |
+| FEATURE | 1005×1225 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1737545398kflCe.webp |
+| FEATURE | 1122×1402 | https://cms.meghna-executive.com/admin/uploads/unit/meghna-knit-composite-ltd/1789017164jSQ2r.webp |
 
 ## unit/penthouse-interior
 
 | Tier | Size (px) | URL |
 |---|---|---|
 | FEATURE | 1366×768 | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/1730288481cB36U.webp |
+| THUMB | 300×360 | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/17302886400IXIj.webp |
+| THUMB | 200×250 | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/1730288651VADf7.webp |
+| THUMB | 200×200 | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/17302886638570S.webp |
+| THUMB | 200×200 | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/1730289238IO0uX.webp |
+| CARD | 668×816 | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/1730289238RMRZC.webp |
+| THUMB | 300×360 | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/1730289238zh34h.webp |
+| THUMB | 342×230 | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/1730290115yEOeS.webp |
+| THUMB | 342×360 | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/1730290129D6GIj.webp |
+| THUMB | 342×230 | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/173029014319Lzy.webp |
+| THUMB | 342×460 | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/17302901577Glax.webp |
+| THUMB | 342×305 | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/17302901703Dvqy.webp |
+| THUMB | 342×340 | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/17302901832vIuf.webp |
+| THUMB | 342×250 | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/1730290199iKLRU.webp |
+| THUMB | 342×230 | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/1730290213wlh0m.webp |
+| THUMB | 342×360 | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/1730290227gqTfG.webp |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/17302903398x6r6.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/1730290351A5HhS.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/1730290370EGkJi.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/1730357482B79lK.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/1730357482TOfm9.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/1730357482Zz32P.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/1730357482aaaqU.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/1730357482ftCaw.svg |
 | CARD | 555×750 | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/17339871478GVEN.webp |
+| FEATURE | 1200×963 | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/1737660855PyLgI.webp |
 | HERO | 8856×7108 | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/1737660962I3vAi.webp |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/penthouse-interior/17880923995dsup.svg |
 
 ## unit/penthouse-livings-limited
 
@@ -325,14 +448,40 @@ Total unique assets: 245
 |---|---|---|
 | THUMB | 370×500 | https://cms.meghna-executive.com/admin/uploads/unit/siam-bangla-industries-ltd/1729663352OM1f5.webp |
 | FEATURE | 1366×768 | https://cms.meghna-executive.com/admin/uploads/unit/siam-bangla-industries-ltd/1730193949WZr9D.webp |
+| CARD | 598×720 | https://cms.meghna-executive.com/admin/uploads/unit/siam-bangla-industries-ltd/1730194136HT8cd.webp |
+| THUMB | 342×230 | https://cms.meghna-executive.com/admin/uploads/unit/siam-bangla-industries-ltd/1730194389NdUNm.webp |
+| THUMB | 342×360 | https://cms.meghna-executive.com/admin/uploads/unit/siam-bangla-industries-ltd/173019439691Ytg.webp |
+| THUMB | 342×230 | https://cms.meghna-executive.com/admin/uploads/unit/siam-bangla-industries-ltd/1730194407IKGMl.webp |
+| THUMB | 342×460 | https://cms.meghna-executive.com/admin/uploads/unit/siam-bangla-industries-ltd/1730194418HWyig.webp |
+| THUMB | 342×305 | https://cms.meghna-executive.com/admin/uploads/unit/siam-bangla-industries-ltd/17301944319JtXw.webp |
+| THUMB | 342×340 | https://cms.meghna-executive.com/admin/uploads/unit/siam-bangla-industries-ltd/1730194441NfFA5.webp |
+| THUMB | 342×250 | https://cms.meghna-executive.com/admin/uploads/unit/siam-bangla-industries-ltd/1730194452YC1gW.webp |
+| THUMB | 342×230 | https://cms.meghna-executive.com/admin/uploads/unit/siam-bangla-industries-ltd/1730194465l7PAc.webp |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/siam-bangla-industries-ltd/1730194502Cjopj.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/siam-bangla-industries-ltd/1730194516MUQi9.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/siam-bangla-industries-ltd/1730194528cvwjN.svg |
 | THUMB | 154×80 | https://cms.meghna-executive.com/admin/uploads/unit/siam-bangla-industries-ltd/1730195504FaeIQ.webp |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/siam-bangla-industries-ltd/17303576980u4uy.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/siam-bangla-industries-ltd/1730357698MLAII.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/siam-bangla-industries-ltd/1730357698cD6wH.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/siam-bangla-industries-ltd/1730357698lLzEG.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/siam-bangla-industries-ltd/1730357698sGn1e.svg |
 
 ## unit/sublime-greentex
 
 | Tier | Size (px) | URL |
 |---|---|---|
 | HERO | 2050×1155 | https://cms.meghna-executive.com/admin/uploads/unit/sublime-greentex/1733818701kHPOv.webp |
+| CARD | 600×720 | https://cms.meghna-executive.com/admin/uploads/unit/sublime-greentex/1733818763d1JnU.webp |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/sublime-greentex/17338187819VOzl.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/sublime-greentex/1733818781L99YL.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/sublime-greentex/1733818781bkvMc.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/sublime-greentex/1733818781unQDr.svg |
 | CARD | 555×750 | https://cms.meghna-executive.com/admin/uploads/unit/sublime-greentex/17339874450GIkJ.webp |
+| FEATURE | 1282×1282 | https://cms.meghna-executive.com/admin/uploads/unit/sublime-greentex/1737611666LBRco.webp |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/sublime-greentex/1737662289WHNDK.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/sublime-greentex/17376623028yFL4.svg |
+| VECTOR | — | https://cms.meghna-executive.com/admin/uploads/unit/sublime-greentex/1737662336SVm1w.svg |
 
 ## brandproduct/bmw-i5
 
@@ -382,6 +531,36 @@ Total unique assets: 245
 |---|---|---|
 | CARD | 800×364 | https://cms.meghna-executive.com/admin/uploads/brandproduct/bmw7-series-sedan/173313865615vSO.webp |
 | THUMB | 291×194 | https://cms.meghna-executive.com/admin/uploads/brandproduct/bmw7-series-sedan/17331386569UqDM.webp |
+
+## brandproduct/consistent-culinary-standards
+
+| Tier | Size (px) | URL |
+|---|---|---|
+| FEATURE | 1086×1448 | https://cms.meghna-executive.com/admin/uploads/brandproduct/consistent-culinary-standards/1785142608jv724.webp |
+
+## brandproduct/contemporary-bistro-ambiance
+
+| Tier | Size (px) | URL |
+|---|---|---|
+| CARD | 900×1200 | https://cms.meghna-executive.com/admin/uploads/brandproduct/contemporary-bistro-ambiance/1785142555oo1SG.webp |
+
+## brandproduct/exceptional-hospitality
+
+| Tier | Size (px) | URL |
+|---|---|---|
+| CARD | 602×803 | https://cms.meghna-executive.com/admin/uploads/brandproduct/exceptional-hospitality/1785142689yTxyb.webp |
+
+## brandproduct/private--corporate-dining
+
+| Tier | Size (px) | URL |
+|---|---|---|
+| FEATURE | 1086×1448 | https://cms.meghna-executive.com/admin/uploads/brandproduct/private--corporate-dining/1785142756eQh47.webp |
+
+## brandproduct/thoughtfully-curated-menu
+
+| Tier | Size (px) | URL |
+|---|---|---|
+| FEATURE | 1086×1448 | https://cms.meghna-executive.com/admin/uploads/brandproduct/thoughtfully-curated-menu/1785142409kFAXA.webp |
 
 ## blog/24
 
@@ -465,6 +644,40 @@ Total unique assets: 245
 |---|---|---|
 | THUMB | 270×380 | https://cms.meghna-executive.com/admin/uploads/blog/39/17376702305J2E9.webp |
 | FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/blog/39/1737969868gb23B.webp |
+
+## (root: journal article images and documents)
+
+| Tier | Size (px) | URL |
+|---|---|---|
+| CARD | 870×457 | https://cms.meghna-executive.com/admin/uploads/17376705261RvuP.webp |
+| CARD | 870×457 | https://cms.meghna-executive.com/admin/uploads/1737670800jevp6.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/1737889693wKnGF.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/1737889712rkOAn.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/1737890013xyWkQ.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/1737890839wy5kg.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/17378908980v2Zw.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/1737956047n3YkN.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/1737956328bS2mT.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/1737956502CIzze.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/17379663191rvzm.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/1737966516GdNR3.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/1737966629OU0ND.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/1737967115JtMdu.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/1737967351eQQbA.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/1737967455koPF9.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/17379677096qlSD.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/1737967992RpW7q.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/1737968115GFfAX.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/1737969169WStLh.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/1737969361v5tvK.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/1737969492nkngv.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/17379697060laPZ.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/1737971328ECfab.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/17379716195XbAF.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/17379716842cz2q.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/1737971948YMayj.webp |
+| FEATURE | 1044×576 | https://cms.meghna-executive.com/admin/uploads/1737972120Q74QY.webp |
+| DOC | — | https://cms.meghna-executive.com/admin/uploads/17890236638Ov2t.pdf |
 
 ## Site static assets
 

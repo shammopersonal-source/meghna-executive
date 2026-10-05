@@ -1,0 +1,354 @@
+{
+ "article-desktop": {
+  "url": "/journal/retail-next-by-bmw",
+  "fetchTime": "2026-10-05T21:48:50.598Z",
+  "scores": {
+   "performance": 99,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "0.5\u00a0s",
+  "LCP": "0.9\u00a0s",
+  "observedLCP_ms": 2387,
+  "TBT": "0\u00a0ms",
+  "CLS": "0.04",
+  "totalBytes": "Total size was 466\u00a0KiB"
+ },
+ "article-mobile": {
+  "url": "/journal/retail-next-by-bmw",
+  "fetchTime": "2026-10-05T21:48:38.125Z",
+  "scores": {
+   "performance": 95,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "1.8\u00a0s",
+  "LCP": "2.7\u00a0s",
+  "observedLCP_ms": 185,
+  "TBT": "50\u00a0ms",
+  "CLS": "0",
+  "totalBytes": "Total size was 443\u00a0KiB"
+ },
+ "careers-desktop": {
+  "url": "/careers",
+  "fetchTime": "2026-10-05T21:49:15.174Z",
+  "scores": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "0.4\u00a0s",
+  "LCP": "0.7\u00a0s",
+  "observedLCP_ms": 183,
+  "TBT": "0\u00a0ms",
+  "CLS": "0.018",
+  "totalBytes": "Total size was 455\u00a0KiB"
+ },
+ "careers-mobile": {
+  "url": "/careers",
+  "fetchTime": "2026-10-05T21:50:44.589Z",
+  "scores": {
+   "performance": 88,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "1.0\u00a0s",
+  "LCP": "3.8\u00a0s",
+  "observedLCP_ms": 2256,
+  "TBT": "100\u00a0ms",
+  "CLS": "0.007",
+  "totalBytes": "Total size was 440\u00a0KiB"
+ },
+ "contact-desktop": {
+  "url": "/contact",
+  "fetchTime": "2026-10-05T21:49:39.503Z",
+  "scores": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "0.4\u00a0s",
+  "LCP": "0.6\u00a0s",
+  "observedLCP_ms": 222,
+  "TBT": "0\u00a0ms",
+  "CLS": "0.001",
+  "totalBytes": "Total size was 408\u00a0KiB"
+ },
+ "contact-mobile": {
+  "url": "/contact",
+  "fetchTime": "2026-10-05T21:49:27.388Z",
+  "scores": {
+   "performance": 92,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "1.8\u00a0s",
+  "LCP": "3.2\u00a0s",
+  "observedLCP_ms": 295,
+  "TBT": "40\u00a0ms",
+  "CLS": "0.015",
+  "totalBytes": "Total size was 394\u00a0KiB"
+ },
+ "group-desktop": {
+  "url": "/group",
+  "fetchTime": "2026-10-05T21:47:11.585Z",
+  "scores": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "0.4\u00a0s",
+  "LCP": "0.7\u00a0s",
+  "observedLCP_ms": 228,
+  "TBT": "0\u00a0ms",
+  "CLS": "0.02",
+  "totalBytes": "Total size was 464\u00a0KiB"
+ },
+ "group-mobile": {
+  "url": "/group",
+  "fetchTime": "2026-10-05T21:46:59.019Z",
+  "scores": {
+   "performance": 95,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "2.0\u00a0s",
+  "LCP": "2.7\u00a0s",
+  "observedLCP_ms": 172,
+  "TBT": "40\u00a0ms",
+  "CLS": "0.024",
+  "totalBytes": "Total size was 428\u00a0KiB"
+ },
+ "home-desktop": {
+  "url": "/",
+  "fetchTime": "2026-10-05T21:45:27.163Z",
+  "scores": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "0.5\u00a0s",
+  "LCP": "0.7\u00a0s",
+  "observedLCP_ms": 317,
+  "TBT": "0\u00a0ms",
+  "CLS": "0.001",
+  "totalBytes": "Total size was 500\u00a0KiB"
+ },
+ "home-mobile": {
+  "url": "/",
+  "fetchTime": "2026-10-05T22:01:42.109Z",
+  "scores": {
+   "performance": 88,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "2.0\u00a0s",
+  "LCP": "3.4\u00a0s",
+  "observedLCP_ms": 235,
+  "TBT": "150\u00a0ms",
+  "CLS": "0",
+  "totalBytes": "Total size was 466\u00a0KiB"
+ },
+ "houses-desktop": {
+  "url": "/houses",
+  "fetchTime": "2026-10-05T21:45:56.229Z",
+  "scores": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "0.5\u00a0s",
+  "LCP": "0.6\u00a0s",
+  "observedLCP_ms": 169,
+  "TBT": "0\u00a0ms",
+  "CLS": "0.018",
+  "totalBytes": "Total size was 514\u00a0KiB"
+ },
+ "houses-mobile": {
+  "url": "/houses",
+  "fetchTime": "2026-10-05T21:50:30.608Z",
+  "scores": {
+   "performance": 83,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "2.0\u00a0s",
+  "LCP": "4.0\u00a0s",
+  "observedLCP_ms": 1458,
+  "TBT": "160\u00a0ms",
+  "CLS": "0.003",
+  "totalBytes": "Total size was 457\u00a0KiB"
+ },
+ "journal-desktop": {
+  "url": "/journal",
+  "fetchTime": "2026-10-05T21:48:25.902Z",
+  "scores": {
+   "performance": 100,
+   "accessibility": 98,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "0.3\u00a0s",
+  "LCP": "0.7\u00a0s",
+  "observedLCP_ms": 203,
+  "TBT": "0\u00a0ms",
+  "CLS": "0.018",
+  "totalBytes": "Total size was 508\u00a0KiB"
+ },
+ "journal-mobile": {
+  "url": "/journal",
+  "fetchTime": "2026-10-05T21:50:56.685Z",
+  "scores": {
+   "performance": 91,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "1.8\u00a0s",
+  "LCP": "3.3\u00a0s",
+  "observedLCP_ms": 180,
+  "TBT": "50\u00a0ms",
+  "CLS": "0.004",
+  "totalBytes": "Total size was 470\u00a0KiB"
+ },
+ "motors-desktop": {
+  "url": "/houses/executive-motors",
+  "fetchTime": "2026-10-05T21:46:22.296Z",
+  "scores": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "0.5\u00a0s",
+  "LCP": "0.7\u00a0s",
+  "observedLCP_ms": 217,
+  "TBT": "0\u00a0ms",
+  "CLS": "0.005",
+  "totalBytes": "Total size was 433\u00a0KiB"
+ },
+ "motors-mobile": {
+  "url": "/houses/executive-motors",
+  "fetchTime": "2026-10-05T21:46:09.144Z",
+  "scores": {
+   "performance": 95,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "2.0\u00a0s",
+  "LCP": "2.7\u00a0s",
+  "observedLCP_ms": 191,
+  "TBT": "40\u00a0ms",
+  "CLS": "0.005",
+  "totalBytes": "Total size was 428\u00a0KiB"
+ },
+ "responsibility-desktop": {
+  "url": "/responsibility",
+  "fetchTime": "2026-10-05T21:48:01.239Z",
+  "scores": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "0.4\u00a0s",
+  "LCP": "0.7\u00a0s",
+  "observedLCP_ms": 218,
+  "TBT": "0\u00a0ms",
+  "CLS": "0.019",
+  "totalBytes": "Total size was 454\u00a0KiB"
+ },
+ "responsibility-mobile": {
+  "url": "/responsibility",
+  "fetchTime": "2026-10-05T21:47:49.209Z",
+  "scores": {
+   "performance": 90,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "0.9\u00a0s",
+  "LCP": "3.6\u00a0s",
+  "observedLCP_ms": 2242,
+  "TBT": "30\u00a0ms",
+  "CLS": "0.012",
+  "totalBytes": "Total size was 452\u00a0KiB"
+ },
+ "sublime-desktop": {
+  "url": "/houses/sublime-greentex",
+  "fetchTime": "2026-10-05T21:46:46.992Z",
+  "scores": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "0.4\u00a0s",
+  "LCP": "0.7\u00a0s",
+  "observedLCP_ms": 235,
+  "TBT": "0\u00a0ms",
+  "CLS": "0.01",
+  "totalBytes": "Total size was 482\u00a0KiB"
+ },
+ "sublime-mobile": {
+  "url": "/houses/sublime-greentex",
+  "fetchTime": "2026-10-05T21:46:34.654Z",
+  "scores": {
+   "performance": 95,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "1.8\u00a0s",
+  "LCP": "2.7\u00a0s",
+  "observedLCP_ms": 163,
+  "TBT": "40\u00a0ms",
+  "CLS": "0.005",
+  "totalBytes": "Total size was 448\u00a0KiB"
+ },
+ "sustainability-desktop": {
+  "url": "/sustainability",
+  "fetchTime": "2026-10-05T21:47:36.781Z",
+  "scores": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "0.4\u00a0s",
+  "LCP": "0.7\u00a0s",
+  "observedLCP_ms": 310,
+  "TBT": "0\u00a0ms",
+  "CLS": "0.016",
+  "totalBytes": "Total size was 497\u00a0KiB"
+ },
+ "sustainability-mobile": {
+  "url": "/sustainability",
+  "fetchTime": "2026-10-05T21:47:24.455Z",
+  "scores": {
+   "performance": 91,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "FCP": "1.8\u00a0s",
+  "LCP": "3.3\u00a0s",
+  "observedLCP_ms": 206,
+  "TBT": "40\u00a0ms",
+  "CLS": "0.013",
+  "totalBytes": "Total size was 432\u00a0KiB"
+ }
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "page": "/",
+    "violations": []
+  },
+  {
+    "page": "/houses",
+    "violations": []
+  },
+  {
+    "page": "/houses/executive-motors",
+    "violations": []
+  },
+  {
+    "page": "/houses/meghna-knit-composite",
+    "violations": []
+  },
+  {
+    "page": "/houses/penthouse-livings",
+    "violations": []
+  },
+  {
+    "page": "/group",
+    "violations": []
+  },
+  {
+    "page": "/sustainability",
+    "violations": []
+  },
+  {
+    "page": "/responsibility",
+    "violations": []
+  },
+  {
+    "page": "/journal",
+    "violations": []
+  },
+  {
+    "page": "/journal/retail-next-by-bmw",
+    "violations": []
+  },
+  {
+    "page": "/journal/mehs-approach-to-modern-manufacturing",
+    "violations": []
+  },
+  {
+    "page": "/careers",
+    "violations": []
+  },
+  {
+    "page": "/contact",
+    "violations": []
+  },
+  {
+    "page": "/missing-page",
+    "violations": []
+  }
+]

@@ -1,0 +1,73 @@
+.manifesto {
+  padding-bottom: clamp(64px, 8vw, 140px);
+}
+.anchorTop {
+  position: absolute;
+  top: clamp(40px, 6vw, 100px);
+  right: 0;
+}
+.kicker {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: clamp(28px, 4vw, 56px);
+}
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.text {
+  grid-column: 1 / -1;
+  font-size: clamp(1.75rem, 0.9rem + 3.5vw, 4.9rem);
+  font-weight: 300;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  text-wrap: pretty;
+}
+.text :global(.w) {
+  will-change: opacity;
+}
+@media (min-width: 1180px) {
+  .text {
+    grid-column: 1 / span 11;
+  }
+}
+.filmWrap {
+  position: relative;
+  padding-bottom: clamp(48px, 6vw, 96px);
+}
+.film {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 100svh;
+  overflow: hidden;
+  background: var(--ink);
+}
+@media (max-width: 767px) {
+  .film {
+    aspect-ratio: 4 / 5;
+  }
+}
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.anchorFilm {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.filmCaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 20px;
+  font-size: var(--fs-small);
+}

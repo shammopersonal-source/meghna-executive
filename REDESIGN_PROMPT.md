@@ -3,6 +3,14 @@
 > Paste everything below the line into your design or build AI, or hand it to your studio as the brief.
 > It comes with `IMAGE_MANIFEST.md`. That file lists every image, video and SVG on the current site, with its URL and resolution.
 
+> **Errata (found while building it; the build follows these corrections).**
+> 1. **The group has 15 houses, not 16.** The live Brands page lists 15. Read "16" below as 15.
+> 2. **Meghna Bearing Industries now has a description** on its own page (founded 1997). The "gap" in section 1 no longer applies.
+> 3. **Audit items 1 and 2 (the "black void" hero, and content blank below the fold without JS) are unverified.** Headless browsers in the audit sandbox could not load the live site's assets reliably, so those screenshots aren't trustworthy evidence. The other findings came from the raw HTML and files and stand: the 41 MB video, `og:image` pointing at localhost, Bootstrap, duplicate stock images, inconsistent naming. Another one was found: every page's map link is `google.com/maps?q=undefined`.
+> 4. **Several founding years conflict** between the About timeline and the house pages. See `CLIENT_QUESTIONS.md`.
+> 5. **The hero is pinned for one viewport.** This was a deliberate exception to "no scroll-jacking except the timeline", made after the client asked for a fully scroll-driven site. Scroll still drives it; nothing autoplays.
+> 6. **Next.js issues 308 for permanent redirects.** It is the method-preserving equivalent of 301.
+
 ---
 
 ## ROLE

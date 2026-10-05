@@ -1,0 +1,17 @@
+.logo,
+.mark {
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask: url("/brand/logo.svg") no-repeat left center / contain;
+  mask: url("/brand/logo.svg") no-repeat left center / contain;
+}
+.logo {
+  aspect-ratio: 206.351 / 60;
+  height: 44px;
+}
+.mark {
+  aspect-ratio: 1;
+  height: 60px;
+  -webkit-mask-size: auto 100%;
+  mask-size: auto 100%;
+}

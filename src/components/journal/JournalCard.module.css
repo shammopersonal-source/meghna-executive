@@ -1,0 +1,58 @@
+.card {
+  display: flex;
+}
+.link {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+.media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--fg) 8%, var(--bg));
+}
+.media img {
+  object-fit: cover;
+  transition: transform 1200ms var(--ease-out);
+}
+.link:hover .media img {
+  transform: scale(1.05);
+}
+.badge {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bone);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.meta {
+  display: flex;
+  gap: 16px;
+  font-size: var(--fs-label);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.title {
+  font-size: var(--fs-h3);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  text-wrap: balance;
+  transition: color var(--dur-ui) var(--ease-out);
+}
+.link:hover .title {
+  color: var(--accent);
+}
+.excerpt {
+  font-size: var(--fs-small);
+}

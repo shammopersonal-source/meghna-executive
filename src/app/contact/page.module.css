@@ -1,0 +1,92 @@
+.page {
+  padding-top: calc(var(--header-h) + clamp(40px, 7vw, 120px));
+  padding-bottom: var(--section);
+}
+.grid {
+  display: grid;
+  gap: 72px var(--col-gap);
+}
+.info {
+  position: relative;
+  display: grid;
+  gap: 28px;
+  align-content: start;
+}
+.anchor {
+  position: absolute;
+  top: -40px;
+  left: 0;
+}
+.lead {
+  max-width: 40ch;
+  color: var(--fg-muted);
+}
+.hotline {
+  display: grid;
+  gap: 4px;
+  justify-self: start;
+}
+.hotlineNum {
+  font-size: clamp(3rem, 2rem + 4vw, 6rem);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  transition: color var(--dur-ui) var(--ease-out);
+}
+.hotline:hover .hotlineNum {
+  color: var(--accent);
+}
+.details {
+  display: grid;
+  gap: 20px;
+}
+.details div {
+  display: grid;
+  gap: 6px;
+}
+.details dd {
+  margin: 0;
+}
+.details address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+}
+.map {
+  position: relative;
+  display: block;
+  aspect-ratio: 1366 / 564;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.map img {
+  object-fit: cover;
+  filter: grayscale(1) contrast(0.95);
+}
+.mapLabel {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bone);
+  font-size: var(--fs-small);
+}
+.formCol {
+  display: grid;
+  gap: 32px;
+  align-content: start;
+}
+@media (min-width: 1180px) {
+  .grid {
+    grid-template-columns: 5fr 1fr 6fr;
+  }
+  .formCol {
+    grid-column: 3;
+    padding-top: 120px;
+  }
+}

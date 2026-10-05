@@ -1,0 +1,292 @@
+.index {
+  position: relative;
+}
+.filters {
+  border: 0;
+  margin: 0 0 clamp(24px, 3vw, 40px);
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filter {
+  position: relative;
+  cursor: pointer;
+}
+.filter input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.filter span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  transition:
+    background-color var(--dur-ui) var(--ease-out),
+    color var(--dur-ui) var(--ease-out),
+    border-color var(--dur-ui) var(--ease-out);
+}
+.filter input:checked + span {
+  background: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
+.filter input:focus-visible + span {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* CSS-only filtering */
+.index:has(input[value="trading"]:checked) .row:not([data-sector="trading"]),
+.index:has(input[value="apparel"]:checked) .row:not([data-sector="apparel"]),
+.index:has(input[value="industrial"]:checked) .row:not([data-sector="industrial"]),
+.index:has(input[value="service"]:checked) .row:not([data-sector="service"]) {
+  display: none;
+}
+
+.rows {
+  position: relative;
+  border-top: 1px solid var(--line);
+}
+.row {
+  border-bottom: 1px solid var(--line);
+  animation: rowIn 600ms var(--ease-out) both;
+}
+@keyframes rowIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+.rowHead {
+  display: flex;
+  align-items: stretch;
+}
+.rowLink {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 2.4rem 1fr;
+  grid-template-areas: "num name" ". meta";
+  align-items: baseline;
+  row-gap: 6px;
+  padding-block: 18px;
+  min-width: 0;
+}
+.num {
+  grid-area: num;
+  font-family: var(--font-serif-stack);
+  font-style: italic;
+  font-feature-settings: "onum" 1;
+  color: var(--fg-muted);
+  font-size: 0.9375rem;
+}
+.name {
+  grid-area: name;
+  font-size: clamp(1.5rem, 1rem + 2.4vw, 3.6rem);
+  font-weight: 300;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  transition:
+    transform 600ms var(--ease-out),
+    color var(--dur-ui) var(--ease-out);
+}
+.meta {
+  grid-area: meta;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  font-size: var(--fs-small);
+  color: var(--fg-muted);
+}
+.partner {
+  font-weight: 500;
+  color: var(--fg);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  align-self: center;
+}
+.year {
+  font-variant-numeric: lining-nums;
+}
+.toggle {
+  flex: 0 0 56px;
+  display: grid;
+  place-items: center;
+  min-height: 56px;
+}
+.plus {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+.plus::before,
+.plus::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: currentColor;
+  transition: transform 400ms var(--ease-out);
+}
+.plus::after {
+  transform: rotate(90deg);
+}
+.row[data-open] .plus::after {
+  transform: rotate(0deg);
+}
+.detail {
+  overflow: hidden;
+}
+.detailInner {
+  display: grid;
+  grid-template-columns: 38% 1fr;
+  gap: 16px;
+  padding: 0 0 22px 2.4rem;
+  animation: detailIn 600ms var(--ease-out) both;
+}
+@keyframes detailIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+.detailMedia {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: color-mix(in srgb, var(--fg) 8%, var(--bg));
+}
+.detailMedia img {
+  object-fit: cover;
+}
+.detailText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: var(--fs-body);
+}
+
+/* Fine pointer (desktop): rows link straight through; image follows cursor */
+.index[data-fine] .toggle {
+  display: none;
+}
+.index[data-fine] .detail {
+  display: none;
+}
+@media (min-width: 1180px) {
+  .rowLink {
+    grid-template-columns: 4rem minmax(0, 1fr) minmax(0, 0.9fr);
+    grid-template-areas: "num name meta";
+    padding-block: 22px;
+  }
+  .meta {
+    justify-content: flex-end;
+    gap: 28px;
+  }
+}
+.index[data-fine] .rowLink:hover .name,
+.index[data-fine] .rowLink:focus-visible .name {
+  transform: translateX(18px);
+  color: var(--accent);
+}
+.index[data-fine] .rows:hover .row:not(:hover) .name {
+  opacity: 0.35;
+}
+.index[data-fine] .name {
+  transition:
+    transform 600ms var(--ease-out),
+    color var(--dur-ui) var(--ease-out),
+    opacity 400ms var(--ease-out);
+}
+.float {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 40;
+  width: clamp(220px, 20vw, 340px);
+  aspect-ratio: 4 / 5;
+  pointer-events: none;
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0;
+  scale: 0.8;
+  transition:
+    opacity 400ms var(--ease-out),
+    scale 600ms var(--ease-out);
+}
+.float[data-show] {
+  opacity: 1;
+  scale: 1;
+}
+.floatImg {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  clip-path: inset(100% 0 0 0);
+  transition:
+    opacity 300ms var(--ease-out),
+    clip-path 700ms var(--ease-out);
+}
+.floatImg[data-on] {
+  opacity: 1;
+  clip-path: inset(0 0 0 0);
+}
+.floatImg img {
+  object-fit: cover;
+}
+
+/* Tablet portrait: two-column index with images showing */
+@media (min-width: 768px) and (max-width: 1179px) {
+  .rows {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--col-gap);
+  }
+  .name {
+    font-size: clamp(1.4rem, 1rem + 1.6vw, 2.2rem);
+  }
+}
+
+.thumb {
+  display: none;
+}
+@media (min-width: 768px) and (max-width: 1179px) {
+  .rowLink {
+    grid-template-columns: 2.4rem 64px 1fr;
+    grid-template-areas: "num thumb name" ". thumb meta";
+    column-gap: 14px;
+  }
+  .thumb {
+    grid-area: thumb;
+    display: block;
+    position: relative;
+    width: 64px;
+    aspect-ratio: 4 / 5;
+    border-radius: 4px;
+    overflow: hidden;
+    align-self: center;
+  }
+  .thumb img {
+    object-fit: cover;
+  }
+  .index[data-fine] .thumb {
+    display: none;
+  }
+  .index[data-fine] .rowLink {
+    grid-template-columns: 2.4rem 1fr;
+    grid-template-areas: "num name" ". meta";
+  }
+}

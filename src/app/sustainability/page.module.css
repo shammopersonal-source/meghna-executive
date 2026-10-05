@@ -1,0 +1,114 @@
+.statement {
+  font-size: clamp(1.6rem, 1rem + 2.6vw, 3.6rem);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  max-width: 28ch;
+}
+.anchor {
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+.pillars {
+  display: grid;
+  gap: var(--col-gap);
+}
+.pillar {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+.pn {
+  font-family: var(--font-serif-stack);
+  font-style: italic;
+  font-size: clamp(3rem, 2rem + 3vw, 5rem);
+  line-height: 1;
+  color: var(--accent);
+  font-feature-settings: "lnum" 1;
+}
+@media (min-width: 768px) {
+  .pillars {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.certWrap {
+  display: grid;
+  gap: 48px var(--col-gap);
+  align-items: center;
+}
+.certs {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+.certs li {
+  display: grid;
+  gap: 4px;
+  padding-block: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.certName {
+  font-size: var(--fs-h3);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+.certMedia {
+  position: relative;
+  aspect-ratio: 598 / 720;
+  max-width: 598px;
+  width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  justify-self: center;
+}
+.certMedia img {
+  object-fit: cover;
+}
+@media (min-width: 1180px) {
+  .certWrap {
+    grid-template-columns: 7fr 5fr;
+  }
+}
+.log {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+.logItem {
+  display: grid;
+  grid-template-columns: 1fr 96px;
+  grid-template-areas: "date media" "title media";
+  gap: 6px 16px;
+  padding-block: 20px;
+  border-bottom: 1px solid var(--line);
+  align-items: center;
+}
+.logDate {
+  grid-area: date;
+  font-size: var(--fs-small);
+  color: var(--fg-muted);
+}
+.logTitle {
+  grid-area: title;
+  font-size: clamp(1.25rem, 1rem + 1.2vw, 2rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.logMedia {
+  grid-area: media;
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.logMedia img {
+  object-fit: cover;
+}
+@media (min-width: 768px) {
+  .logItem {
+    grid-template-columns: 180px 1fr 140px;
+    grid-template-areas: "date title media";
+  }
+}

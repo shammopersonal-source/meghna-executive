@@ -1,0 +1,58 @@
+.anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.grid {
+  display: grid;
+  gap: 40px var(--col-gap);
+}
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1180px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.card {
+  display: grid;
+  gap: 16px;
+}
+.media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+.media img {
+  object-fit: cover;
+  transition: transform 1400ms var(--ease-out);
+}
+.card:hover .media img {
+  transform: scale(1.05);
+}
+.cardText {
+  display: grid;
+  gap: 8px;
+}
+.name {
+  font-size: var(--fs-h3);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  transition: color var(--dur-ui) var(--ease-out);
+}
+.card:hover .name {
+  color: var(--accent);
+}
+.meta {
+  display: flex;
+  gap: 16px;
+  font-size: var(--fs-label);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}

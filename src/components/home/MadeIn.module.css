@@ -1,0 +1,125 @@
+.section {
+  overflow: hidden;
+}
+.anchor {
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 28px;
+  margin-bottom: clamp(56px, 8vw, 120px);
+}
+.lead {
+  max-width: 52ch;
+  color: var(--fg-muted);
+}
+.mosaic {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--col-gap);
+}
+.tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  aspect-ratio: 4 / 5;
+}
+.tileInner {
+  position: absolute;
+  inset: -12% 0;
+}
+.tileInner img {
+  object-fit: cover;
+}
+.tile[data-tile="0"],
+.tile[data-tile="5"] {
+  grid-column: span 2;
+  aspect-ratio: 16 / 9;
+}
+@media (min-width: 768px) {
+  .mosaic {
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-flow: dense;
+  }
+  .tile {
+    grid-column: span 2;
+  }
+  .tile[data-tile="0"] {
+    grid-column: 1 / span 4;
+    aspect-ratio: 16 / 10;
+  }
+  .tile[data-tile="1"] {
+    grid-column: 5 / span 2;
+    aspect-ratio: auto;
+  }
+  .tile[data-tile="2"] {
+    margin-top: 18%;
+  }
+  .tile[data-tile="4"] {
+    margin-top: -12%;
+  }
+  .tile[data-tile="5"] {
+    grid-column: 1 / -1;
+    aspect-ratio: 21 / 9;
+  }
+}
+.marquee {
+  margin-top: clamp(64px, 9vw, 140px);
+  border-block: 1px solid var(--line);
+  overflow: hidden;
+  padding-block: 22px;
+}
+.track {
+  display: flex;
+  width: max-content;
+  animation: marquee 48s linear infinite;
+}
+.marquee:hover .track {
+  animation-play-state: paused;
+}
+.run {
+  display: flex;
+}
+.buyer {
+  font-size: clamp(1.5rem, 1rem + 2vw, 2.75rem);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  padding-inline: clamp(20px, 3vw, 48px);
+  white-space: nowrap;
+}
+.buyer::after {
+  content: "·";
+  margin-left: clamp(20px, 3vw, 48px);
+  color: var(--accent);
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+    flex-wrap: wrap;
+    width: auto;
+  }
+  .run + .run {
+    display: none;
+  }
+  .run {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 40px;
+  margin-top: 40px;
+}

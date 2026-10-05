@@ -1,0 +1,39 @@
+.hero {
+  position: relative;
+  padding-top: calc(var(--header-h) + clamp(48px, 9vw, 160px));
+}
+.copy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 28px;
+  padding-bottom: clamp(56px, 8vw, 128px);
+}
+.anchor {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+}
+.lead {
+  max-width: 48ch;
+  color: var(--fg-muted);
+}
+.media {
+  position: relative;
+  height: min(88svh, 960px);
+  overflow: hidden;
+}
+.parallax {
+  position: absolute;
+  inset: -10% 0;
+}
+.parallax img {
+  object-fit: cover;
+}
+@media (max-width: 767px) {
+  .media {
+    height: 70svh;
+  }
+}

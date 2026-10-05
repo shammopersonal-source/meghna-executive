@@ -1,0 +1,98 @@
+.rail {
+  position: relative;
+  display: flex;
+  gap: var(--col-gap);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 4px var(--gutter) 24px;
+  margin-inline: calc(var(--gutter) * -1);
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+.card {
+  flex: 0 0 min(78vw, 420px);
+  scroll-snap-align: start;
+}
+.cardLink {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--fg) 7%, var(--bg));
+}
+.media img {
+  object-fit: cover;
+  transition: transform 1200ms var(--ease-out);
+}
+.media[data-partner] img {
+  object-fit: contain;
+}
+a.cardLink:hover .media img {
+  transform: scale(1.04);
+}
+.typeOnly {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  text-align: center;
+  font-size: var(--fs-h3);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--fg-muted);
+}
+.cardText {
+  display: grid;
+  gap: 4px;
+}
+.name {
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+}
+.tag {
+  font-size: var(--fs-label);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.list {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+.listItem {
+  display: grid;
+  grid-template-columns: 2.6rem 1fr;
+  align-items: baseline;
+  gap: 4px 12px;
+  padding-block: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.listItem > :global(.muted) {
+  grid-column: 2;
+  font-size: var(--fs-small);
+}
+.num {
+  font-family: var(--font-serif-stack);
+  font-style: italic;
+  font-feature-settings: "onum" 1;
+  color: var(--fg-muted);
+}
+.listName {
+  font-size: clamp(1.5rem, 1rem + 2vw, 2.75rem);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+@media (min-width: 1180px) {
+  .list {
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--col-gap);
+  }
+}

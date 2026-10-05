@@ -1,0 +1,63 @@
+.wrap {
+  padding-bottom: var(--section);
+}
+.filters {
+  border: 0;
+  padding: 0;
+  margin: 0 0 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filter {
+  position: relative;
+}
+.filter input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.filter span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font-size: var(--fs-small);
+  font-weight: 500;
+}
+.filter input:checked + span {
+  background: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
+.filter input:focus-visible + span {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.wrap:has(input[value="Blog"]:checked) li:not([data-cat="Blog"]),
+.wrap:has(input[value="Video"]:checked) li:not([data-cat="Video"]),
+.wrap:has(input[value="News"]:checked) li:not([data-cat="News"]) {
+  display: none;
+}
+.grid {
+  display: grid;
+  gap: 56px var(--col-gap);
+}
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1180px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .wrap:has(input[value="All"]:checked) .lead {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
