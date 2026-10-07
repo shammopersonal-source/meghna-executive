@@ -25,7 +25,7 @@ export default function Offerings({ items }: { items: Offering[] }) {
           <>
             <div className={styles.media} data-partner={o.image?.partner ? "" : undefined}>
               {o.image ? (
-                <Img media={o.image} sizes="(max-width: 767px) 80vw, 30vw" quality={75} />
+                <Img media={o.image} sizes="(max-width: 767px) 50vw, 30vw" quality={75} />
               ) : (
                 <span className={styles.typeOnly} aria-hidden="true">
                   {o.name}

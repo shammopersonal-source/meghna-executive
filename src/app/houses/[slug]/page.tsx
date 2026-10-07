@@ -75,7 +75,7 @@ export default async function HousePage({ params }: PageProps<"/houses/[slug]">)
           houseSchema(house),
           breadcrumbSchema([
             { name: "Home", path: "/" },
-            { name: "Houses", path: "/houses" },
+            { name: "Our companies", path: "/houses" },
             { name: house.name, path: `/houses/${house.slug}` },
           ]),
         ]}

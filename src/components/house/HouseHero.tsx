@@ -14,7 +14,7 @@ export default function HouseHero({ house }: { house: House }) {
     <header className={`theme-material grain ${styles.hero}`}>
       <div className={styles.media}>
         <div className={styles.parallax} data-parallax="0.18">
-          <Img media={house.hero} sizes="(max-aspect-ratio: 4/5) 100vh, 100vw" priority="high" quality={75} />
+          <Img media={house.hero} sizes="100vw" priority="high" quality={75} />
         </div>
         <div className={styles.shade} aria-hidden="true" />
       </div>
@@ -22,7 +22,7 @@ export default function HouseHero({ house }: { house: House }) {
         <nav aria-label="Breadcrumb" className={styles.crumbs}>
           <ol role="list">
             <li>
-              <Link href="/houses">Houses</Link>
+              <Link href="/houses">Our companies</Link>
             </li>
             <li>
               <Link href={`/houses#${house.sector}`}>{sectorLabel(house.sector)}</Link>

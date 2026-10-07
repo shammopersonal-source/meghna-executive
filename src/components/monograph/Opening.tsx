@@ -10,7 +10,7 @@ const alt = "Braided river channels seen from above: the opening frame of the gr
 const common = { alt, sizes: "100vw", quality: 75, fetchPriority: "high" as const, loading: "eager" as const };
 const {
   props: { srcSet: portraitSrcSet },
-} = getImageProps({ ...common, src: "/media/opening-river-portrait.jpg", width: 810, height: 1440 });
+} = getImageProps({ ...common, quality: 60, src: "/media/opening-river-portrait.jpg", width: 810, height: 1440 });
 const portrait = { srcSet: portraitSrcSet };
 const { props: landscape } = getImageProps({ ...common, src: "/media/opening-river.jpg", width: 2560, height: 1440 });
 

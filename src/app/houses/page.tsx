@@ -12,7 +12,7 @@ import { houses, sectors } from "@/content/houses";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "The Houses",
+  title: "Our companies",
   description:
     "Fifteen houses across trading, apparel, industry and hospitality: Executive Motors (BMW), Executive Machines (Apple), Executive Lifestyles (KOHLER), Penthouse Livings and more.",
   alternates: { canonical: "/houses" },
@@ -25,20 +25,19 @@ export default function HousesPage() {
     ...sectors.map((s, i) => ({ id: s.id, numeral: roman[i], title: s.label })),
     { id: "all", numeral: "V", title: "Index" },
   ];
-  const order = sectors.flatMap((s) => houses.filter((h) => h.sector === s.id).map((h) => h.slug));
   return (
     <main id="main" data-mat-bg="#f1f0ee">
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", path: "/" },
-          { name: "Houses", path: "/houses" },
+          { name: "Our companies", path: "/houses" },
         ])}
       />
       <ChapterSpine chapters={chapters} />
       <PageHero
-        kicker="The Houses"
-        lines={["Fifteen houses,", "four sectors."]}
-        lead="Exclusive partners to BMW and KOHLER, and an authorised Apple partner. Knitwear for global buyers. White cement, export furniture, precision bearings, and a bistro."
+        kicker="Our companies"
+        lines={["Fifteen companies,", "four sectors."]}
+        lead="Exclusive distributor of BMW and KOHLER in Bangladesh, and an authorised Apple reseller. Knitwear for global buyers. White cement, export furniture, precision bearings, and a bistro."
       />
 
       {sectors.map((s, si) => (
@@ -53,9 +52,9 @@ export default function HousesPage() {
               {houses
                 .filter((h) => h.sector === s.id)
                 .map((h, i) => {
-                  const fig = order.indexOf(h.slug) + 1;
                   return (
-                    <li key={h.slug} data-reveal="fade" data-delay={(i % 3) * 0.08}>
+                    // The first sector can sit on the first screen: no scroll reveal there (it would hold back LCP).
+                    <li key={h.slug} data-reveal={si === 0 ? undefined : "fade"} data-delay={(i % 3) * 0.08}>
                       <Link href={`/houses/${h.slug}`} className={styles.card}>
                         <div className={styles.media}>
                           <Img

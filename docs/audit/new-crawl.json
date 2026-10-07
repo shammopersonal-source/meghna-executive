@@ -1,46 +1,42 @@
 {
  "origin": "http://localhost:3200",
- "crawled": "2026-10-07T17:30:38.496Z",
+ "crawled": "2026-10-07T19:06:36.216Z",
  "rows": [
   {
    "url": "http://localhost:3200/",
    "status": 200,
    "finalUrl": "http://localhost:3200/",
    "rawH1": 1,
-   "rawTextChars": 8482,
-   "title": "Meghna Executive Holdings: fifteen houses, since 1965",
-   "description": "Meghna Executive Holdings: fifteen houses across trading, apparel, industry and hospitality. BMW, Apple and KOHLER in Bangladesh, and garments made for the world. Since 1965.",
+   "rawTextChars": 7514,
+   "title": "Meghna Executive Holdings: BMW, Apple, KOHLER and more, since 1965",
+   "description": "Meghna Executive Holdings: fifteen companies across trading, apparel, industry and hospitality. BMW, Apple and KOHLER in Bangladesh, and garments made for the world. Since 1965.",
    "robots": null,
    "canonical": "https://meghna-executive.com",
    "lang": "en-GB",
-   "ogTitle": "Meghna Executive Holdings: fifteen houses, since 1965",
+   "ogTitle": "Meghna Executive Holdings: BMW, Apple, KOHLER and more, since 1965",
    "ogImage": "https://meghna-executive.com/opengraph-image?e06eea4b94217bfa",
    "h1": 1,
    "headings": [
     "H1: MeghnaExecutive Holdings",
-    "H2: Find a house",
+    "H2: Our companies",
     "H3: Trading",
     "H3: Apparel",
     "H3: Industrial",
     "H3: Service",
-    "H2: Origins",
+    "H2: Our story",
     "H3: 1965 to 2025",
-    "H2: The Houses",
+    "H2: Our companies",
     "H3: Executive Motors",
     "H3: Executive Lifestyles",
     "H3: Executive Machines",
     "H3: Penthouse Livings",
-    "H3: Six apparel houses",
+    "H3: Six apparel companies",
     "H3: Industry",
     "H3: Slaw Bistro",
     "H2: Made in Bangladesh",
-    "H2: Stewardship",
-    "H3: Eco-friendly manufacturing",
-    "H3: Sustainable sourcing",
-    "H3: Community development",
-    "H2: Correspondence"
+    "H2: News"
    ],
-   "images": 27,
+   "images": 30,
    "imagesNoAlt": 0,
    "imagesEmptyAlt": 0,
    "jsonld": [
@@ -57,26 +53,26 @@
    "forms": 0,
    "docWidth": 360,
    "vw": 360,
-   "words": 1123
+   "words": 755
   },
   {
    "url": "http://localhost:3200/houses",
    "status": 200,
    "finalUrl": "http://localhost:3200/houses",
    "rawH1": 1,
-   "rawTextChars": 5714,
-   "title": "The Houses · Meghna Executive Holdings",
+   "rawTextChars": 5674,
+   "title": "Our companies · Meghna Executive Holdings",
    "description": "Fifteen houses across trading, apparel, industry and hospitality: Executive Motors (BMW), Executive Machines (Apple), Executive Lifestyles (KOHLER), Penthouse Livings and more.",
    "robots": null,
    "canonical": "https://meghna-executive.com/houses",
    "lang": "en-GB",
-   "ogTitle": "The Houses · Meghna Executive Holdings",
+   "ogTitle": "Our companies · Meghna Executive Holdings",
    "ogImage": "https://meghna-executive.com/houses/opengraph-image?debb1bd1eab5bb79",
    "h1": 1,
    "headings": [
-    "H1: Fifteen houses, four sectors.",
-    "H2: Exclusive partners to global marques.",
-    "H2: Knitwear made in Gazipur, worn across Europe.",
+    "H1: Fifteen companies, four sectors.",
+    "H2: Partners to global brands.",
+    "H2: Knitwear made in Gazipur for global buyers.",
     "H2: White cement, furniture and bearings.",
     "H2: Hospitality, the newest current.",
     "H2: All fifteen houses"
@@ -95,16 +91,16 @@
    "forms": 0,
    "docWidth": 360,
    "vw": 360,
-   "words": 586
+   "words": 518
   },
   {
    "url": "http://localhost:3200/group",
    "status": 200,
    "finalUrl": "http://localhost:3200/group",
    "rawH1": 1,
-   "rawTextChars": 4630,
+   "rawTextChars": 4446,
    "title": "The Group · Meghna Executive Holdings",
-   "description": "Founded in 1965, Meghna Executive Holdings has grown into fifteen houses across luxury trading, apparel, industry and hospitality in Bangladesh.",
+   "description": "Founded in 1965, Meghna Executive Holdings has grown into fifteen companies across luxury trading, apparel, industry and hospitality in Bangladesh.",
    "robots": null,
    "canonical": "https://meghna-executive.com/group",
    "lang": "en-GB",
@@ -118,7 +114,6 @@
     "H3: Mission",
     "H3: Vision",
     "H3: 1965 to 2025",
-    "H2: Leadership",
     "H2: Nikunja-2, Dhaka"
    ],
    "images": 13,
@@ -135,35 +130,35 @@
    "forms": 0,
    "docWidth": 360,
    "vw": 360,
-   "words": 541
+   "words": 469
   },
   {
    "url": "http://localhost:3200/sustainability",
    "status": 200,
    "finalUrl": "http://localhost:3200/sustainability",
    "rawH1": 1,
-   "rawTextChars": 2909,
+   "rawTextChars": 2986,
    "title": "Sustainability · Meghna Executive Holdings",
    "description": "LEED Platinum and LEED Gold factories, solar power, FSC timber, water harvesting and zero-waste garment production across Meghna Executive Holdings.",
    "robots": null,
    "canonical": "https://meghna-executive.com/sustainability",
    "lang": "en-GB",
    "ogTitle": "Sustainability · Meghna Executive Holdings",
-   "ogImage": "https://meghna-executive.com/sustainability/opengraph-image?6631d9eb7f971557",
+   "ogImage": "https://meghna-executive.com/sustainability/opengraph-image?071e6e835a3de890",
    "h1": 1,
    "headings": [
-    "H1: Leave the river cleaner than we found it.",
+    "H1: Crafting a legacy of sustainability.",
     "H2: How we work",
     "H3: Eco-friendly manufacturing",
     "H3: Sustainable sourcing",
     "H3: Community development",
     "H2: On the record",
     "H2: The work, by date",
-    "H3: Solar power in our manufacturing units",
-    "H3: Cutting the carbon footprint of transportation",
-    "H3: A green supply chain for Bangladesh",
-    "H3: Local water conservation and harvesting",
-    "H3: Zero-waste garment production"
+    "H3: Solar power implementation in manufacturing units",
+    "H3: Carbon footprint reduction in transportation",
+    "H3: Green supply chain development in Bangladesh",
+    "H3: Local water conservation and harvesting project",
+    "H3: Zero-waste garment production initiative"
    ],
    "images": 7,
    "imagesNoAlt": 0,
@@ -179,14 +174,14 @@
    "forms": 0,
    "docWidth": 360,
    "vw": 360,
-   "words": 310
+   "words": 265
   },
   {
    "url": "http://localhost:3200/responsibility",
    "status": 200,
    "finalUrl": "http://localhost:3200/responsibility",
    "rawH1": 1,
-   "rawTextChars": 2795,
+   "rawTextChars": 2796,
    "title": "Responsibility · Meghna Executive Holdings",
    "description": "Marks & Start with CRP, inclusive hiring and flood relief: how Meghna Executive Holdings invests in the communities around its houses.",
    "robots": null,
@@ -199,7 +194,7 @@
     "H1: A brighter future, built with others.",
     "H2: The Marks & Start training centre",
     "H2: Recruiting from CRP-Bangladesh",
-    "H2: Flood relief in the north"
+    "H2: Flood relief, 2007"
    ],
    "images": 3,
    "imagesNoAlt": 0,
@@ -215,16 +210,16 @@
    "forms": 0,
    "docWidth": 360,
    "vw": 360,
-   "words": 295
+   "words": 248
   },
   {
    "url": "http://localhost:3200/journal",
    "status": 200,
    "finalUrl": "http://localhost:3200/journal",
    "rawH1": 1,
-   "rawTextChars": 4188,
+   "rawTextChars": 4182,
    "title": "Journal · Meghna Executive Holdings",
-   "description": "News, stories and films from the houses of Meghna Executive Holdings.",
+   "description": "News, stories and films from the companies of Meghna Executive Holdings.",
    "robots": null,
    "canonical": "https://meghna-executive.com/journal",
    "lang": "en-GB",
@@ -261,16 +256,16 @@
    "forms": 0,
    "docWidth": 360,
    "vw": 360,
-   "words": 514
+   "words": 473
   },
   {
    "url": "http://localhost:3200/careers",
    "status": 200,
    "finalUrl": "http://localhost:3200/careers",
    "rawH1": 1,
-   "rawTextChars": 2299,
+   "rawTextChars": 2208,
    "title": "Careers · Meghna Executive Holdings",
-   "description": "Grow with Meghna Executive Holdings: fifteen houses across automotive, technology, design, manufacturing and hospitality.",
+   "description": "Grow with Meghna Executive Holdings: fifteen companies across automotive, technology, design, manufacturing and hospitality.",
    "robots": null,
    "canonical": "https://meghna-executive.com/careers",
    "lang": "en-GB",
@@ -280,7 +275,7 @@
    "headings": [
     "H1: Our people are the group.",
     "H2: HR philosophy",
-    "H2: Join a house"
+    "H2: Apply today"
    ],
    "images": 4,
    "imagesNoAlt": 0,
@@ -297,14 +292,14 @@
    "forms": 0,
    "docWidth": 360,
    "vw": 360,
-   "words": 254
+   "words": 190
   },
   {
    "url": "http://localhost:3200/contact",
    "status": 200,
    "finalUrl": "http://localhost:3200/contact",
    "rawH1": 1,
-   "rawTextChars": 2224,
+   "rawTextChars": 2243,
    "title": "Contact · Meghna Executive Holdings",
    "description": "Reach Meghna Executive Holdings or any of its houses. Hotline 16765, info@meghna-executive.com, Le Meridien (Level 6), Nikunja-2, Dhaka.",
    "robots": null,
@@ -331,16 +326,16 @@
    "forms": 1,
    "docWidth": 360,
    "vw": 360,
-   "words": 218
+   "words": 181
   },
   {
    "url": "http://localhost:3200/houses/executive-motors",
    "status": 200,
    "finalUrl": "http://localhost:3200/houses/executive-motors",
    "rawH1": 1,
-   "rawTextChars": 3909,
+   "rawTextChars": 3873,
    "title": "Executive Motors: BMW in Bangladesh · Meghna Executive Holdings",
-   "description": "The exclusive home of BMW in Bangladesh since 2002. Executive Motors has been Bangladesh’s exclusive BMW importer since 2002: sales, service and the full BMW ownership experience under one roof.",
+   "description": "The exclusive home of BMW in Bangladesh since 2002. Executive Motors has been Bangladesh’s exclusive BMW importer since 2002: BMW vehicles and services, with comprehensive aftersales support.",
    "robots": null,
    "canonical": "https://meghna-executive.com/houses/executive-motors",
    "lang": "en-GB",
@@ -351,11 +346,11 @@
     "H1: Executive Motors",
     "H2: I Trading · Executive Motors Ltd.",
     "H2: The line-up",
-    "H2: Plates",
+    "H2: Gallery",
     "H2: Visit and enquire",
-    "H3: Write to Executive Motors"
+    "H3: Book a test drive, or write to Executive Motors"
    ],
-   "images": 15,
+   "images": 16,
    "imagesNoAlt": 0,
    "imagesEmptyAlt": 0,
    "jsonld": [
@@ -366,19 +361,20 @@
    "contact": [
     "tel:16765",
     "mailto:info@meghna-executive.com",
+    "tel:01886000555",
     "mailto:info@bmw.com.bd"
    ],
    "forms": 1,
    "docWidth": 360,
    "vw": 360,
-   "words": 457
+   "words": 406
   },
   {
    "url": "http://localhost:3200/houses/executive-machines",
    "status": 200,
    "finalUrl": "http://localhost:3200/houses/executive-machines",
    "rawH1": 1,
-   "rawTextChars": 3745,
+   "rawTextChars": 3726,
    "title": "Executive Machines: Apple Authorised Reseller · Meghna Executive Holdings",
    "description": "Apple in Bangladesh, sold and serviced since 2009. Executive Machines brought Apple’s products to Bangladesh in 2009. It is one of the country’s longest-standing authorised resellers, and an authorised service provider.",
    "robots": null,
@@ -391,7 +387,7 @@
     "H1: Executive Machines",
     "H2: I Trading · Executive Machines Ltd.",
     "H2: Now in store",
-    "H2: Plates",
+    "H2: Gallery",
     "H2: Visit and enquire",
     "H3: Write to Executive Machines"
    ],
@@ -412,16 +408,16 @@
    "forms": 1,
    "docWidth": 360,
    "vw": 360,
-   "words": 416
+   "words": 371
   },
   {
    "url": "http://localhost:3200/houses/executive-lifestyles",
    "status": 200,
    "finalUrl": "http://localhost:3200/houses/executive-lifestyles",
    "rawH1": 1,
-   "rawTextChars": 3664,
+   "rawTextChars": 3574,
    "title": "Executive Lifestyles: KOHLER in Bangladesh · Meghna Executive Holdings",
-   "description": "KOHLER’s exclusive home in Bangladesh since 2015. Executive Lifestyles is the sole importer of KOHLER, the ultra-luxury bath and kitchen brand: faucets, showering, bathtubs and intelligent toilets.",
+   "description": "The authorised KOHLER distributor in Bangladesh. Executive Lifestyles is the sole importer of KOHLER, the ultra-luxury bath and kitchen brand: faucets, showering, bathtubs and intelligent toilets.",
    "robots": null,
    "canonical": "https://meghna-executive.com/houses/executive-lifestyles",
    "lang": "en-GB",
@@ -432,7 +428,7 @@
     "H1: Executive Lifestyles",
     "H2: I Trading · Executive Lifestyles Ltd.",
     "H2: Bath and kitchen",
-    "H2: Plates",
+    "H2: Gallery",
     "H2: Visit and enquire",
     "H3: Write to Executive Lifestyles"
    ],
@@ -457,14 +453,14 @@
    "forms": 1,
    "docWidth": 360,
    "vw": 360,
-   "words": 394
+   "words": 337
   },
   {
    "url": "http://localhost:3200/houses/penthouse-livings",
    "status": 200,
    "finalUrl": "http://localhost:3200/houses/penthouse-livings",
    "rawH1": 1,
-   "rawTextChars": 3462,
+   "rawTextChars": 3449,
    "title": "Penthouse Livings: Trading · Meghna Executive Holdings",
    "description": "Bangladesh’s first luxury lifestyle houseware. Penthouse Livings brings international furniture and home accessories from Italy, the USA and Germany to Bangladesh.",
    "robots": null,
@@ -476,8 +472,8 @@
    "headings": [
     "H1: Penthouse Livings",
     "H2: I Trading · Penthouse Livings Ltd.",
-    "H2: The houses we carry",
-    "H2: Plates",
+    "H2: The brands we carry",
+    "H2: Gallery",
     "H2: Visit and enquire",
     "H3: Write to Penthouse Livings"
    ],
@@ -498,14 +494,14 @@
    "forms": 1,
    "docWidth": 360,
    "vw": 360,
-   "words": 376
+   "words": 332
   },
   {
    "url": "http://localhost:3200/houses/penthouse-interior",
    "status": 200,
    "finalUrl": "http://localhost:3200/houses/penthouse-interior",
    "rawH1": 1,
-   "rawTextChars": 3496,
+   "rawTextChars": 3508,
    "title": "Penthouse Interior: Trading · Meghna Executive Holdings",
    "description": "Do everything once, do it right. Penthouse Interior designs and builds residential, office and commercial interiors. The team includes designers from Dubai and international consultants.",
    "robots": null,
@@ -518,7 +514,7 @@
     "H1: Penthouse Interior",
     "H2: I Trading · Penthouse Interior",
     "H2: Service portfolio",
-    "H2: Plates",
+    "H2: Gallery",
     "H2: Visit and enquire",
     "H3: Write to Penthouse Interior"
    ],
@@ -533,21 +529,22 @@
    "contact": [
     "tel:16765",
     "tel:01313798340",
-    "mailto:info@meghna-executive.com"
+    "mailto:info@meghna-executive.com",
+    "mailto:info@penthouselivings.com"
    ],
    "forms": 1,
    "docWidth": 360,
    "vw": 360,
-   "words": 378
+   "words": 333
   },
   {
    "url": "http://localhost:3200/houses/meghna-knit-composite",
    "status": 200,
    "finalUrl": "http://localhost:3200/houses/meghna-knit-composite",
    "rawH1": 1,
-   "rawTextChars": 3838,
+   "rawTextChars": 3845,
    "title": "Meghna Knit Composite: Apparel · Meghna Executive Holdings",
-   "description": "Vertically integrated knitwear, from yarn to finished garment. Meghna Knit Composite knits, dyes, cuts, prints, embroiders and stitches under one roof, with advanced equipment and a highly skilled workforce.",
+   "description": "Vertically integrated knitwear, from knitting to finished garment. Meghna Knit Composite knits, dyes, cuts, prints, embroiders and stitches in-house, with advanced equipment and a highly skilled workforce.",
    "robots": null,
    "canonical": "https://meghna-executive.com/houses/meghna-knit-composite",
    "lang": "en-GB",
@@ -557,8 +554,8 @@
    "headings": [
     "H1: Meghna Knit Composite",
     "H2: I Apparel · Meghna Knit Composite Ltd.",
-    "H2: The detail",
-    "H2: Plates",
+    "H2: Facts and figures",
+    "H2: Gallery",
     "H2: Visit and enquire",
     "H3: Write to Meghna Knit Composite"
    ],
@@ -577,14 +574,14 @@
    "forms": 1,
    "docWidth": 360,
    "vw": 360,
-   "words": 433
+   "words": 388
   },
   {
    "url": "http://localhost:3200/houses/meghna-dresses",
    "status": 200,
    "finalUrl": "http://localhost:3200/houses/meghna-dresses",
    "rawH1": 1,
-   "rawTextChars": 3100,
+   "rawTextChars": 3124,
    "title": "Meghna Dresses: Apparel · Meghna Executive Holdings",
    "description": "Circular knits for H&M and Next. Meghna Dresses cuts, prints and stitches circular knits (tees, joggers and kids’ wear) for H&M and Next.",
    "robots": null,
@@ -596,8 +593,8 @@
    "headings": [
     "H1: Meghna Dresses",
     "H2: I Apparel · Meghna Dresses Ltd.",
-    "H2: The detail",
-    "H2: Plates",
+    "H2: Facts and figures",
+    "H2: Gallery",
     "H2: Visit and enquire",
     "H3: Write to Meghna Dresses"
    ],
@@ -616,14 +613,14 @@
    "forms": 1,
    "docWidth": 360,
    "vw": 360,
-   "words": 322
+   "words": 284
   },
   {
    "url": "http://localhost:3200/houses/executive-intimates",
    "status": 200,
    "finalUrl": "http://localhost:3200/houses/executive-intimates",
    "rawH1": 1,
-   "rawTextChars": 3311,
+   "rawTextChars": 3339,
    "title": "Executive Intimates: Apparel · Meghna Executive Holdings",
    "description": "Intimate apparel, made in a LEED Gold factory. Executive Intimates makes bras, briefs, maternity wear and soft basics for M&S, Primark, Lidl and Perry Ellis.",
    "robots": null,
@@ -635,8 +632,8 @@
    "headings": [
     "H1: Executive Intimates",
     "H2: I Apparel · Executive Intimates Ltd.",
-    "H2: The detail",
-    "H2: Plates",
+    "H2: Facts and figures",
+    "H2: Gallery",
     "H2: Visit and enquire",
     "H3: Write to Executive Intimates"
    ],
@@ -655,14 +652,14 @@
    "forms": 1,
    "docWidth": 360,
    "vw": 360,
-   "words": 347
+   "words": 307
   },
   {
    "url": "http://localhost:3200/houses/executive-hi-fashions",
    "status": 200,
    "finalUrl": "http://localhost:3200/houses/executive-hi-fashions",
    "rawH1": 1,
-   "rawTextChars": 3210,
+   "rawTextChars": 3234,
    "title": "Executive Hi Fashions: Apparel · Meghna Executive Holdings",
    "description": "Circular knits, cut by Gerber and Lectra. Executive Hi Fashions knits, cuts and stitches tees, hoodies, joggers and ladies’ wear for M&S, P&C, Tesco, Mayoral and Matalan.",
    "robots": null,
@@ -674,8 +671,8 @@
    "headings": [
     "H1: Executive Hi Fashions",
     "H2: I Apparel · Executive Hi Fashions Ltd.",
-    "H2: The detail",
-    "H2: Plates",
+    "H2: Facts and figures",
+    "H2: Gallery",
     "H2: Visit and enquire",
     "H3: Write to Executive Hi Fashions"
    ],
@@ -694,14 +691,14 @@
    "forms": 1,
    "docWidth": 360,
    "vw": 360,
-   "words": 333
+   "words": 295
   },
   {
    "url": "http://localhost:3200/houses/sublime-greentex",
    "status": 200,
    "finalUrl": "http://localhost:3200/houses/sublime-greentex",
    "rawH1": 1,
-   "rawTextChars": 3292,
+   "rawTextChars": 3308,
    "title": "Sublime Greentex: Apparel · Meghna Executive Holdings",
    "description": "Sustainable knitwear from a LEED Gold factory. Sublime Greentex cuts and stitches tees, polos, hoodies, joggers and kids’ wear for M&S, Gina Tricot, Primark and Lidl.",
    "robots": null,
@@ -713,8 +710,8 @@
    "headings": [
     "H1: Sublime Greentex",
     "H2: I Apparel · Sublime Greentex Ltd.",
-    "H2: The detail",
-    "H2: Plates",
+    "H2: Facts and figures",
+    "H2: Gallery",
     "H2: Visit and enquire",
     "H3: Write to Sublime Greentex"
    ],
@@ -733,14 +730,14 @@
    "forms": 1,
    "docWidth": 360,
    "vw": 360,
-   "words": 351
+   "words": 313
   },
   {
    "url": "http://localhost:3200/houses/executive-greentex",
    "status": 200,
    "finalUrl": "http://localhost:3200/houses/executive-greentex",
    "rawH1": 1,
-   "rawTextChars": 3378,
+   "rawTextChars": 3402,
    "title": "Executive Greentex: Apparel · Meghna Executive Holdings",
    "description": "Eco-friendly garments from a LEED Platinum facility. Executive Greentex knits, dyes, cuts, embroiders and stitches polos, nightwear, hoodies, skirts and knitted bottoms for M&S, H&M, Decathlon, Varner, Tesco and Stanley & Stella.",
    "robots": null,
@@ -752,8 +749,8 @@
    "headings": [
     "H1: Executive Greentex",
     "H2: I Apparel · Executive Greentex Ltd.",
-    "H2: The detail",
-    "H2: Plates",
+    "H2: Facts and figures",
+    "H2: Gallery",
     "H2: Visit and enquire",
     "H3: Write to Executive Greentex"
    ],
@@ -772,16 +769,16 @@
    "forms": 1,
    "docWidth": 360,
    "vw": 360,
-   "words": 355
+   "words": 317
   },
   {
    "url": "http://localhost:3200/houses/siam-bangla-industries",
    "status": 200,
    "finalUrl": "http://localhost:3200/houses/siam-bangla-industries",
    "rawH1": 1,
-   "rawTextChars": 3600,
+   "rawTextChars": 3692,
    "title": "Siam Bangla Industries: Industrial · Meghna Executive Holdings",
-   "description": "White Elephant and White Tiger, Bangladesh’s white cement. With technology and support from Thailand’s Siam Cement Group, Siam Bangla produces premium white cement under the White Elephant and White Tiger brands.",
+   "description": "White Elephant and White Tiger: a leading position in Bangladesh’s white cement market. With technology and support from Thailand’s Siam Cement Group, Siam Bangla produces premium white cement under the White Elephant and White Tiger brands.",
    "robots": null,
    "canonical": "https://meghna-executive.com/houses/siam-bangla-industries",
    "lang": "en-GB",
@@ -791,8 +788,8 @@
    "headings": [
     "H1: Siam Bangla Industries",
     "H2: I Industrial · Siam Bangla Industries Ltd.",
-    "H2: The detail",
-    "H2: Plates",
+    "H2: Facts and figures",
+    "H2: Gallery",
     "H2: Visit and enquire",
     "H3: Write to Siam Bangla Industries"
    ],
@@ -812,16 +809,16 @@
    "forms": 1,
    "docWidth": 360,
    "vw": 360,
-   "words": 382
+   "words": 356
   },
   {
    "url": "http://localhost:3200/houses/executive-woodworks",
    "status": 200,
    "finalUrl": "http://localhost:3200/houses/executive-woodworks",
    "rawH1": 1,
-   "rawTextChars": 3691,
+   "rawTextChars": 3719,
    "title": "Executive Woodworks: Industrial · Meghna Executive Holdings",
-   "description": "Furniture for the West, made in Gazipur. Executive Woodworks is a 100% export-oriented furniture maker. Its 680,000 sq ft facility ships five 40-ft HC containers a day, mainly to the USA, against an annual export target of US$70 million.",
+   "description": "Furniture for the West, made in Gazipur. Executive Woodworks is a 100% export-oriented furniture maker. Its 680,000 sq ft facility exports to the Western market, particularly the USA, with a daily capacity of five 40-ft HC containers and an annual export target of US$70 million.",
    "robots": null,
    "canonical": "https://meghna-executive.com/houses/executive-woodworks",
    "lang": "en-GB",
@@ -831,8 +828,8 @@
    "headings": [
     "H1: Executive Woodworks",
     "H2: I Industrial · Executive Woodworks Ltd.",
-    "H2: The detail",
-    "H2: Plates",
+    "H2: Facts and figures",
+    "H2: Gallery",
     "H2: Visit and enquire",
     "H3: Write to Executive Woodworks"
    ],
@@ -851,16 +848,16 @@
    "forms": 1,
    "docWidth": 360,
    "vw": 360,
-   "words": 413
+   "words": 372
   },
   {
    "url": "http://localhost:3200/houses/meghna-bearing-industries",
    "status": 200,
    "finalUrl": "http://localhost:3200/houses/meghna-bearing-industries",
    "rawH1": 1,
-   "rawTextChars": 3411,
+   "rawTextChars": 3503,
    "title": "Meghna Bearing Industries: Industrial · Meghna Executive Holdings",
-   "description": "Precision bearings for the machinery that runs Bangladesh. Meghna Bearing Industries makes and supplies precision bearings for heavy manufacturing, automotive, construction, textiles, agriculture, energy, ports, and steel and cement plants.",
+   "description": "Precision bearings for Bangladesh’s most critical industrial sectors. Meghna Bearing Industries makes and supplies precision bearings for heavy manufacturing, automotive, construction, textiles, agriculture, energy, ports, and steel and cement plants.",
    "robots": null,
    "canonical": "https://meghna-executive.com/houses/meghna-bearing-industries",
    "lang": "en-GB",
@@ -870,8 +867,8 @@
    "headings": [
     "H1: Meghna Bearing Industries",
     "H2: I Industrial · Meghna Bearing Industries Ltd.",
-    "H2: The detail",
-    "H2: Plates",
+    "H2: Facts and figures",
+    "H2: Gallery",
     "H2: Visit and enquire",
     "H3: Write to Meghna Bearing Industries"
    ],
@@ -886,19 +883,21 @@
    "contact": [
     "tel:16765",
     "tel:01681748404",
-    "mailto:info@meghna-executive.com"
+    "mailto:info@meghna-executive.com",
+    "tel:01304095553",
+    "mailto:mdshazzadurrahmanresvi@gmail.com"
    ],
    "forms": 1,
    "docWidth": 360,
    "vw": 360,
-   "words": 345
+   "words": 313
   },
   {
    "url": "http://localhost:3200/houses/executive-gourmet",
    "status": 200,
    "finalUrl": "http://localhost:3200/houses/executive-gourmet",
    "rawH1": 1,
-   "rawTextChars": 3176,
+   "rawTextChars": 3201,
    "title": "Executive Gourmet: Service · Meghna Executive Holdings",
    "description": "Slaw Bistro: the group’s first table. Executive Gourmet is the group’s move into dining. Its flagship, Slaw Bistro, is a contemporary bistro built on three things in equal measure: cuisine, ambience and hospitality.",
    "robots": null,
@@ -911,7 +910,7 @@
     "H1: Executive Gourmet",
     "H2: I Service · Executive Gourmet Ltd.",
     "H2: At Slaw Bistro",
-    "H2: Plates",
+    "H2: Gallery",
     "H2: Visit and enquire",
     "H3: Write to Executive Gourmet"
    ],
@@ -926,19 +925,20 @@
    "contact": [
     "tel:16765",
     "tel:01886032265",
-    "mailto:info@meghna-executive.com"
+    "mailto:info@meghna-executive.com",
+    "mailto:slawdhk@gmail.com"
    ],
    "forms": 1,
    "docWidth": 360,
    "vw": 360,
-   "words": 332
+   "words": 294
   },
   {
    "url": "http://localhost:3200/journal/penthouse-livings-driving-the-luxury-furniture-trend-in-bangladesh",
    "status": 200,
    "finalUrl": "http://localhost:3200/journal/penthouse-livings-driving-the-luxury-furniture-trend-in-bangladesh",
    "rawH1": 1,
-   "rawTextChars": 6887,
+   "rawTextChars": 6883,
    "title": "Penthouse Livings: Driving the luxury furniture trend in Bangladesh · Meghna Executive Holdings",
    "description": "Penthouse Livings is a place where luxury and style come together effortlessly. It’s a destination for anyone who loves beautiful, high-quality furnishings.…",
    "robots": null,
@@ -977,14 +977,14 @@
    "forms": 0,
    "docWidth": 360,
    "vw": 360,
-   "words": 947
+   "words": 906
   },
   {
    "url": "http://localhost:3200/journal/retail-next-by-bmw",
    "status": 200,
    "finalUrl": "http://localhost:3200/journal/retail-next-by-bmw",
    "rawH1": 1,
-   "rawTextChars": 6494,
+   "rawTextChars": 6490,
    "title": "Retail.Next by BMW: An Unmatched Retail Experience · Meghna Executive Holdings",
    "description": "Imagine entering a place that feels alive, welcoming, and designed just for you. That’s what BMW’s Retail.Next concept brings to life. Located at Meghna Tower…",
    "robots": null,
@@ -1020,14 +1020,14 @@
    "forms": 0,
    "docWidth": 360,
    "vw": 360,
-   "words": 945
+   "words": 904
   },
   {
    "url": "http://localhost:3200/journal/exploring-the-iphone-16-the-future-of-smartphones-with-executive-machines",
    "status": 200,
    "finalUrl": "http://localhost:3200/journal/exploring-the-iphone-16-the-future-of-smartphones-with-executive-machines",
    "rawH1": 1,
-   "rawTextChars": 8048,
+   "rawTextChars": 8044,
    "title": "Exploring the iPhone 16: The Future of Smartphones with Executive Machines · Meghna Executive Holdings",
    "description": "Smartphones are always changing, and Apple is right there leading the way. The iPhone 16 is a perfect example of how Apple continues to push boundaries with new…",
    "robots": null,
@@ -1065,14 +1065,14 @@
    "forms": 0,
    "docWidth": 360,
    "vw": 360,
-   "words": 1196
+   "words": 1155
   },
   {
    "url": "http://localhost:3200/journal/the-first-ever-fully-electric-bmw-i7-sedan",
    "status": 200,
    "finalUrl": "http://localhost:3200/journal/the-first-ever-fully-electric-bmw-i7-sedan",
    "rawH1": 1,
-   "rawTextChars": 6918,
+   "rawTextChars": 6914,
    "title": "The First Ever Fully Electric BMW i7 Sedan · Meghna Executive Holdings",
    "description": "Electric vehicles are changing the way we think about cars. They’re no longer just about being eco-friendly—they’re about combining sustainability with…",
    "robots": null,
@@ -1109,14 +1109,14 @@
    "forms": 0,
    "docWidth": 360,
    "vw": 360,
-   "words": 1018
+   "words": 977
   },
   {
    "url": "http://localhost:3200/journal/mehs-approach-to-modern-manufacturing",
    "status": 200,
    "finalUrl": "http://localhost:3200/journal/mehs-approach-to-modern-manufacturing",
    "rawH1": 1,
-   "rawTextChars": 4390,
+   "rawTextChars": 4384,
    "title": "MEH’s Approach to Modern Manufacturing · Meghna Executive Holdings",
    "description": "In an era marked by rapid advancements and increasing demand for sustainable practices, MEH exemplifies a modern approach to manufacturing that balances…",
    "robots": null,
@@ -1146,14 +1146,14 @@
    "forms": 0,
    "docWidth": 360,
    "vw": 360,
-   "words": 502
+   "words": 461
   },
   {
    "url": "http://localhost:3200/journal/create-your-dream-bathroom-with-executive-lifestyles-limited",
    "status": 200,
    "finalUrl": "http://localhost:3200/journal/create-your-dream-bathroom-with-executive-lifestyles-limited",
    "rawH1": 1,
-   "rawTextChars": 7506,
+   "rawTextChars": 7501,
    "title": "Create Your Dream Bathroom with Executive Lifestyles Limited · Meghna Executive Holdings",
    "description": "We all want a bathroom that gives us some personal space – a place where we can refresh and get some peace of mind. Imagine a bathroom that looks beautiful,…",
    "robots": null,
@@ -1189,14 +1189,14 @@
    "forms": 0,
    "docWidth": 360,
    "vw": 360,
-   "words": 1065
+   "words": 1023
   },
   {
    "url": "http://localhost:3200/journal/the-evolution-of-meghna-executive-holdings",
    "status": 200,
    "finalUrl": "http://localhost:3200/journal/the-evolution-of-meghna-executive-holdings",
    "rawH1": 1,
-   "rawTextChars": 2849,
+   "rawTextChars": 2843,
    "title": "The Evolution of Meghna Executive Holdings · Meghna Executive Holdings",
    "description": "Meghna Executive Holdings (MEH) has undergone a remarkable transformation since its inception, emerging as a leader across various industries. From its humble…",
    "robots": null,
@@ -1226,14 +1226,14 @@
    "forms": 0,
    "docWidth": 360,
    "vw": 360,
-   "words": 303
+   "words": 262
   },
   {
    "url": "http://localhost:3200/journal/solar-power-implementation-in-manufacturing-units",
    "status": 200,
    "finalUrl": "http://localhost:3200/journal/solar-power-implementation-in-manufacturing-units",
    "rawH1": 1,
-   "rawTextChars": 3433,
+   "rawTextChars": 3427,
    "title": "Solar Power Implementation in Manufacturing Units · Meghna Executive Holdings",
    "description": "As industries increasingly seek sustainable solutions to reduce their carbon footprint and energy costs, the implementation of solar power in manufacturing…",
    "robots": null,
@@ -1263,14 +1263,14 @@
    "forms": 0,
    "docWidth": 360,
    "vw": 360,
-   "words": 376
+   "words": 335
   },
   {
    "url": "http://localhost:3200/journal/carbon-footprint-reduction-in-transportation",
    "status": 200,
    "finalUrl": "http://localhost:3200/journal/carbon-footprint-reduction-in-transportation",
    "rawH1": 1,
-   "rawTextChars": 3551,
+   "rawTextChars": 3545,
    "title": "Carbon Footprint Reduction in Transportation · Meghna Executive Holdings",
    "description": "The transportation sector is a significant contributor to global carbon emissions, making the reduction of its carbon footprint a critical challenge for…",
    "robots": null,
@@ -1300,14 +1300,14 @@
    "forms": 0,
    "docWidth": 360,
    "vw": 360,
-   "words": 389
+   "words": 348
   },
   {
    "url": "http://localhost:3200/journal/green-supply-chain-development-in-bangladesh",
    "status": 200,
    "finalUrl": "http://localhost:3200/journal/green-supply-chain-development-in-bangladesh",
    "rawH1": 1,
-   "rawTextChars": 3829,
+   "rawTextChars": 3823,
    "title": "Green Supply Chain Development in Bangladesh · Meghna Executive Holdings",
    "description": "As Bangladesh continues to emerge as a key player in the global manufacturing and export markets, the importance of developing a green supply chain has never…",
    "robots": null,
@@ -1337,14 +1337,14 @@
    "forms": 0,
    "docWidth": 360,
    "vw": 360,
-   "words": 425
+   "words": 384
   },
   {
    "url": "http://localhost:3200/journal/local-water-conservation-and-harvesting-project",
    "status": 200,
    "finalUrl": "http://localhost:3200/journal/local-water-conservation-and-harvesting-project",
    "rawH1": 1,
-   "rawTextChars": 3928,
+   "rawTextChars": 3922,
    "title": "Local Water Conservation and Harvesting Project · Meghna Executive Holdings",
    "description": "The Local Water Conservation and Harvesting Project aims to address the growing challenges of water scarcity and environmental degradation through sustainable…",
    "robots": null,
@@ -1374,14 +1374,14 @@
    "forms": 0,
    "docWidth": 360,
    "vw": 360,
-   "words": 442
+   "words": 401
   },
   {
    "url": "http://localhost:3200/journal/zero-waste-garment-production-initiative",
    "status": 200,
    "finalUrl": "http://localhost:3200/journal/zero-waste-garment-production-initiative",
    "rawH1": 1,
-   "rawTextChars": 4032,
+   "rawTextChars": 4026,
    "title": "Zero-Waste Garment Production Initiative · Meghna Executive Holdings",
    "description": "The Zero-Waste Garment Production Initiative is a groundbreaking effort aimed at revolutionizing the fashion and textile industry by eliminating waste at every…",
    "robots": null,
@@ -1411,7 +1411,7 @@
    "forms": 0,
    "docWidth": 360,
    "vw": 360,
-   "words": 459
+   "words": 418
   }
  ],
  "notInList": []

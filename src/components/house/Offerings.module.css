@@ -98,3 +98,22 @@ a.cardLink:hover .media img {
     column-gap: var(--col-gap);
   }
 }
+
+/* Phones: the whole line-up at a glance, two to a row (as the live site shows its models). */
+@media (max-width: 767px) {
+  .rail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 12px;
+    overflow: visible;
+    scroll-snap-type: none;
+    margin-inline: 0;
+    padding: 4px 0 8px;
+  }
+  .card {
+    min-width: 0;
+  }
+  .name {
+    font-size: 1rem;
+  }
+}

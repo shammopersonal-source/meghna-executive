@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="container">
         <div className={styles.cta}>
           <span className={styles.rest} aria-hidden="true" />
-          <p className="label muted">Where the currents meet</p>
+          <p className="label muted">Contact</p>
           <Link href="/contact" className={styles.ctaLink}>
             Start a conversation
             <span className="arrow" aria-hidden="true" />
