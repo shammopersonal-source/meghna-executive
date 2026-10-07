@@ -6,6 +6,8 @@ import SectionHead from "@/components/page/SectionHead";
 import ChapterSpine from "@/components/monograph/ChapterSpine";
 import HouseIndex from "@/components/home/HouseIndex";
 import { toIndexHouses } from "@/lib/index-houses";
+import JsonLd from "@/components/seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 import { houses, sectors } from "@/content/houses";
 import styles from "./page.module.css";
 
@@ -26,6 +28,12 @@ export default function HousesPage() {
   const order = sectors.flatMap((s) => houses.filter((h) => h.sector === s.id).map((h) => h.slug));
   return (
     <main id="main" data-mat-bg="#f1f0ee">
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Houses", path: "/houses" },
+        ])}
+      />
       <ChapterSpine chapters={chapters} />
       <PageHero
         kicker="The Houses"

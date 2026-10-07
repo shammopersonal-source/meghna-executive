@@ -525,6 +525,15 @@ Total unique assets: 426
 | THUMB | 340×227 | https://cms.meghna-executive.com/admin/uploads/brandproduct/bmw-xm/1733141839xOHjL.webp |
 | HERO | 1920×1080 | https://cms.meghna-executive.com/admin/uploads/brandproduct/bmw-xm/1737636335gGQRj.webp |
 
+## brandproduct/demo (BMW 3 Series Sedan)
+
+Found on the live Executive Motors page on 7 Oct 2026, where the 291px file is the 3 Series card.
+
+| Tier | Size (px) | URL |
+|---|---|---|
+| CARD | 800×364 | https://cms.meghna-executive.com/admin/uploads/brandproduct/demo/1733137510F6FTP.webp |
+| THUMB | 291×194 | https://cms.meghna-executive.com/admin/uploads/brandproduct/demo/1733137476XwDBI.webp |
+
 ## brandproduct/bmw7-series-sedan
 
 | Tier | Size (px) | URL |

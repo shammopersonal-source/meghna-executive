@@ -36,7 +36,8 @@ export default function Figure({
       </div>
       <figcaption className="caption">
         <span className="fig">Fig. {fig}</span>
-        <span>{caption}</span>
+        {/* When the caption repeats the alt text, screen readers hear it once (from the image). */}
+        <span aria-hidden={caption === media.alt ? true : undefined}>{caption}</span>
       </figcaption>
     </figure>
   );

@@ -12,6 +12,11 @@ export const CMS_UPLOADS =
   process.env.QA_LOCAL_MEDIA === "1" ? "/__qa-media/" : "https://cms.meghna-executive.com/admin/uploads/";
 
 export const mediaRegistry: Record<string, readonly [path: string, width: number, height: number]> = {
+  // Partner marks from the live home page (white, for dark grounds). Width/height are the SVG viewBox.
+  "1730470036tBz7q": ["page/home-page/1730470036tBz7q.svg", 60, 60],
+  "1730470036vE86X": ["page/home-page/1730470036vE86X.svg", 138.559, 30],
+  "1730470036QjL0R": ["page/home-page/1730470036QjL0R.svg", 207.748, 60],
+  "1730470036JuN6A": ["page/home-page/1730470036JuN6A.svg", 98.576, 80],
   "1729593232xt8oD": ["page/home-page/1729593232xt8oD.webp", 300, 360],
   "1729593263wemHB": ["page/home-page/1729593263wemHB.webp", 200, 200],
   "1729595355PdpH8": ["page/about-us/1729595355PdpH8.webp", 345, 476],
@@ -126,6 +131,8 @@ export const mediaRegistry: Record<string, readonly [path: string, width: number
   "17331363904QNxu": ["unit/executive-motors-ltd/17331363904QNxu.webp", 563, 1218],
   "1733136390tEtHV": ["unit/executive-motors-ltd/1733136390tEtHV.webp", 2049, 1152],
   "173313865615vSO": ["brandproduct/bmw7-series-sedan/173313865615vSO.webp", 800, 364],
+  // BMW 3 Series Sedan: the live site shows this car from its "demo" folder (291px); this is the 800px original.
+  "1733137510F6FTP": ["brandproduct/demo/1733137510F6FTP.webp", 800, 364],
   "17331386569UqDM": ["brandproduct/bmw7-series-sedan/17331386569UqDM.webp", 291, 194],
   "1733141628tFgau": ["brandproduct/bmw-x1/1733141628tFgau.webp", 340, 227],
   "1733141839xOHjL": ["brandproduct/bmw-xm/1733141839xOHjL.webp", 340, 227],

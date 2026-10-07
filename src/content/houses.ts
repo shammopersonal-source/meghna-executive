@@ -93,6 +93,7 @@ export const houses: House[] = [
         name: "BMW 3 Series Sedan",
         tag: "Plug-in Hybrid",
         href: "https://www.bmw.com.bd/models/bmw-3-series-sedan-overview/",
+        image: media("1733137510F6FTP", "BMW 3 Series Sedan, front view, under a concrete canopy.", P),
       },
       {
         name: "BMW i5",

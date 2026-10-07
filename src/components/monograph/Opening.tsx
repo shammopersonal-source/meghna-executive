@@ -3,6 +3,7 @@ import { openingStatement } from "@/content/group";
 import { videos } from "@/content/media";
 import OpeningMotion from "./OpeningMotion";
 import OpeningFilm from "./OpeningFilm";
+import PartnerMarks from "./PartnerMarks";
 import styles from "./Opening.module.css";
 
 /**
@@ -63,6 +64,7 @@ export default function Opening() {
       <div className={styles.statement} data-op-statement>
         <p className="smallcaps muted">Foreword</p>
         <p className={styles.statementText}>{openingStatement}</p>
+        <PartnerMarks />
       </div>
       <OpeningMotion />
     </section>

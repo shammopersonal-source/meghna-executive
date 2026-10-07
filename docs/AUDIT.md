@@ -123,7 +123,7 @@ Measured with `qa/contact-path.mjs`:
 2. **Premium, licensed typography.** Banana Grotesk with PP Migra Italic accents. It already feels expensive.
 3. **A contact block and enquiry form on every unit page**, with unit-specific phones, emails and showroom addresses (Executive Lifestyles lists three showrooms).
 4. **Hotline 16765 in the desktop header** and in every footer.
-5. **Thirteen articles** in the Media Center: launches (BMW i7, Retail.Next, iPhone 16), furniture and bathroom guides, and five sustainability pieces.
+5. **Twelve articles** in the Media Center: launches (BMW i7, Retail.Next, iPhone 16), furniture and bathroom guides, and five sustainability pieces.
 6. **A complete footer**: address, email, hotline, four social profiles (Facebook, Instagram, LinkedIn, YouTube), and links to every section.
 7. **Unique, descriptive page titles** and correct canonical tags.
 8. **CMS-driven.** The owner's team edits content in an admin panel (`cms.meghna-executive.com`).

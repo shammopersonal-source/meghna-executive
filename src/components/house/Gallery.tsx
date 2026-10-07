@@ -4,8 +4,8 @@ import styles from "./Gallery.module.css";
 
 /**
  * Plates with numbered captions: alternating widths on desktop, a swipe rail
- * on phones. The caption carries the description, so images are never upscaled
- * past their source width.
+ * on phones. Tiles are never wider than their source image, so nothing is
+ * upscaled. The caption repeats the alt text visibly.
  */
 export default function Gallery({ images, label, start = 1 }: { images: Media[]; label: string; start?: number }) {
   return (
@@ -13,7 +13,7 @@ export default function Gallery({ images, label, start = 1 }: { images: Media[];
       {images.map((m, i) => (
         <li key={m.src} className={styles.item} style={{ maxWidth: `min(100%, ${m.width}px)` }}>
           <Figure
-            media={{ ...m, alt: "" }}
+            media={m}
             fig={String(start + i).padStart(2, "0")}
             caption={m.alt}
             sizes="(max-width: 767px) 80vw, (max-width: 1179px) 50vw, 40vw"

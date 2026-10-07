@@ -6,6 +6,8 @@
   scroll-snap-type: x mandatory;
   padding: 4px var(--gutter) 24px;
   margin-inline: calc(var(--gutter) * -1);
+  /* Snap to the gutter, not the screen edge. */
+  scroll-padding-inline: var(--gutter);
   scrollbar-width: thin;
   scrollbar-color: var(--line) transparent;
 }

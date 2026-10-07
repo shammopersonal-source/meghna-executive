@@ -34,7 +34,7 @@ export default function CareersPage() {
           {careers.images.map((m, i) => (
             <li key={m.src} className={styles.tile} data-tile={i}>
               <Figure
-                media={{ ...m, alt: "" }}
+                media={m}
                 fig={String(i + 1).padStart(2, "0")}
                 caption={m.alt}
                 sizes="(max-width: 767px) 50vw, 25vw"
