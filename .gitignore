@@ -16,3 +16,5 @@ next-env.d.ts
 # Raw Lighthouse reports (~1 MB each); medians are committed
 docs/audit/lh/*.json
 !docs/audit/lh/*-medians.json
+docs/audit/lh/**/*.json
+!docs/audit/lh/**/*-medians.json
