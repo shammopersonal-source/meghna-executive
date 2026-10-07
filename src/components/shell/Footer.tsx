@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
 
           {sectors.map((s) => (
-            <nav key={s.id} className={styles.col} aria-label={`${s.label} houses`}>
+            <nav key={s.id} className={styles.col} data-sector aria-label={`${s.label} companies`}>
               <p className="label muted">{s.label}</p>
               <ul role="list">
                 {houses
@@ -92,7 +92,7 @@ export default function Footer() {
         <p>
           © {year} {site.name}. Since {site.founded}.
         </p>
-        <p className="muted">All imagery courtesy of the group’s houses and partners.</p>
+        <p className="muted">All imagery courtesy of the group’s companies and partners.</p>
       </div>
     </footer>
   );

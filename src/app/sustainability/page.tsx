@@ -36,8 +36,8 @@ export default function SustainabilityPage() {
       <ChapterSpine chapters={chapters} />
       <PageHero
         kicker="Sustainability"
-        lines={["Leave the river", "cleaner than", "we found it."]}
-        lead="At MEH, sustainability isn’t a programme. It is how every house is expected to build, source and grow."
+        lines={["Crafting a legacy", "of sustainability."]}
+        lead="At Meghna Executive Holdings, sustainability forms the essence of our business philosophy."
         image={riverImage}
         caption="A river winding through forest."
       />

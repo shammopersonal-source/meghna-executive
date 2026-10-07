@@ -2,10 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 20px clamp(28px, 4vw, 48px);
-  padding-top: 28px;
-  margin-top: 8px;
-  border-top: 1px solid rgb(255 255 255 / 0.16);
+  gap: 14px clamp(24px, 3vw, 40px);
 }
 .mark {
   display: flex;
@@ -25,21 +22,31 @@
 }
 /* Optical sizes: a roundel, a wordmark, a lock-up and a monogram read at different heights. */
 .marks li:nth-child(1) img {
-  height: 44px;
+  height: 38px;
 }
 .marks li:nth-child(2) img {
-  height: 20px;
+  height: 17px;
 }
 .marks li:nth-child(3) img {
-  height: 36px;
+  height: 31px;
 }
 .marks li:nth-child(4) img {
-  height: 46px;
+  height: 40px;
 }
 @media (max-width: 479px) {
   .marks {
-    display: grid;
-    grid-template-columns: repeat(2, max-content);
-    column-gap: 40px;
+    gap: 10px 22px;
+  }
+  .marks li:nth-child(1) img {
+    height: 30px;
+  }
+  .marks li:nth-child(2) img {
+    height: 14px;
+  }
+  .marks li:nth-child(3) img {
+    height: 26px;
+  }
+  .marks li:nth-child(4) img {
+    height: 32px;
   }
 }

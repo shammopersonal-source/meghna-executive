@@ -20,10 +20,10 @@ export default function NotFound() {
         <p className="lead muted">The page you were looking for has moved or no longer exists.</p>
         <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
           <Link href="/" className="btn">
-            Back to the river
+            Back to the home page
           </Link>
           <Link href="/houses" className="btn">
-            See all houses
+            See all our companies
           </Link>
         </div>
       </div>

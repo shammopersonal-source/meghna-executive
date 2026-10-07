@@ -11,17 +11,18 @@ import styles from "./Plates.module.css";
  */
 export default function Plates({ plates }: { plates: Plate[] }) {
   return (
-    <ol className={styles.plates} role="list" aria-label="The houses">
+    <ol className={styles.plates} role="list" aria-label="Our companies">
       {plates.map((p, i) => (
         <li key={p.slug} className={`theme-ink ${styles.plate}`} data-recede>
           <div className={styles.media} data-recede-media>
-            <Img media={p.image} sizes="100vw" quality={75} />
+            {/* Portrait screens crop a landscape plate by height, so width follows the viewport height. */}
+            <Img media={p.image} sizes="(max-aspect-ratio: 4/5) 150vh, 100vw" quality={75} />
           </div>
           <div className={styles.shade} aria-hidden="true" />
           <div className={styles.dim} data-recede-shade aria-hidden="true" />
           <div className={styles.caption}>
             <p className={styles.count} aria-hidden="true">
-              <span>{String(i + 1).padStart(2, "0")}</span> / {String(plates.length).padStart(2, "0")}
+              <span>{String(i + 1).padStart(2, "0")}</span>
             </p>
             <h3 className={styles.name}>{p.name}</h3>
             <p className="smallcaps">{p.meta}</p>

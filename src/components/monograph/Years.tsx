@@ -12,12 +12,13 @@ const DIGITS = "0123456789".split("");
  * mechanical calendar while the photograph and caption change beneath it.
  * Phones, tablets and no-JS: the same milestones as a quiet vertical register.
  */
-export default function Years({ items, id = "years" }: { items: Milestone[]; id?: string }) {
+/** `phoneLimit`: on phones, show only the first N milestones and link to the full list on The Group. */
+export default function Years({ items, id = "years", phoneLimit }: { items: Milestone[]; id?: string; phoneLimit?: number }) {
   const first = String(items[0].year);
   return (
     <section id={id} className={`theme-ink grain ${styles.years}`} aria-labelledby={`${id}-title`}>
       <div className={`container ${styles.head}`}>
-        <p className="smallcaps muted">The register</p>
+        <p className="smallcaps muted">Milestones</p>
         <h3 id={`${id}-title`} className={styles.heading}>
           {items[0].year} to {items[items.length - 1].year}
         </h3>
@@ -43,7 +44,13 @@ export default function Years({ items, id = "years" }: { items: Milestone[]; id?
 
       <ol className={styles.list} role="list">
         {items.map((m, i) => (
-          <li key={m.year + m.title} className={styles.item} data-year-item={i} data-on={i === 0 ? "" : undefined}>
+          <li
+            key={m.year + m.title}
+            className={styles.item}
+            data-year-item={i}
+            data-on={i === 0 ? "" : undefined}
+            data-phone-extra={phoneLimit !== undefined && i >= phoneLimit ? "" : undefined}
+          >
             <p className={styles.year}>{m.year}</p>
             <div className={styles.media}>
               <Img media={m.image} sizes="(max-width: 767px) 104px, (max-width: 1023px) 90vw, 44vw" quality={75} />
@@ -56,13 +63,20 @@ export default function Years({ items, id = "years" }: { items: Milestone[]; id?
               <p className="muted">{m.text}</p>
               {m.house ? (
                 <Link href={`/houses/${m.house}`} className="link">
-                  The house <span className="arrow" aria-hidden="true" />
+                  The company <span className="arrow" aria-hidden="true" />
                 </Link>
               ) : null}
             </div>
           </li>
         ))}
       </ol>
+      {phoneLimit !== undefined && items.length > phoneLimit ? (
+        <p className={`container ${styles.all}`}>
+          <Link href="/group#register" className="link">
+            All {items.length} milestones <span className="arrow" aria-hidden="true" />
+          </Link>
+        </p>
+      ) : null}
       <div className={styles.ticks} aria-hidden="true">
         {items.map((m, i) => (
           <i key={m.year + m.title} data-tick={i} data-on={i === 0 ? "" : undefined} />

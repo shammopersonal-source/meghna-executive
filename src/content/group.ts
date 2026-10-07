@@ -32,31 +32,11 @@ export const confluencePanels: { house: string; label: string; partner: string; 
   {
     house: "penthouse-livings",
     label: "Penthouse Livings",
-    partner: "50+ furniture houses",
+    partner: "50+ furniture brands",
     image: media("1730192732MG7WR", "A warm-lit living room with ivory sofas and backlit shelving.", {
       focus: "55% 50%",
     }),
   },
-];
-
-export const manifesto =
-  "Rivers don’t compete. They converge. Since 1965, Meghna Executive Holdings has brought BMW, Apple and KOHLER to Bangladesh, and taken Bangladeshi craft to the world. Fifteen houses. Four sectors. One current.";
-
-export type LedgerStat = {
-  value: number;
-  /** How the final value is written, e.g. "680,000" or "1.5M". */
-  display: string;
-  label: string;
-  source: string;
-};
-
-export const ledger: LedgerStat[] = [
-  { value: 1965, display: "1965", label: "Founded", source: "The Group" },
-  { value: 15, display: "15", label: "Houses", source: "Across four sectors" },
-  { value: 680000, display: "680,000", label: "Sq ft under one roof", source: "Executive Woodworks" },
-  { value: 1.5, display: "1.5M", label: "Garments a month", source: "Executive Greentex" },
-  { value: 17, display: "17", label: "Global apparel buyers", source: "M&S, H&M, Primark and more" },
-  { value: 5, display: "5", label: "40-ft containers shipped a day", source: "Executive Woodworks" },
 ];
 
 export type Milestone = { year: number; title: string; text: string; image: Media; house?: string };
@@ -66,7 +46,7 @@ export const timeline: Milestone[] = [
   {
     year: 1965,
     title: "The group is founded",
-    text: "Meghna Executive Holdings begins, and grows into one of Bangladesh’s most diversified business groups.",
+    text: "Meghna Executive Holdings is founded, and becomes a significant force in Bangladesh’s business landscape, across diverse industries.",
     image: media("1729596289Iz5If", "The group’s head-office tower lit at dusk."),
   },
   {
@@ -99,7 +79,7 @@ export const timeline: Milestone[] = [
   },
   {
     year: 2014,
-    title: "A second apparel house",
+    title: "Meghna Dresses",
     text: "Meghna Dresses launches, expanding the group’s manufacturing capability.",
     image: media("1733314441EFAAv", "A long sewing line at Meghna Dresses."),
     house: "meghna-dresses",
@@ -114,7 +94,7 @@ export const timeline: Milestone[] = [
   {
     year: 2017,
     title: "LEED Gold",
-    text: "Sublime Greentex launches as a LEED Gold-certified factory.",
+    text: "Sublime Greentex’s factory is certified LEED Gold, awarded in November 2017.",
     image: media("17295961379VCFz", "The glass-fronted Sublime Greentex factory."),
     house: "sublime-greentex",
   },
@@ -142,14 +122,14 @@ export const timeline: Milestone[] = [
 ];
 
 export const mission =
-  "To raise the standard of every industry we touch. We bring world-class products and services to Bangladesh, build long partnerships with global brands, and hold ourselves to trust, integrity and sustainability in all of it.";
+  "To elevate the standards of luxury and innovation across every industry we touch: world-class products and services, long-term relationships with global brands, and the values of trust, excellence and sustainability.";
 
 export const vision =
-  "To shape the future of luxury and industry in Bangladesh and beyond, and to be the most trusted name in every field we serve, for generations.";
+  "To lead in shaping the future of luxury and innovation in Bangladesh and beyond, and to become the most trusted name in the industries we serve.";
 
 export const groupStory = [
-  "Meghna Executive Holdings began in 1965. Six decades on, it spans luxury automobiles, consumer technology, bath and kitchen, furniture and interiors, knitwear manufacturing, white cement, export furniture, precision bearings and, most recently, dining.",
-  "Each house is run to its own partner’s or buyer’s standard, whether that is BMW, Apple, KOHLER, M&S or H&M, and to the group’s standard of trust.",
+  "Meghna Executive Holdings was founded in 1965. With a legacy of more than 50 years, it spans luxury automobiles, consumer technology, bath and kitchen, furniture and interiors, knitwear manufacturing, white cement, export furniture, precision bearings and, most recently, dining.",
+  "Each business adheres to the highest standards of craftsmanship and service, guided by a timeless legacy of trust.",
 ];
 
 /* ------------------------------------------------------------ Sustainability */
@@ -176,31 +156,31 @@ export const sustainabilityPillars = [
 export const initiatives: { date: string; title: string; slug: string; image: Media }[] = [
   {
     date: "2024-11-12",
-    title: "Solar power in our manufacturing units",
+    title: "Solar power implementation in manufacturing units",
     slug: "solar-power-implementation-in-manufacturing-units",
     image: media("1730724700sLxre", "An engineer with a tablet walking between rows of solar panels."),
   },
   {
     date: "2024-11-08",
-    title: "Cutting the carbon footprint of transportation",
+    title: "Carbon footprint reduction in transportation",
     slug: "carbon-footprint-reduction-in-transportation",
     image: media("173072483093ZPR", "A lorry on a forest road seen from above at dusk."),
   },
   {
     date: "2024-10-10",
-    title: "A green supply chain for Bangladesh",
+    title: "Green supply chain development in Bangladesh",
     slug: "green-supply-chain-development-in-bangladesh",
     image: media("1730725145w67HY", "Aerial view of a factory surrounded by green fields."),
   },
   {
     date: "2024-10-04",
-    title: "Local water conservation and harvesting",
+    title: "Local water conservation and harvesting project",
     slug: "local-water-conservation-and-harvesting-project",
     image: media("1730725506c8MxK", "Hands cupping clean water under a running tap."),
   },
   {
     date: "2024-09-12",
-    title: "Zero-waste garment production",
+    title: "Zero-waste garment production initiative",
     slug: "zero-waste-garment-production-initiative",
     image: media("1730522664dKB0O", "A cotton tote printed with the recycling symbol."),
   },
@@ -209,7 +189,7 @@ export const initiatives: { date: string; title: string; slug: string; image: Me
 export const certifications = [
   { name: "LEED Platinum", where: "Executive Greentex" },
   { name: "LEED Gold", where: "Sublime Greentex, Executive Intimates (Nov 2017)" },
-  { name: "GOTS · OEKO-TEX · OCS", where: "Across the apparel houses" },
+  { name: "GOTS · OEKO-TEX · OCS", where: "Meghna Knit Composite, Executive Intimates, Executive Hi Fashions, Sublime Greentex, Executive Greentex" },
   { name: "FSC timber · Fair Trade USA", where: "Executive Woodworks" },
   { name: "ISO 14001", where: "Siam Bangla Industries" },
 ];
@@ -222,7 +202,7 @@ export const responsibilities: { n: string; kicker: string; title: string; text:
     kicker: "Since 2015",
     title: "The Marks & Start training centre",
     text: [
-      "Marks & Start is Marks & Spencer’s programme in Bangladesh with the Centre for the Rehabilitation of the Paralysed (CRP). Since 2006 it has trained more than 1,200 people with physical disabilities and helped them into the garment industry.",
+      "Marks & Start is Marks & Spencer’s programme in Bangladesh with the Centre for the Rehabilitation of the Paralysed (CRP). Since its inception in 2006, the programme has trained and integrated over 1,200 individuals into the workforce.",
       "Meghna Knit Composite joined in 2015, donating two sewing machines to expand the training centre at Gonokbari, Savar.",
     ],
     image: media("1733310566ecnJt", "Machinists at their stations on the Meghna Knit Composite floor."),
@@ -240,7 +220,7 @@ export const responsibilities: { n: string; kicker: string; title: string; text:
   {
     n: "03",
     kicker: "2007",
-    title: "Flood relief in the north",
+    title: "Flood relief, 2007",
     text: [
       "When floods swept Bangladesh in 2007, the group sent food and medical supplies to families in Paikchora, Vungmorara and Kurigram.",
     ],
@@ -252,7 +232,7 @@ export const responsibilities: { n: string; kicker: string; title: string; text:
 
 export const careers = {
   intro:
-    "Our people are how a 1965 company stays modern. We look for people who value growth, craft and responsibility, and give them room to make a real impact.",
+    "Join a team that values growth, innovation and excellence. We are committed to empowering talent and fostering a collaborative environment where you can thrive and make a real impact.",
   philosophy: [
     "Our HR philosophy is built on nurturing talent, investing in professional development and keeping an inclusive culture.",
     "We give people the tools and support to excel, and we take work-life balance, diversity and career progression seriously.",
@@ -284,29 +264,27 @@ export const contactMapImage = media("1737663666wpS2I", "Street map of Nikunja-2
 /* ===================================================================== Monograph (home) */
 
 export const homeChapters = [
-  { id: "origins", numeral: "I", title: "Origins" },
-  { id: "houses", numeral: "II", title: "The Houses" },
+  { id: "origins", numeral: "I", title: "Our story" },
+  { id: "houses", numeral: "II", title: "Our companies" },
   { id: "made", numeral: "III", title: "Made in Bangladesh" },
-  { id: "stewardship", numeral: "IV", title: "Stewardship" },
-  { id: "correspondence", numeral: "V", title: "Correspondence" },
+  { id: "correspondence", numeral: "IV", title: "News" },
 ] as const;
 
 export const openingStatement =
-  "Since 1965 the group has grown into fifteen houses: Bangladesh’s home of BMW and KOHLER, an authorised Apple partner, a maker of knitwear for Europe’s high streets, and a producer of the country’s white cement.";
+  "Founded in 1965, the group has grown into fifteen companies: the exclusive distributor of BMW and KOHLER in Bangladesh, an authorised Apple reseller, a maker of knitwear for global buyers such as M&S and H&M, and a leading producer of white cement.";
 
 export const chapterLines: Record<string, string> = {
-  origins: "Founded in 1965, built one house at a time.",
-  houses: "Fifteen houses, each run to the standard of its partner.",
-  made: "Knit, dyed, cut and sewn in Gazipur. Worn across Europe.",
-  stewardship: "What we build should leave the river cleaner than we found it.",
-  correspondence: "News from the houses, and an open door.",
+  origins: "Founded in 1965, built one company at a time.",
+  houses: "Fifteen companies across trading, apparel, industry and service.",
+  made: "Knit, dyed, cut and sewn in Gazipur for global buyers.",
+  correspondence: "News from our companies.",
 };
 
 /** Calm figures: set, not counted. All from the live site. */
 export const figures: { value: string; label: string; note: string }[] = [
-  { value: "1965", label: "Established", note: "Dhaka, Bangladesh" },
-  { value: "15", label: "Houses", note: "Across four sectors" },
-  { value: "17", label: "Global apparel buyers", note: "From M&S to Decathlon" },
+  { value: "1965", label: "Founded", note: "More than 50 years of excellence" },
+  { value: "15", label: "Companies", note: "Across four sectors" },
+  { value: "2002", label: "BMW in Bangladesh", note: "Executive Motors" },
   { value: "680,000", label: "Square feet", note: "Executive Woodworks, Gazipur" },
 ];
 
@@ -335,8 +313,8 @@ export const housePlates: Plate[] = [
   {
     slug: "executive-lifestyles",
     name: "Executive Lifestyles",
-    meta: "Trading · KOHLER · Since 2015",
-    line: "KOHLER’s exclusive home in Bangladesh, with three showrooms across Dhaka.",
+    meta: "Trading · KOHLER",
+    line: "The authorised KOHLER distributor in Bangladesh, in Banani, Uttara and Hatirpool.",
     href: "/houses/executive-lifestyles",
     image: media("1733229778NCTMz", "A KOHLER bathroom at night, the city glowing through tall windows.", {
       partner: true,
@@ -356,13 +334,13 @@ export const housePlates: Plate[] = [
     slug: "penthouse-livings",
     name: "Penthouse Livings",
     meta: "Trading · Since 2019",
-    line: "Bangladesh’s first luxury lifestyle houseware, from more than fifty international furniture houses.",
+    line: "Bangladesh’s first luxury lifestyle houseware, with over 50 world-famous furniture brands.",
     href: "/houses/penthouse-livings",
     image: media("1730192732MG7WR", "A warm-lit living room with ivory sofas and backlit shelving."),
   },
   {
     slug: "apparel",
-    name: "Six apparel houses",
+    name: "Six apparel companies",
     meta: "Apparel · Gazipur",
     line: "Knitwear made for M&S, H&M, Primark, Tesco and Lidl, in factories certified LEED Gold and Platinum.",
     href: "/houses#apparel",

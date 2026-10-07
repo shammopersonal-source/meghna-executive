@@ -1,6 +1,6 @@
 # Questions for Meghna Executive Holdings
 
-Items the rebuild needs the group to confirm or supply. Nothing on the new site is invented. Where the current site contradicts itself, the rebuild uses the house page's own figure, and the item is listed here.
+Items the rebuild needs the group to confirm or supply. Nothing on the new site should be invented. Where the current site contradicts itself, the rebuild uses the house page's own figure, and the item is listed here.
 
 ## A. Facts that conflict on the current site
 
@@ -14,14 +14,19 @@ Items the rebuild needs the group to confirm or supply. Nothing on the new site 
 | 6 | Executive Greentex | "LEED **Platinum**" | LEED Platinum | Confirm, and the year awarded |
 | 7 | "The Evolution of MEH" article | Mentions "real estate, packaging, and logistics" | Article kept verbatim | These sectors appear nowhere else on the site. Keep, edit or retire the article? |
 | 8 | BMW i7 article | Two sections repeat the same two paragraphs | Duplicate removed | OK? |
-| 9 | **Executive Motors phone** | The page **shows 16765** but the link **dials 01886000555** | **16765** shown and dialled | Which number should BMW customers call? |
+| 9 | **Executive Motors phone** | The page **shows 16765** but the link **dials 01886000555** | Both shown, each dialling itself; the call buttons use 16765 | Which number should BMW customers call first? |
 | 10 | Broken contact links | `tel:undefined` and `mailto:undefined` links on 30 of 33 pages (empty CMS fields) | Not reproduced | None needed; listed so your team knows |
 | 11 | Sustainability "initiative" articles | Five general essays (solar power, transport carbon, green supply chain, water harvesting, zero-waste garments) with no MEH-specific facts | Kept verbatim at their old addresses, linked from Sustainability | Can you add what MEH actually did for each (sites, dates, results)? That would turn them into proof. |
+| 12 | **KOHLER since 2013 or 2015?** | About timeline: **2015**. Executive Lifestyles page: "authorized KOHLER® distributor in Bangladesh **since 2013**" and "for over a decade" | No year on the Lifestyles hero; the timeline keeps 2015 | Which year is correct? |
+| 13 | **Executive Lifestyles showrooms** | The bathroom article: "showrooms in two great locations, Banani and Uttara". The unit page lists Banani (office), Uttara (showroom) and Hatirpool (address) | "Locations in Banani, Uttara and Hatirpool" | How many are showrooms? |
+| 14 | **Years** | "50+ Years Of Excellence" and "more than 50 years", though 1965 to 2025 is 60 | "More than 50 years" | May the site say "60 years" or "six decades"? |
+| 15 | **ISO 14000:2015** (Executive Woodworks) | "ISO 14000:2015 (EMS)" | Copied as published | ISO 14000 is a family; the certifiable standard is ISO 14001:2015. Please confirm the certificate |
+| 16 | **Meghna Dresses as the "second" apparel company** | About: "launched its second apparel production Brand, Meghna Dresses Ltd., in 2014". Other apparel companies are dated 2005 | The milestone reads "Meghna Dresses" without "second" | Which was the second? |
 
 ## B. Content to supply
 
 1. **Leadership.** Names, roles, portraits and 60-word biographies (a placeholder is in place on /group).
-2. **Meghna Bearing Industries.** The original brief flagged it as having no description, but the live site now has one (founded 1997), and the rebuild uses it. Please confirm the copy, and supply a public contact email. The site lists a personal Gmail address, which the rebuild does not publish.
+2. **Meghna Bearing Industries.** The original brief flagged it as having no description, but the live site now has one (founded 1997), and the rebuild uses it. Please confirm the copy. The live page lists a personal Gmail address and two numbers; the redesign shows them as published, but a company address would be better for a public page.
 3. **Showroom hours** for every location (BMW Retail.Next, the three Executive Machines stores, the three Executive Lifestyles showrooms, Penthouse Banani, Slaw Bistro).
 4. **Open roles** for /careers, with title, house, location and how to apply. Or confirm the "send your CV" route.
 5. **Executive Machines' public email**, for enquiry routing.

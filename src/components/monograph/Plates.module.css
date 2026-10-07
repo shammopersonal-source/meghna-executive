@@ -69,7 +69,16 @@
   color: var(--pure);
 }
 @media (max-width: 767px) {
+  /* Phones: a little under a screen each, so the next plate is already in view and the page stays shorter. */
+  .plate {
+    height: 82svh;
+    min-height: 520px;
+  }
   .caption {
-    bottom: var(--pill-clear);
+    bottom: 36px;
+  }
+  /* Phones keep the four trading plates; apparel, industry and the bistro are in the directory and in Made. */
+  .plate:nth-child(n + 5) {
+    display: none;
   }
 }

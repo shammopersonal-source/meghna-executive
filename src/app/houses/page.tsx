@@ -38,7 +38,7 @@ export default function HousesPage() {
       <PageHero
         kicker="The Houses"
         lines={["Fifteen houses,", "four sectors."]}
-        lead="Exclusive partners to BMW and KOHLER, and an authorised Apple partner. Knitwear for Europe’s high streets. White cement, export furniture, precision bearings, and a bistro."
+        lead="Exclusive partners to BMW and KOHLER, and an authorised Apple partner. Knitwear for global buyers. White cement, export furniture, precision bearings, and a bistro."
       />
 
       {sectors.map((s, si) => (
@@ -66,7 +66,6 @@ export default function HousesPage() {
                           />
                         </div>
                         <p className="caption">
-                          <span className="fig">Fig. {String(fig).padStart(2, "0")}</span>
                           <span>
                             {h.partner ? `${h.partner} · ` : ""}
                             {h.founded ? `Since ${h.founded}` : s.label}

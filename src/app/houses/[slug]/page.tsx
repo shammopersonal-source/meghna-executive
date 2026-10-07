@@ -51,8 +51,8 @@ export default async function HousePage({ params }: PageProps<"/houses/[slug]">)
   const sections: [string, string, boolean][] = [
     ["overview", "Overview", true],
     ["offerings", house.offeringsTitle ?? "Offerings", !!house.offerings?.length],
-    ["specs", "The detail", !!(house.facts?.length || house.capacities?.length)],
-    ["gallery", "Plates", house.gallery.length > 0],
+    ["specs", "At a glance", !!(house.facts?.length || house.capacities?.length)],
+    ["gallery", "Gallery", house.gallery.length > 0],
     ["visit", "Visit", true],
   ];
   const chapters: Chapter[] = sections
@@ -140,7 +140,7 @@ export default async function HousePage({ params }: PageProps<"/houses/[slug]">)
       {house.facts?.length || house.capacities?.length ? (
         <section className="section theme-bone" aria-labelledby="specs">
           <div className="container">
-            <SectionHead kicker="At a glance" id="specs" numeral={num("specs")} lines={["The detail"]} />
+            <SectionHead kicker="At a glance" id="specs" numeral={num("specs")} lines={["Facts and figures"]} />
             {house.facts?.length ? (
               <dl className={styles.facts}>
                 {house.facts.map((f) => (
@@ -168,7 +168,7 @@ export default async function HousePage({ params }: PageProps<"/houses/[slug]">)
       {house.gallery.length ? (
         <section className={`section ${mat.dark ? "theme-material" : "theme-bone"}`} aria-labelledby="gallery">
           <div className="container">
-            <SectionHead kicker="Gallery" id="gallery" numeral={num("gallery")} lines={["Plates"]} />
+            <SectionHead kicker="Gallery" id="gallery" numeral={num("gallery")} lines={["Gallery"]} />
             <Gallery images={house.gallery} label={`${house.name} gallery`} />
           </div>
         </section>
@@ -208,11 +208,11 @@ export default async function HousePage({ params }: PageProps<"/houses/[slug]">)
                 <p className="label muted">{l.label}</p>
                 <address>{l.address}</address>
                 <div className={styles.locLinks}>
-                  {l.phone ? (
-                    <a href={`tel:${l.phone.replace(/[^\d+]/g, "")}`} className="link" data-cta="hotline">
-                      {l.phone}
+                  {[l.phone, ...(l.morePhones ?? [])].filter(Boolean).map((ph) => (
+                    <a key={ph} href={`tel:${ph!.replace(/[^\d+]/g, "")}`} className="link" data-cta="hotline">
+                      {ph}
                     </a>
-                  ) : null}
+                  ))}
                   {l.email ? (
                     <a href={`mailto:${l.email}`} className="link">
                       {l.email}
@@ -228,8 +228,10 @@ export default async function HousePage({ params }: PageProps<"/houses/[slug]">)
             ))}
           </ul>
           <div className={styles.enquire} id="enquire">
-            <h3 className="h3">Write to {house.name.replace(/ Ltd\.$/, "")}</h3>
-            <p className="muted">Your message goes straight to this house.</p>
+            <h3 className="h3">
+              {house.enquireLabel ? `${house.enquireLabel}, or write to` : "Write to"} {house.name.replace(/ Ltd\.$/, "")}
+            </h3>
+            <p className="muted">Connect with us through the form below, or give us a call.</p>
             <EnquiryForm options={enquiryOptions} defaultHouse={house.slug} />
           </div>
         </div>
@@ -240,7 +242,7 @@ export default async function HousePage({ params }: PageProps<"/houses/[slug]">)
           <Img media={next.card} sizes="100vw" quality={60} />
         </div>
         <div className={`container ${styles.nextCopy}`}>
-          <p className="label">Next house</p>
+          <p className="label">Next company</p>
           <Lines as="p" className="display" lines={[next.name.replace(/ Ltd\.$/, "")]} />
           <span className={styles.nextArrow} aria-hidden="true">
             <span className="arrow" />

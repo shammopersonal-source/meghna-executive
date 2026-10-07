@@ -5,5 +5,5 @@ export const size = ogSize;
 export const contentType = ogContentType;
 
 export default function Image() {
-  return renderOg({ kicker: "Sustainability", title: "Leave the river", italic: "cleaner." });
+  return renderOg({ kicker: "Sustainability", title: "Crafting a legacy of", italic: "sustainability." });
 }

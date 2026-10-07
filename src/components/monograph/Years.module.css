@@ -239,3 +239,16 @@
     align-items: center;
   }
 }
+
+.all {
+  display: none;
+}
+@media (max-width: 767px) {
+  .item[data-phone-extra] {
+    display: none;
+  }
+  .all {
+    display: block;
+    padding-top: 24px;
+  }
+}

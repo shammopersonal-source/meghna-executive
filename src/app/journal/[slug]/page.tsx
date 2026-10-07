@@ -92,8 +92,8 @@ export default async function ArticlePage({ params }: PageProps<"/journal/[slug]
             })}
           </div>
           {house ? (
-            <aside className={styles.related} aria-label="Related house">
-              <p className="label muted">The house</p>
+            <aside className={styles.related} aria-label="Related company">
+              <p className="label muted">The company</p>
               <Link href={`/houses/${house.slug}`} className={styles.relatedCard}>
                 <div className={styles.relatedMedia}>
                   <Img media={house.card} sizes="320px" quality={60} />

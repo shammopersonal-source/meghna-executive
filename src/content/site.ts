@@ -3,7 +3,7 @@ export const site = {
   short: "MEH",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://meghna-executive.com",
   description:
-    "Meghna Executive Holdings: fifteen houses across trading, apparel, industry and hospitality. BMW, Apple and KOHLER in Bangladesh, and garments made for the world. Since 1965.",
+    "Meghna Executive Holdings: fifteen companies across trading, apparel, industry and hospitality. BMW, Apple and KOHLER in Bangladesh, and garments made for the world. Since 1965.",
   founded: 1965,
   hotline: "16765",
   hotlineHref: "tel:16765",

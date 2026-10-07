@@ -15,16 +15,15 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "The Group",
   description:
-    "Founded in 1965, Meghna Executive Holdings has grown into fifteen houses across luxury trading, apparel, industry and hospitality in Bangladesh.",
+    "Founded in 1965, Meghna Executive Holdings has grown into fifteen companies across luxury trading, apparel, industry and hospitality in Bangladesh.",
   alternates: { canonical: "/group" },
 };
 
 const chapters = [
   { id: "story", numeral: "I", title: "The story" },
   { id: "purpose", numeral: "II", title: "Purpose" },
-  { id: "register", numeral: "III", title: "The register" },
-  { id: "people", numeral: "IV", title: "The people" },
-  { id: "office", numeral: "V", title: "Head office" },
+  { id: "register", numeral: "III", title: "Milestones" },
+  { id: "office", numeral: "IV", title: "Head office" },
 ];
 
 export default function GroupPage() {
@@ -40,7 +39,7 @@ export default function GroupPage() {
       <PageHero
         kicker="The Group · Est. 1965"
         lines={["A pioneer in", "Bangladesh’s luxury", "landscape."]}
-        lead="Six decades, fifteen houses and one standard: the partner’s, the buyer’s and our own."
+        lead="More than 50 years, fifteen companies, four sectors."
         image={media("17376645482MKBG", "The BMW Retail.Next lounge at Meghna Tower.", { partner: true })}
         caption="BMW Retail.Next at Meghna Tower, Tejgaon. The showroom opened in 2023."
       />
@@ -80,19 +79,10 @@ export default function GroupPage() {
         <Years items={timeline} id="group-years" />
       </div>
 
-      <section className="section theme-bone" aria-labelledby="people">
-        <div className="container">
-          <SectionHead numeral="IV" kicker="The people" id="people" lines={["Leadership"]} />
-          <p className={styles.placeholder} role="note">
-            Leadership portraits and biographies will appear here once the group supplies them. See CLIENT_QUESTIONS.md.
-          </p>
-        </div>
-      </section>
-
       <section className="section theme-ink grain" aria-labelledby="office">
         <div className={`container ${styles.office}`}>
           <div>
-            <SectionHead numeral="V" kicker="Head office" id="office" lines={["Nikunja-2, Dhaka"]} />
+            <SectionHead numeral="IV" kicker="Head office" id="office" lines={["Nikunja-2, Dhaka"]} />
             <address className={styles.address}>
               {site.address.lines.map((l) => (
                 <span key={l}>{l}</span>

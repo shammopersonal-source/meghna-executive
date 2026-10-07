@@ -26,7 +26,6 @@ export default function OpeningMotion() {
           scrollTrigger: { trigger: root, start: "top top", end: "+=110%", scrub: 1, pin: true, anticipatePin: 1 },
         });
         tl.fromTo(q("[data-op-title]"), { yPercent: 0, opacity: 1 }, { yPercent: -18, opacity: 0, duration: 0.35 }, 0)
-          .fromTo(q("[data-op-cue]"), { opacity: 1 }, { opacity: 0, duration: 0.15 }, 0)
           .fromTo(
             q("[data-op-frame]"),
             { clipPath: "inset(0% 0% 0% 0% round 0px)" },

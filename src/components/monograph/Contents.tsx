@@ -6,18 +6,19 @@ import styles from "./Contents.module.css";
 const short = (name: string) => name.replace(/ (Ltd\.|Limited)$/, "");
 
 /**
- * The monograph's contents page, which is also the directory. Most visitors
- * arrive with a task (call the BMW showroom, reach a factory), so every house
- * is one tap away, and the trading houses carry their partner and phone.
+ * The contents page, which is also the directory. Most visitors arrive with a
+ * task (call the BMW showroom, reach a factory), so every company is one tap
+ * away, and the trading companies carry their partner and phone. No years here:
+ * founding dates live in Milestones, so the page never states two for one company.
  */
 export default function Contents() {
   return (
     <section id="contents" className={`theme-bone ${styles.contents}`} aria-labelledby="contents-title">
       <div className="container">
         <header className={styles.head}>
-          <p className="smallcaps muted">Contents</p>
+          <p className="smallcaps muted">Find a company</p>
           <h2 id="contents-title" className={styles.title}>
-            Find a house
+            Our companies
           </h2>
         </header>
         <div className={styles.sectors}>
@@ -36,7 +37,7 @@ export default function Contents() {
                         <Link href={`/houses/${h.slug}`} className={styles.row}>
                           <span className={styles.name}>{short(h.name)}</span>
                           <span className={styles.leader} aria-hidden="true" />
-                          <span className={styles.year}>{h.founded ?? ""}</span>
+                          <span className="arrow" aria-hidden="true" />
                         </Link>
                         {h.partner || phone ? (
                           <p className={styles.sub}>

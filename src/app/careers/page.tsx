@@ -10,7 +10,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Careers",
   description:
-    "Grow with Meghna Executive Holdings: fifteen houses across automotive, technology, design, manufacturing and hospitality.",
+    "Grow with Meghna Executive Holdings: fifteen companies across automotive, technology, design, manufacturing and hospitality.",
   alternates: { canonical: "/careers" },
 };
 
@@ -65,7 +65,7 @@ export default function CareersPage() {
 
       <section className="section theme-ink grain" aria-labelledby="roles">
         <div className="container">
-          <SectionHead kicker="Open roles" id="roles" lines={["Join a house"]} />
+          <SectionHead kicker="Open roles" id="roles" lines={["Apply today"]} />
           {roles.length ? (
             <ul className={styles.roles} role="list">
               {roles.map((r) => (
@@ -82,8 +82,7 @@ export default function CareersPage() {
           ) : (
             <div className={styles.empty}>
               <p className="lead">
-                There are no open roles listed right now. We are always glad to meet exceptional people: send your CV
-                and tell us which house you would like to grow with.
+                Send your CV and tell us which of our companies you would like to join.
               </p>
               <a href={`mailto:${careers.applyEmail}?subject=${subject}`} className="btn" data-cta="career-apply">
                 Send your CV <span className="arrow" aria-hidden="true" />

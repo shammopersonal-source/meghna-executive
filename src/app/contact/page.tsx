@@ -33,7 +33,7 @@ export default async function ContactPage({ searchParams }: PageProps<"/contact"
           <p className="label muted">Contact</p>
           <Lines as="h1" immediate className="display" lines={["Get in", <>touch.</>]} />
           <p className={`lead ${styles.lead}`}>
-            Client, partner, investor or neighbour: we read every message, and route it to the right house.
+            Whether you are a client, partner, investor or member of the community, your inquiries and feedback are important to us.
           </p>
           <a href={site.hotlineHref} className={styles.hotline} data-cta="hotline">
             <span className="label muted">Hotline</span>

@@ -135,6 +135,10 @@
 }
 
 @media (max-width: 767px) {
+  /* Phones: the logo bar only sits on the first screen; once reading, the pill carries Call and Menu. */
+  .header[data-scrolled]:not([data-open]) {
+    transform: translateY(-110%);
+  }
   .bar {
     grid-template-columns: auto 1fr;
     height: 64px;

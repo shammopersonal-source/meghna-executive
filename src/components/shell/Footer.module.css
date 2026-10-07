@@ -137,3 +137,10 @@
   min-height: 44px;
   align-items: center;
 }
+
+@media (max-width: 767px) {
+  /* Phones: the company lists repeat the home directory and the menu; keep contact and the group links. */
+  .col[data-sector] {
+    display: none;
+  }
+}

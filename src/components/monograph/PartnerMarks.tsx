@@ -23,7 +23,7 @@ export default function PartnerMarks() {
         <li key={house}>
           <Link href={`/houses/${house}`} className={styles.mark}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={m.src} alt={m.alt} width={Math.round(m.width)} height={Math.round(m.height)} loading="lazy" decoding="async" />
+            <img src={m.src} alt={m.alt} width={Math.round(m.width)} height={Math.round(m.height)} decoding="async" fetchPriority="low" />
           </Link>
         </li>
       ))}

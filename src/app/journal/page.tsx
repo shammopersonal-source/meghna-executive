@@ -8,7 +8,7 @@ import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Journal",
-  description: "News, stories and films from the houses of Meghna Executive Holdings.",
+  description: "News, stories and films from the companies of Meghna Executive Holdings.",
   alternates: { canonical: "/journal" },
 };
 

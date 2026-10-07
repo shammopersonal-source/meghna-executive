@@ -49,10 +49,12 @@
 }
 .pair {
   display: grid;
-  gap: 48px var(--col-gap);
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
 @media (min-width: 768px) {
   .pair {
+    gap: 48px var(--col-gap);
     grid-template-columns: 5fr 1fr 4fr;
     align-items: start;
   }

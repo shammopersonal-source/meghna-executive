@@ -32,7 +32,7 @@ export default function ResponsibilityPage() {
         theme="ink"
         kicker="Responsibility"
         lines={["A brighter future,", "built with others."]}
-        lead="We work to enrich the communities around our houses and help people reach their full potential."
+        lead="We are devoted to cultivating a brighter future by enriching our communities and empowering individuals to realise their fullest potential."
       />
       {responsibilities.map((r, i) => (
         <article

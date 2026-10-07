@@ -45,7 +45,7 @@ export function maxDisplayWidth(m: Media) {
 }
 
 export type Video = {
-  /** AV1 (preferred) and H.264 fallback, both re-encoded to ≤4 MB from the CMS originals. */
+  /** AV1 (preferred) and H.264 fallback, re-encoded from the CMS originals (the opening film: 14 s at 720p, 0.8 / 1.3 MB). */
   av1: string;
   h264: string;
   poster: string;
@@ -58,7 +58,7 @@ export const videos = {
     h264: "/media/confluence-film.h264.mp4",
     poster: "/media/confluence-film.poster.jpg",
     label:
-      "A thirty-second film moving through the group's houses: a BMW 7 Series in mist, Penthouse Livings, a kitchen interior and Apple products.",
+      "A fourteen-second film from the group: braided river channels from above, the Penthouse Livings sign and a showroom interior.",
   },
   "executive-motors": {
     av1: "/media/executive-motors.av1.mp4",

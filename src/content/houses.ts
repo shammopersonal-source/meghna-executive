@@ -11,8 +11,8 @@ import { media, type Media, type Video, videos } from "./media";
 export type Sector = "trading" | "apparel" | "industrial" | "service";
 
 export const sectors: { id: Sector; label: string; line: string }[] = [
-  { id: "trading", label: "Trading", line: "Exclusive partners to global marques." },
-  { id: "apparel", label: "Apparel", line: "Knitwear made in Gazipur, worn across Europe." },
+  { id: "trading", label: "Trading", line: "Partners to global brands." },
+  { id: "apparel", label: "Apparel", line: "Knitwear made in Gazipur for global buyers." },
   { id: "industrial", label: "Industrial", line: "White cement, furniture and bearings." },
   { id: "service", label: "Service", line: "Hospitality, the newest current." },
 ];
@@ -31,13 +31,18 @@ export type Offering = {
 export type Location = {
   label: string;
   address: string;
+  /** The main number, as the live site shows it. */
   phone?: string;
+  /** Further numbers the live site publishes for this location. */
+  morePhones?: string[];
   email?: string;
   mapUrl?: string;
 };
 
 export type House = {
   slug: string;
+  /** The house's own call to action, where the live site has one (e.g. "Book a Test Drive" on Executive Motors). */
+  enquireLabel?: string;
   legacySlug: string;
   name: string;
   /** Name split for the headline treatment; `italic` is the single PP Migra word. */
@@ -70,6 +75,7 @@ export const houses: House[] = [
   /* ------------------------------------------------------------------ TRADING */
   {
     slug: "executive-motors",
+    enquireLabel: "Book a test drive",
     legacySlug: "executive-motors-ltd",
     name: "Executive Motors Ltd.",
     title: { before: "Executive", italic: "Motors" },
@@ -79,13 +85,12 @@ export const houses: House[] = [
     material: "graphite",
     positioning: "The exclusive home of BMW in Bangladesh since 2002.",
     intro: [
-      "Executive Motors has been Bangladesh’s exclusive BMW importer since 2002: sales, service and the full BMW ownership experience under one roof.",
+      "Executive Motors has been Bangladesh’s exclusive BMW importer since 2002: BMW vehicles and services, with comprehensive aftersales support.",
       "In 2023 it opened the BMW Retail.Next showroom at Meghna Tower, Tejgaon. It has dedicated delivery bays, configuration technology and furniture designed for the space.",
     ],
     stats: [
       { value: "2002", label: "Exclusive BMW importer since" },
       { value: "2023", label: "BMW Retail.Next showroom opens, Tejgaon" },
-      { value: "8", label: "Models in the current line-up" },
     ],
     offeringsTitle: "The line-up",
     offerings: [
@@ -157,6 +162,8 @@ export const houses: House[] = [
         label: "BMW Retail.Next, Meghna Tower",
         address: "187-188 B, Forum Meghna Tower, Bir Uttam Mir Shawkat Sarak, Tejgaon-Gulshan Link Road, Dhaka",
         phone: "16765",
+        // The live page shows 16765 but its link dials 01886000555; both are published (see CLIENT_QUESTIONS A9).
+        morePhones: ["01886-000555"],
         email: "info@bmw.com.bd",
         mapUrl: "https://maps.app.goo.gl/xsGHqEbfsC2ZHdVo8",
       },
@@ -236,18 +243,17 @@ export const houses: House[] = [
     name: "Executive Lifestyles Ltd.",
     title: { before: "Executive", italic: "Lifestyles" },
     sector: "trading",
-    founded: 2015,
+    // founded: 2015 or 2013? The live site says both (CLIENT_QUESTIONS A12); no year until confirmed.
     partner: "KOHLER",
     material: "porcelain",
-    positioning: "KOHLER’s exclusive home in Bangladesh since 2015.",
+    positioning: "The authorised KOHLER distributor in Bangladesh.",
     intro: [
       "Executive Lifestyles is the sole importer of KOHLER, the ultra-luxury bath and kitchen brand: faucets, showering, bathtubs and intelligent toilets.",
-      "Every project starts with a one-to-one design consultation, and you can see the products in person at three showrooms across Dhaka.",
+      "Executive Lifestyles offers a one-on-one design consultation, with locations in Banani, Uttara and Hatirpool.",
     ],
     stats: [
-      { value: "2015", label: "Exclusive KOHLER importer since" },
-      { value: "3", label: "Showrooms: Banani, Uttara, Hatirpool" },
-      { value: "1:1", label: "Design consultation on every project" },
+      { value: "3", label: "Locations: Banani, Uttara, Hatirpool" },
+      { value: "1:1", label: "Design consultation on offer" },
     ],
     offeringsTitle: "Bath and kitchen",
     offerings: [
@@ -313,14 +319,14 @@ export const houses: House[] = [
     positioning: "Bangladesh’s first luxury lifestyle houseware.",
     intro: [
       "Penthouse Livings brings international furniture and home accessories from Italy, the USA and Germany to Bangladesh.",
-      "The Banani flagship covers more than 20,000 square feet. Bespoke design services and large-project solutions sit alongside the collection.",
+      "The Banani showroom covers over 20,000 square feet. Bespoke design services and large-project solutions sit alongside the collection.",
     ],
     stats: [
       { value: "2019", label: "Established" },
       { value: "50+", label: "International furniture brands" },
-      { value: "20,000", label: "Sq ft flagship, Kamal Ataturk Avenue" },
+      { value: "20,000+", label: "Sq ft showroom, Kamal Ataturk Avenue" },
     ],
-    offeringsTitle: "The houses we carry",
+    offeringsTitle: "The brands we carry",
     offerings: [
       { name: "Poliform" },
       { name: "Boca do Lobo" },
@@ -342,7 +348,7 @@ export const houses: House[] = [
     video: videos["penthouse-livings"],
     locations: [
       {
-        label: "Banani flagship",
+        label: "Banani showroom",
         address: "Suvastu Suraiya Trade Center, Plot 57, Block B, Kamal Ataturk Avenue, Banani, Dhaka 1213",
         phone: "01313404804",
         email: "info@penthouselivings.com",
@@ -365,14 +371,14 @@ export const houses: House[] = [
     ],
     stats: [
       { value: "50+", label: "Furniture brands via Penthouse Livings" },
-      { value: "Dubai", label: "Designers and international consultants" },
+      { value: "Dubai", label: "Designers from" },
       { value: "1", label: "City-centre factory for custom work" },
     ],
     offeringsTitle: "Service portfolio",
     offerings: [
       { name: "Interior design & visualisation", note: "Immersive concepts before anything is built." },
-      { name: "Project management", note: "One team from brief to handover." },
-      { name: "Execution & joinery", note: "Artisans combining traditional craft with modern technique." },
+      { name: "Project management", note: "Meticulous project management and seamless execution." },
+      { name: "Execution", note: "Skilled artisans blend traditional craftsmanship with modern techniques." },
     ],
     hero: media("1730288481cB36U", "A calm stone-coloured room with a single armchair and a potted olive tree.", {
       focus: "70% 50%",
@@ -389,6 +395,7 @@ export const houses: House[] = [
         label: "Showroom",
         address: "Suvastu Suraiya Trade Center, Plot 57, Block B, Kamal Ataturk Avenue, Banani, Dhaka 1213",
         phone: "01313798340",
+        email: "info@penthouselivings.com",
       },
     ],
     website: { href: "https://www.penthouselivings.com/design-interior", label: "Penthouse Interior" },
@@ -403,15 +410,15 @@ export const houses: House[] = [
     sector: "apparel",
     founded: 2005,
     material: "cotton",
-    positioning: "Vertically integrated knitwear, from yarn to finished garment.",
+    positioning: "Vertically integrated knitwear, from knitting to finished garment.",
     intro: [
-      "Meghna Knit Composite knits, dyes, cuts, prints, embroiders and stitches under one roof, with advanced equipment and a highly skilled workforce.",
+      "Meghna Knit Composite knits, dyes, cuts, prints, embroiders and stitches in-house, with advanced equipment and a highly skilled workforce.",
       "It makes for M&S, H&M, Tesco and other global buyers, certified to ACCORD, GOTS and OEKO-TEX.",
     ],
     stats: [
       { value: "40", label: "Tons knitted per day" },
-      { value: "90,000", label: "Pieces sewn per day" },
-      { value: "6", label: "Processes under one roof" },
+      { value: "80,000", label: "Pieces sewn per day" },
+      { value: "6", label: "In-house processes" },
     ],
     facts: [
       { term: "Facilities", detail: "Knitting, dyeing, cutting, printing, embroidery, stitching" },
@@ -427,7 +434,8 @@ export const houses: House[] = [
       { value: "40 t/day", label: "Knitting" },
       { value: "35 t/day", label: "Dyeing" },
       { value: "45 t/day", label: "Fabric finishing" },
-      { value: "90,000 pcs/day", label: "Sewing" },
+      { value: "90,000 pcs/day", label: "Cutting" },
+      { value: "80,000 pcs/day", label: "Sewing" },
       { value: "250 units/day", label: "Sampling" },
     ],
     hero: media("17333062260s6Fl", "Aerial view of the Meghna Knit Composite factory with its striped facade."),
@@ -466,7 +474,7 @@ export const houses: House[] = [
       "Production follows ACCORD and SEDEX standards for labour, safety and environmental practice.",
     ],
     stats: [
-      { value: "0.5M", label: "Pieces per month" },
+      { value: "0.5M", label: "Monthly capacity, pieces" },
       { value: "4.5M", label: "Production minutes per month" },
       { value: "52", label: "Machines across 10 sewing lines" },
     ],
@@ -497,10 +505,10 @@ export const houses: House[] = [
     positioning: "Intimate apparel, made in a LEED Gold factory.",
     intro: [
       "Executive Intimates makes bras, briefs, maternity wear and soft basics for M&S, Primark, Lidl and Perry Ellis.",
-      "Its facility was certified LEED Gold in November 2017, with energy-efficient systems throughout.",
+      "Its facility, certified LEED Gold in November 2017, incorporates energy-efficient solutions.",
     ],
     stats: [
-      { value: "2.2M", label: "Pieces per month" },
+      { value: "2.2M", label: "Monthly capacity, panties/boxers" },
       { value: "613", label: "Sewing machines" },
       { value: "LEED Gold", label: "Certified November 2017" },
     ],
@@ -543,7 +551,7 @@ export const houses: House[] = [
       "Gerber CAD and Lectra auto-cutters keep fabric use to a minimum.",
     ],
     stats: [
-      { value: "0.8M", label: "Pieces per month" },
+      { value: "0.8M", label: "Monthly capacity, pieces" },
       { value: "18", label: "Knitting machines" },
       { value: "21", label: "Sewing lines" },
     ],
@@ -624,7 +632,7 @@ export const houses: House[] = [
       "Its facility holds LEED Platinum certification, along with ACCORD, GOTS, OEKO-TEX, BSCI and SEDEX.",
     ],
     stats: [
-      { value: "1.5M", label: "Pieces per month" },
+      { value: "1.5M", label: "Monthly capacity, pieces" },
       { value: "60,000", label: "Pieces cut per day" },
       { value: "LEED Platinum", label: "Certified facility" },
     ],
@@ -662,10 +670,10 @@ export const houses: House[] = [
     sector: "industrial",
     founded: 2003,
     material: "limestone",
-    positioning: "White Elephant and White Tiger, Bangladesh’s white cement.",
+    positioning: "White Elephant and White Tiger: a leading position in Bangladesh’s white cement market.",
     intro: [
       "With technology and support from Thailand’s Siam Cement Group, Siam Bangla produces premium white cement under the White Elephant and White Tiger brands.",
-      "Chemical engineers from Thailand test every batch hourly. Quality is controlled to ASTM, whiteness is measured by the Hunter Lab method, and BUET verifies regularly.",
+      "The cement’s physical and chemical properties are tested every hour by chemical engineers from Thailand. Quality is controlled to ASTM, whiteness is measured by the Hunter Lab method, and BUET verifies regularly.",
     ],
     stats: [
       { value: "Hourly", label: "Testing by chemical engineers from Thailand" },
@@ -711,12 +719,12 @@ export const houses: House[] = [
     material: "limestone",
     positioning: "Furniture for the West, made in Gazipur.",
     intro: [
-      "Executive Woodworks is a 100% export-oriented furniture maker. Its 680,000 sq ft facility ships five 40-ft HC containers a day, mainly to the USA, against an annual export target of US$70 million.",
+      "Executive Woodworks is a 100% export-oriented furniture maker. Its 680,000 sq ft facility exports to the Western market, particularly the USA, with a daily capacity of five 40-ft HC containers and an annual export target of US$70 million.",
       "It sources FSC-certified timber and natural materials like hogla, seagrass, bamboo and jute. It uses 6-axis CNC machining, and is Fair Trade USA certified, with daycare and breastfeeding rooms for the women who work there.",
     ],
     stats: [
       { value: "680,000", label: "Sq ft facility" },
-      { value: "5 × 40-ft", label: "HC containers shipped a day" },
+      { value: "5 × 40-ft", label: "HC containers, daily capacity" },
       { value: "US$70M", label: "Annual export target" },
     ],
     facts: [
@@ -750,15 +758,13 @@ export const houses: House[] = [
     sector: "industrial",
     founded: 1997,
     material: "limestone",
-    positioning: "Precision bearings for the machinery that runs Bangladesh.",
+    positioning: "Precision bearings for Bangladesh’s most critical industrial sectors.",
     intro: [
       "Meghna Bearing Industries makes and supplies precision bearings for heavy manufacturing, automotive, construction, textiles, agriculture, energy, ports, and steel and cement plants.",
-      "Every batch is checked from raw-material inspection through dimensional, load and hardness testing to a final audit before dispatch.",
+      "Quality is embedded into every stage: incoming checks on every batch of raw material, dimensional verification at each production stage, and load and durability tests for each bearing variant.",
     ],
     stats: [
       { value: "1997", label: "Founded" },
-      { value: "10", label: "Industries served" },
-      { value: "5", label: "Quality gates before dispatch" },
     ],
     facts: [
       {
@@ -767,7 +773,7 @@ export const houses: House[] = [
           "Heavy machinery, automotive assembly, construction and infrastructure, textile and garment machinery, agricultural equipment, pumps and compressors, power generation, conveyors, marine and port equipment, steel and cement plant machinery",
       },
       {
-        term: "Quality gates",
+        term: "Quality control",
         detail:
           "Raw-material inspection, dimensional accuracy, load and durability, surface finish and hardness, final audit before dispatch",
       },
@@ -775,7 +781,16 @@ export const houses: House[] = [
     hero: media("17851375978OmCd", "The long, bright assembly hall of Meghna Bearing Industries."),
     card: media("1786622230OUIG6", "Gloved hands inspecting a tapered roller bearing."),
     gallery: [media("1785138147CEBRY", "Ball and roller bearings stacked together.")],
-    locations: [{ label: "Works", address: "373 Tejgaon Industrial Area, Dhaka 1215", phone: "01681-748404" }],
+    locations: [
+      {
+        label: "Address",
+        address: "373 Tejgaon Industrial Area, Dhaka 1215",
+        phone: "01681-748404",
+        morePhones: ["01304-095553"],
+        // As published on the live page (a personal address; see CLIENT_QUESTIONS B2).
+        email: "mdshazzadurrahmanresvi@gmail.com",
+      },
+    ],
   },
 
   /* ------------------------------------------------------------------ SERVICE */
@@ -827,6 +842,7 @@ export const houses: House[] = [
         label: "Slaw Bistro",
         address: "187-188 B, Tejgaon Link Road, Meghna Tower Forum (Ground Floor), Dhaka 1215",
         phone: "01886-032265",
+        email: "slawdhk@gmail.com",
       },
     ],
     website: { href: "https://menu.apetitomenu.com/slawbistro/en/menu", label: "Online menu" },

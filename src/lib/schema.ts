@@ -64,6 +64,7 @@ export function houseSchema(h: House) {
       name: l.label,
       address: { "@type": "PostalAddress", streetAddress: l.address, addressCountry: "BD" },
       ...(l.phone ? { telephone: l.phone } : {}),
+      ...(l.email ? { email: l.email } : {}),
     })),
   };
 }

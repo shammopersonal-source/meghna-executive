@@ -7,7 +7,6 @@ import Figures from "@/components/monograph/Figures";
 import Years from "@/components/monograph/Years";
 import Plates from "@/components/monograph/Plates";
 import Made from "@/components/monograph/Made";
-import Stewardship from "@/components/monograph/Stewardship";
 import Correspondence from "@/components/monograph/Correspondence";
 import Contents from "@/components/monograph/Contents";
 import { chapterLines, figures, groupStory, homeChapters, housePlates, timeline } from "@/content/group";
@@ -16,7 +15,7 @@ import { site } from "@/content/site";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: { absolute: `${site.name}: fifteen houses, since 1965` },
+  title: { absolute: `${site.name}: BMW, Apple, KOHLER and more, since 1965` },
   description: site.description,
   alternates: { canonical: "/" },
 };
@@ -31,7 +30,7 @@ export default async function HomePage() {
       <Contents />
 
       <ChapterOpener id="origins" numeral={ch.origins.numeral} title={ch.origins.title} line={chapterLines.origins} />
-      <section className={`theme-bone ${styles.origins}`} aria-label="Origins">
+      <section className={`theme-bone ${styles.origins}`} aria-label="Our story">
         <div className={`container ${styles.story}`}>
           <p className={styles.storyLead} data-reveal="fade">
             {groupStory[0]}
@@ -44,7 +43,7 @@ export default async function HomePage() {
           <Figures items={figures} />
         </div>
       </section>
-      <Years items={timeline} />
+      <Years items={timeline} phoneLimit={6} />
 
       <ChapterOpener
         id="houses"
@@ -56,20 +55,13 @@ export default async function HomePage() {
       <Plates plates={housePlates} />
       <p className={`theme-ink ${styles.allHouses}`}>
         <Link href="/houses" className="link">
-          All fifteen houses, by sector <span className="arrow" aria-hidden="true" />
+          All fifteen companies, by sector <span className="arrow" aria-hidden="true" />
         </Link>
       </p>
 
       <ChapterOpener id="made" numeral={ch.made.numeral} title={ch.made.title} line={chapterLines.made} theme="paper" />
       <Made />
 
-      <ChapterOpener
-        id="stewardship"
-        numeral={ch.stewardship.numeral}
-        title={ch.stewardship.title}
-        line={chapterLines.stewardship}
-      />
-      <Stewardship />
 
       <ChapterOpener
         id="correspondence"

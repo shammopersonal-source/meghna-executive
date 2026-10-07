@@ -14,7 +14,7 @@ export default function HouseHero({ house }: { house: House }) {
     <header className={`theme-material grain ${styles.hero}`}>
       <div className={styles.media}>
         <div className={styles.parallax} data-parallax="0.18">
-          <Img media={house.hero} sizes="100vw" priority="high" quality={75} />
+          <Img media={house.hero} sizes="(max-aspect-ratio: 4/5) 100vh, 100vw" priority="high" quality={75} />
         </div>
         <div className={styles.shade} aria-hidden="true" />
       </div>
@@ -52,7 +52,7 @@ export default function HouseHero({ house }: { house: House }) {
             </div>
             {house.founded ? (
               <div className={house.partner ? undefined : styles.keep}>
-                <dt>Founded</dt>
+                <dt>{house.partner ? "Since" : "Founded"}</dt>
                 <dd>{house.founded}</dd>
               </div>
             ) : null}
@@ -75,7 +75,7 @@ export default function HouseHero({ house }: { house: House }) {
           ) : null}
           <li>
             <a href="#enquire" className="btn" data-cta="enquire">
-              Enquire
+              {house.enquireLabel ?? "Enquire"}
             </a>
           </li>
           {map ? (

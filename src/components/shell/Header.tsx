@@ -104,7 +104,7 @@ export default function Header({ houses }: { houses: MenuHouse[] }) {
             </a>
             <Link href="/houses" className={styles.housesLink}>
               <span className={styles.plus} aria-hidden="true" />
-              Houses
+              Our companies
             </Link>
           </div>
         </div>
