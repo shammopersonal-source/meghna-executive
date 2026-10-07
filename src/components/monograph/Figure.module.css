@@ -1,0 +1,23 @@
+.figure {
+  margin: 0;
+}
+.frame {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: color-mix(in srgb, var(--fg) 8%, var(--bg));
+}
+.inner {
+  position: absolute;
+  inset: -4% 0;
+}
+.inner img {
+  object-fit: cover;
+}
+.innerStill {
+  position: absolute;
+  inset: 0;
+}
+.innerStill img {
+  object-fit: cover;
+}

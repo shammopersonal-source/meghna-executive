@@ -274,3 +274,111 @@ export const madeInBangladesh: Media[] = [
 export const riverImage = media("1729597227WvUNI", "Aerial view of a river winding through dense green forest.");
 export const saplingImage = media("1729597630pQfiq", "Hands holding a sapling in soil above a green valley.");
 export const contactMapImage = media("1737663666wpS2I", "Street map of Nikunja-2, Dhaka, showing the head office.");
+
+/* ===================================================================== Monograph (home) */
+
+export const homeChapters = [
+  { id: "origins", numeral: "I", title: "Origins" },
+  { id: "houses", numeral: "II", title: "The Houses" },
+  { id: "made", numeral: "III", title: "Made in Bangladesh" },
+  { id: "stewardship", numeral: "IV", title: "Stewardship" },
+  { id: "correspondence", numeral: "V", title: "Correspondence" },
+] as const;
+
+export const openingStatement =
+  "Since 1965 the group has grown into fifteen houses: Bangladesh’s home of BMW and KOHLER, an authorised Apple partner, a maker of knitwear for Europe’s high streets, and a producer of the country’s white cement.";
+
+export const chapterLines: Record<string, string> = {
+  origins: "Founded in 1965, built one house at a time.",
+  houses: "Fifteen houses, each run to the standard of its partner.",
+  made: "Knit, dyed, cut and sewn in Gazipur. Worn across Europe.",
+  stewardship: "What we build should leave the river cleaner than we found it.",
+  correspondence: "News from the houses, and an open door.",
+};
+
+/** Calm figures: set, not counted. All from the live site. */
+export const figures: { value: string; label: string; note: string }[] = [
+  { value: "1965", label: "Established", note: "Dhaka, Bangladesh" },
+  { value: "15", label: "Houses", note: "Across four sectors" },
+  { value: "17", label: "Global apparel buyers", note: "From M&S to Decathlon" },
+  { value: "680,000", label: "Square feet", note: "Executive Woodworks, Gazipur" },
+];
+
+export type Plate = {
+  slug: string;
+  name: string;
+  meta: string;
+  line: string;
+  href: string;
+  image: Media;
+};
+
+/** Chapter II plates: the four trading houses, then one plate per remaining sector. */
+export const housePlates: Plate[] = [
+  {
+    slug: "executive-motors",
+    name: "Executive Motors",
+    meta: "Trading · BMW · Since 2002",
+    line: "The exclusive home of BMW in Bangladesh, and since 2023 the BMW Retail.Next showroom at Meghna Tower.",
+    href: "/houses/executive-motors",
+    image: media("17331329886L6sQ", "The illuminated kidney grille of a BMW 7 Series in a dark showroom.", {
+      partner: true,
+      focus: "30% 50%",
+    }),
+  },
+  {
+    slug: "executive-lifestyles",
+    name: "Executive Lifestyles",
+    meta: "Trading · KOHLER · Since 2015",
+    line: "KOHLER’s exclusive home in Bangladesh, with three showrooms across Dhaka.",
+    href: "/houses/executive-lifestyles",
+    image: media("1733229778NCTMz", "A KOHLER bathroom at night, the city glowing through tall windows.", {
+      partner: true,
+    }),
+  },
+  {
+    slug: "executive-machines",
+    name: "Executive Machines",
+    meta: "Trading · Apple · Since 2009",
+    line: "Apple in Bangladesh, sold and serviced as an authorised reseller and service provider.",
+    href: "/houses/executive-machines",
+    image: media("1730192104HC7i6", "The camera plateau of an iPhone, lit from the side against black.", {
+      partner: true,
+    }),
+  },
+  {
+    slug: "penthouse-livings",
+    name: "Penthouse Livings",
+    meta: "Trading · Since 2019",
+    line: "Bangladesh’s first luxury lifestyle houseware, from more than fifty international furniture houses.",
+    href: "/houses/penthouse-livings",
+    image: media("1730192732MG7WR", "A warm-lit living room with ivory sofas and backlit shelving."),
+  },
+  {
+    slug: "apparel",
+    name: "Six apparel houses",
+    meta: "Apparel · Gazipur",
+    line: "Knitwear made for M&S, H&M, Primark, Tesco and Lidl, in factories certified LEED Gold and Platinum.",
+    href: "/houses#apparel",
+    image: media("17333062260s6Fl", "Aerial view of the Meghna Knit Composite factory with its striped facade."),
+  },
+  {
+    slug: "industrial",
+    name: "Industry",
+    meta: "Industrial · Since 1997",
+    line: "White Elephant and White Tiger white cement, export furniture for the USA, and precision bearings.",
+    href: "/houses#industrial",
+    image: media(
+      "17338192563CqnO",
+      "A craftsman guiding a timber frame through the finishing line at Executive Woodworks.",
+    ),
+  },
+  {
+    slug: "executive-gourmet",
+    name: "Slaw Bistro",
+    meta: "Service · Executive Gourmet · Since 2025",
+    line: "The group’s first table: a contemporary bistro at Meghna Tower Forum.",
+    href: "/houses/executive-gourmet",
+    image: media("1785140168rqczE", "The Slaw Bistro dining room with a planted wall and warm timber chairs."),
+  },
+];

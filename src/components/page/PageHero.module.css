@@ -1,39 +1,44 @@
 .hero {
   position: relative;
-  padding-top: calc(var(--header-h) + clamp(48px, 9vw, 160px));
+  padding-top: calc(var(--header-h) + clamp(56px, 10vw, 168px));
+  padding-bottom: clamp(56px, 8vw, 120px);
 }
 .copy {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  display: grid;
   gap: 28px;
-  padding-bottom: clamp(56px, 8vw, 128px);
 }
-.anchor {
-  position: absolute;
-  top: -40px;
-  left: 50%;
+.title {
+  font-size: clamp(3rem, 1.2rem + 6.4vw, 8.4rem);
+  font-weight: 300;
+  line-height: 0.94;
+  letter-spacing: -0.05em;
+  max-width: 14ch;
 }
 .lead {
-  max-width: 48ch;
+  font-size: var(--fs-lead);
+  font-weight: 300;
+  line-height: 1.42;
   color: var(--fg-muted);
+  max-width: 44ch;
 }
-.media {
-  position: relative;
-  height: min(88svh, 960px);
-  overflow: hidden;
+.plate {
+  margin-top: clamp(56px, 7vw, 112px);
 }
-.parallax {
-  position: absolute;
-  inset: -10% 0;
-}
-.parallax img {
-  object-fit: cover;
+@media (min-width: 1180px) {
+  .copy {
+    grid-template-columns: 8fr 4fr;
+    column-gap: var(--col-gap);
+    align-items: end;
+  }
+  .copy > :first-child {
+    grid-column: 1 / -1;
+  }
+  .lead {
+    padding-bottom: 1.2rem;
+  }
 }
 @media (max-width: 767px) {
-  .media {
-    height: 70svh;
+  .plate :global(figure) > div {
+    aspect-ratio: 4 / 5 !important;
   }
 }

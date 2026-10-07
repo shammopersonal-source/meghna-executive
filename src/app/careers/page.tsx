@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import Img from "@/components/ui/Img";
-import Words from "@/components/ui/Words";
 import PageHero from "@/components/page/PageHero";
 import SectionHead from "@/components/page/SectionHead";
+import Figure from "@/components/monograph/Figure";
 import JsonLd from "@/components/seo/JsonLd";
 import { careers } from "@/content/group";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -28,29 +27,21 @@ export default function CareersPage() {
           { name: "Careers", path: "/careers" },
         ])}
       />
-      <PageHero
-        kicker="Careers"
-        lines={[
-          "Our people",
-          <>
-            are the <em className="serif">current.</em>
-          </>,
-        ]}
-        lead={careers.intro}
-      />
+      <PageHero kicker="Careers" lines={["Our people", "are the group."]} lead={careers.intro} />
 
       <section className="theme-bone" aria-label="Our people at work">
         <ul className={`container ${styles.mosaic}`} role="list">
           {careers.images.map((m, i) => (
-            <li key={m.src} className={styles.tile} data-tile={i} data-reveal="tide">
-              <div className={styles.tileInner} data-parallax={i % 2 ? "0.18" : "0.08"}>
-                <Img
-                  media={m}
-                  sizes="(max-width: 767px) 50vw, 25vw"
-                  quality={60}
-                  priority={i === 0 ? "high" : i < 4 ? "eager" : undefined}
-                />
-              </div>
+            <li key={m.src} className={styles.tile} data-tile={i}>
+              <Figure
+                media={{ ...m, alt: "" }}
+                fig={String(i + 1).padStart(2, "0")}
+                caption={m.alt}
+                sizes="(max-width: 767px) 50vw, 25vw"
+                ratio="3 / 4"
+                priority={i === 0 ? "high" : i < 4 ? "eager" : undefined}
+                still
+              />
             </li>
           ))}
         </ul>
@@ -58,11 +49,13 @@ export default function CareersPage() {
 
       <section className="section theme-bone" aria-labelledby="philosophy">
         <div className={`container ${styles.phil}`}>
-          <h2 id="philosophy" className="label muted">
+          <h2 id="philosophy" className="smallcaps muted">
             HR philosophy
           </h2>
           <div className={styles.philText}>
-            <Words text={careers.philosophy[0]} className={styles.big} />
+            <p className={styles.big} data-reveal="fade">
+              {careers.philosophy[0]}
+            </p>
             <p className="muted" data-reveal="fade">
               {careers.philosophy[1]}
             </p>
@@ -71,17 +64,8 @@ export default function CareersPage() {
       </section>
 
       <section className="section theme-ink grain" aria-labelledby="roles">
-        <span className={styles.anchor} data-line-anchor data-line-x="0.5" aria-hidden="true" />
         <div className="container">
-          <SectionHead
-            kicker="Open roles"
-            id="roles"
-            lines={[
-              <>
-                Join a <em className="serif">house.</em>
-              </>,
-            ]}
-          />
+          <SectionHead kicker="Open roles" id="roles" lines={["Join a house"]} />
           {roles.length ? (
             <ul className={styles.roles} role="list">
               {roles.map((r) => (

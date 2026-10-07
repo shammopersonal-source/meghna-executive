@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Img from "@/components/ui/Img";
-import Words from "@/components/ui/Words";
 import PageHero from "@/components/page/PageHero";
 import SectionHead from "@/components/page/SectionHead";
+import ChapterSpine from "@/components/monograph/ChapterSpine";
+import Figure from "@/components/monograph/Figure";
 import JsonLd from "@/components/seo/JsonLd";
 import { certifications, initiatives, riverImage, saplingImage, sustainabilityPillars } from "@/content/group";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -16,6 +17,11 @@ export const metadata: Metadata = {
 };
 
 const fmt = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short", year: "numeric" });
+const chapters = [
+  { id: "pillars", numeral: "I", title: "Three pillars" },
+  { id: "certs", numeral: "II", title: "On the record" },
+  { id: "initiatives", numeral: "III", title: "Initiatives" },
+];
 
 export default function SustainabilityPage() {
   return (
@@ -26,45 +32,23 @@ export default function SustainabilityPage() {
           { name: "Sustainability", path: "/sustainability" },
         ])}
       />
+      <ChapterSpine chapters={chapters} />
       <PageHero
         kicker="Sustainability"
-        lines={[
-          "Leave the river",
-          <>
-            <em className="serif">cleaner</em> than
-          </>,
-          "we found it.",
-        ]}
-        lead="Sustainability isn’t a programme at MEH. It is how every house is expected to build, source and grow."
+        lines={["Leave the river", "cleaner than", "we found it."]}
+        lead="At MEH, sustainability isn’t a programme. It is how every house is expected to build, source and grow."
         image={riverImage}
+        caption="A river winding through forest."
       />
 
-      <section className="section theme-bone" aria-label="Our position">
+      <section className="section theme-paper" aria-labelledby="pillars">
         <div className="container">
-          <Words
-            className={styles.statement}
-            text="We put eco-friendly solutions and ethical standards into every house, from the factory floor to the showroom, and we measure ourselves by the communities and environment around us."
-          />
-        </div>
-      </section>
-
-      <section className="section theme-ink grain" aria-labelledby="pillars">
-        <span className={styles.anchor} data-line-anchor data-line-x="0.5" aria-hidden="true" />
-        <div className="container">
-          <SectionHead
-            kicker="Three pillars"
-            id="pillars"
-            lines={[
-              <>
-                How we <em className="serif">work.</em>
-              </>,
-            ]}
-          />
+          <SectionHead numeral="I" kicker="Three pillars" id="pillars" lines={["How we work"]} />
           <ol className={styles.pillars} role="list">
             {sustainabilityPillars.map((p, i) => (
               <li key={p.n} className={styles.pillar} data-reveal="fade" data-delay={i * 0.1}>
                 <span className={styles.pn}>{p.n}</span>
-                <h3 className="h3">{p.title}</h3>
+                <h3 className={styles.pt}>{p.title}</h3>
                 <p className="muted">{p.text}</p>
               </li>
             ))}
@@ -75,7 +59,7 @@ export default function SustainabilityPage() {
       <section className="section theme-bone" aria-labelledby="certs">
         <div className={`container ${styles.certWrap}`}>
           <div>
-            <SectionHead kicker="Certified" id="certs" lines={["On the record."]} />
+            <SectionHead numeral="II" kicker="Certified" id="certs" lines={["On the record"]} />
             <ul className={styles.certs} role="list">
               {certifications.map((c) => (
                 <li key={c.name} data-reveal="fade">
@@ -85,27 +69,24 @@ export default function SustainabilityPage() {
               ))}
             </ul>
           </div>
-          <div className={styles.certMedia} data-reveal="tide">
-            <Img media={saplingImage} sizes="(max-width: 1179px) 100vw, 40vw" />
+          <div className={styles.certMedia}>
+            <Figure
+              media={saplingImage}
+              fig="II"
+              caption="A sapling, held above a green valley."
+              sizes="(max-width: 1179px) 100vw, 40vw"
+            />
           </div>
         </div>
       </section>
 
-      <section className="section theme-bone" aria-labelledby="initiatives">
+      <section className="section theme-paper" aria-labelledby="initiatives">
         <div className="container">
-          <SectionHead
-            kicker="Initiatives"
-            id="initiatives"
-            lines={[
-              <>
-                The work, <em className="serif">dated.</em>
-              </>,
-            ]}
-          />
+          <SectionHead numeral="III" kicker="Initiatives" id="initiatives" lines={["The work, by date"]} />
           <ol className={styles.log} role="list">
             {initiatives.map((it) => (
               <li key={it.title} className={styles.logItem} data-reveal="fade">
-                <time dateTime={it.date} className={styles.logDate}>
+                <time dateTime={it.date} className={`smallcaps ${styles.logDate}`}>
                   {fmt.format(new Date(it.date))}
                 </time>
                 <h3 className={styles.logTitle}>{it.title}</h3>

@@ -30,25 +30,8 @@ export default async function ContactPage({ searchParams }: PageProps<"/contact"
       />
       <div className={`container ${styles.grid}`}>
         <div className={styles.info}>
-          <span
-            className={styles.anchor}
-            data-line-anchor
-            data-line-x="0.06"
-            data-line-x-sm="0.04"
-            aria-hidden="true"
-          />
           <p className="label muted">Contact</p>
-          <Lines
-            as="h1"
-            immediate
-            className="display"
-            lines={[
-              "Get in",
-              <>
-                <em className="serif">touch.</em>
-              </>,
-            ]}
-          />
+          <Lines as="h1" immediate className="display" lines={["Get in", <>touch.</>]} />
           <p className={`lead ${styles.lead}`}>
             Client, partner, investor or neighbour: we read every message, and route it to the right house.
           </p>

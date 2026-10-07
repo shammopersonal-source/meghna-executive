@@ -1,4 +1,4 @@
-.statement {
+.unusedStatement {
   font-size: clamp(1.6rem, 1rem + 2.6vw, 3.6rem);
   font-weight: 300;
   line-height: 1.1;
@@ -20,6 +20,12 @@
   align-content: start;
   border-top: 1px solid var(--line);
   padding-top: 24px;
+}
+.pt {
+  font-size: var(--fs-h3);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
 }
 .pn {
   font-family: var(--font-serif-stack);
@@ -55,16 +61,9 @@
   letter-spacing: -0.02em;
 }
 .certMedia {
-  position: relative;
-  aspect-ratio: 598 / 720;
   max-width: 598px;
   width: 100%;
-  border-radius: var(--radius);
-  overflow: hidden;
   justify-self: center;
-}
-.certMedia img {
-  object-fit: cover;
 }
 @media (min-width: 1180px) {
   .certWrap {

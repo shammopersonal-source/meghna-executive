@@ -5,16 +5,6 @@
 }
 .tile {
   position: relative;
-  aspect-ratio: 3 / 4;
-  overflow: hidden;
-  border-radius: var(--radius);
-}
-.tileInner {
-  position: absolute;
-  inset: -10% 0;
-}
-.tileInner img {
-  object-fit: cover;
 }
 @media (min-width: 768px) {
   .mosaic {

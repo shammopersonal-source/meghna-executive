@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
-import Img from "@/components/ui/Img";
 import Lines from "@/components/ui/Lines";
+import Figure from "@/components/monograph/Figure";
 import type { Media } from "@/content/media";
 import styles from "./PageHero.module.css";
 
@@ -9,32 +9,38 @@ type Props = {
   lines: ReactNode[];
   lead?: string;
   image?: Media;
-  theme?: "ink" | "bone";
+  caption?: string;
+  theme?: "ink" | "bone" | "paper";
   children?: ReactNode;
 };
 
-/** Inner-page opening: masked headline, short lead, optional full-bleed image that scales in with scroll. */
-export default function PageHero({ kicker, lines, lead, image, theme = "bone", children }: Props) {
+/** An inner page's title page: small-caps kicker, a plain display title, a lead, and a frontispiece plate. */
+export default function PageHero({ kicker, lines, lead, image, caption, theme = "bone", children }: Props) {
   return (
     <header className={`theme-${theme} ${styles.hero}`}>
       <div className={`container ${styles.copy}`}>
-        <span data-line-anchor data-line-x="0.5" data-line-x-sm="0.5" aria-hidden="true" className={styles.anchor} />
-        <p className="label muted" data-reveal="fade-now" style={{ "--d": "0s" } as React.CSSProperties}>
+        <p className="smallcaps muted" data-reveal="fade-now" style={{ "--d": "0s" } as React.CSSProperties}>
           {kicker}
         </p>
-        <Lines as="h1" className="display" lines={lines} immediate />
+        <Lines as="h1" className={styles.title} lines={lines} immediate />
         {lead ? (
-          <p className={`lead ${styles.lead}`} data-reveal="fade-now">
+          <p className={styles.lead} data-reveal="fade-now">
             {lead}
           </p>
         ) : null}
         {children}
       </div>
       {image ? (
-        <div className={styles.media} data-scale-in>
-          <div className={styles.parallax} data-parallax="0.16">
-            <Img media={image} sizes="100vw" priority="high" />
-          </div>
+        <div className={`container ${styles.plate}`}>
+          <Figure
+            media={image}
+            fig="I"
+            caption={caption ?? image.alt}
+            sizes="(max-width: 1179px) 100vw, 1600px"
+            ratio="16 / 8"
+            priority="high"
+            still
+          />
         </div>
       ) : null}
     </header>

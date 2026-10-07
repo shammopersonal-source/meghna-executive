@@ -9,9 +9,11 @@
   --ink-2: #222726;
   --bone: #f1f0ee;
   --bone-2: #e7e5e1;
+  --paper: #ebe6dd; /* warm paper for long reading chapters */
   --mist: #bec5bd;
   --mist-ink: #5d645f; /* mist darkened for AA text on bone */
-  --silt: #8c7a5b; /* single accent: brass / river silt */
+  --silt: #8c7a5b; /* single accent: brass / river silt (fills, rules, the spine) */
+  --silt-text: #735f3e; /* brass for small text on light grounds (AA ≥ 4.7:1) */
   --silt-light: #b9a37c; /* silt for use on ink (AA for large text + UI) */
   --pure: #ffffff;
 
@@ -20,7 +22,7 @@
   --fg: var(--ink);
   --fg-muted: var(--mist-ink);
   --line: color-mix(in srgb, var(--fg) 16%, transparent);
-  --accent: var(--silt);
+  --accent: var(--silt-text);
 
   /* Type */
   --font-sans-stack: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
@@ -43,7 +45,7 @@
   --s6: 4rem;
   --s7: 6rem;
   --s8: 8rem;
-  --gutter: clamp(16px, 4vw, 80px);
+  --gutter: clamp(18px, 5vw, 104px);
   --section: clamp(96px, 14vw, 240px);
   --maxw: 1600px;
   --cols: 4;
@@ -131,8 +133,8 @@ ul,
 ol {
   margin: 0;
 }
-ul[role="list"],
-ol[role="list"] {
+/* Zero specificity, so component classes can always set their own padding. */
+:where(ul[role="list"], ol[role="list"]) {
   list-style: none;
   padding: 0;
 }
@@ -276,7 +278,7 @@ em.serif,
   --fg: var(--ink);
   --fg-muted: var(--mist-ink);
   --line: color-mix(in srgb, var(--ink) 14%, transparent);
-  --accent: var(--silt);
+  --accent: var(--silt-text);
   background: var(--bg);
   color: var(--fg);
 }
@@ -285,7 +287,17 @@ em.serif,
   --fg: var(--mat-fg, var(--ink));
   --fg-muted: var(--mat-muted, var(--mist-ink));
   --line: color-mix(in srgb, var(--fg) 16%, transparent);
-  --accent: var(--mat-accent, var(--silt));
+  --accent: var(--mat-accent, var(--silt-text));
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.theme-paper {
+  --bg: var(--paper);
+  --fg: var(--ink);
+  --fg-muted: #5a5850;
+  --line: color-mix(in srgb, var(--ink) 16%, transparent);
+  --accent: var(--silt-text);
   background: var(--bg);
   color: var(--fg);
 }
@@ -446,12 +458,12 @@ html.motion [data-reveal="fade"] {
   opacity: 0;
   transform: translateY(24px);
 }
-html.motion [data-reveal="tide"] {
-  clip-path: inset(100% 0 0 0);
+html.motion [data-reveal="window"] {
+  clip-path: inset(7% 7% 7% 7%);
 }
-html.motion [data-reveal="tide"] img,
-html.motion [data-reveal="tide"] video {
-  transform: scale(1.08);
+html.motion [data-reveal="window"] img,
+html.motion [data-reveal="window"] video {
+  transform: scale(1.06);
 }
 html.lenis,
 html.lenis body {
@@ -475,57 +487,8 @@ html.lenis body {
   }
 }
 
-/* ---------- The Meghna Line ---------- */
-.river {
-  position: relative;
-}
-.meghna-line {
-  position: absolute;
-  inset: 0;
-  z-index: 6;
-  pointer-events: none;
-  mix-blend-mode: difference;
-  overflow: hidden;
-}
-.meghna-line svg {
-  position: absolute;
-  inset: 0;
-  overflow: visible;
-}
-.meghna-line path {
-  fill: none;
-  stroke: #bec5bd;
-  stroke-width: 1;
-  stroke-linecap: round;
-  vector-effect: non-scaling-stroke;
-}
-.meghna-line path.branch {
-  opacity: 0.5;
-}
-.meghna-line .tip {
-  fill: #e9d9b6;
-  filter: drop-shadow(0 0 6px rgb(233 217 182 / 0.9));
-  transition: opacity 300ms var(--ease-out);
-}
-
-/* ---------- Route curtain ---------- */
-.route-curtain {
-  position: fixed;
-  inset: 0;
-  z-index: 80;
-  pointer-events: none;
-  visibility: hidden;
-}
-
 html.menu-open {
   overflow: hidden;
-}
-
-/* Ledger digits sit in fixed cells while counting */
-.count-digits .d {
-  display: inline-block;
-  width: 0.62em;
-  text-align: center;
 }
 
 /* Video pause/play control: WCAG 2.2.2 for moving content */
@@ -573,4 +536,69 @@ html.menu-open {
   from {
     transform: translateY(18px);
   }
+}
+
+/* ==========================================================================
+   Monograph details
+   ========================================================================== */
+
+/* Small caps for labels, folios and captions */
+.smallcaps {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* Figure captions: "Fig. 03 · BMW Retail.Next, Tejgaon" */
+.caption {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  margin-top: 14px;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--fg-muted);
+}
+.caption .fig {
+  flex: none;
+  font-family: var(--font-serif-stack);
+  font-style: italic;
+  font-feature-settings: "lnum" 1;
+  color: var(--accent);
+}
+
+/* An outlined serif numeral that fills with ink as it crosses the screen (data-fill) */
+.numeral {
+  --fill: 100%;
+  font-family: var(--font-serif-stack);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 0.8;
+  letter-spacing: -0.02em;
+  font-feature-settings: "lnum" 1;
+  color: transparent;
+  -webkit-text-stroke: 1px color-mix(in srgb, var(--fg) 55%, transparent);
+  background: linear-gradient(180deg, var(--fg) var(--fill), transparent var(--fill));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+html.motion .numeral[data-fill] {
+  --fill: 0%;
+}
+
+/* A hairline rule with brass end-cap, used between chapters */
+.hairline {
+  height: 1px;
+  background: var(--line);
+  position: relative;
+}
+.hairline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 48px;
+  height: 3px;
+  background: var(--accent);
 }

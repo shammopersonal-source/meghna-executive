@@ -61,7 +61,6 @@ export default function HouseHero({ house }: { house: House }) {
           </dl>
         </div>
       </div>
-      <span className={styles.anchor} data-line-anchor data-line-x="0.92" data-line-x-sm="0.94" aria-hidden="true" />
     </header>
   );
 }

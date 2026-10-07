@@ -4,8 +4,6 @@ import { banana, migra } from "./fonts";
 import Header from "@/components/shell/Header";
 import Footer from "@/components/shell/Footer";
 import MotionRoot from "@/components/motion/MotionRoot";
-import MeghnaLine from "@/components/motion/MeghnaLine";
-import RouteCurtain from "@/components/motion/RouteCurtain";
 import JsonLd from "@/components/seo/JsonLd";
 import { houses } from "@/content/houses";
 import { site } from "@/content/site";
@@ -55,13 +53,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         <Header houses={menuHouses} />
-        <div className="river">
-          {children}
-          <Footer />
-          <MeghnaLine />
-        </div>
+        {children}
+        <Footer />
         <MotionRoot />
-        <RouteCurtain />
       </body>
     </html>
   );

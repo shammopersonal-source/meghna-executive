@@ -11,10 +11,10 @@ export default function Footer() {
     <footer className={`${styles.footer} theme-ink grain`}>
       <div className="container">
         <div className={styles.cta}>
-          <span className={styles.rest} data-line-anchor="rest" data-line-x="0.5" aria-hidden="true" />
+          <span className={styles.rest} aria-hidden="true" />
           <p className="label muted">Where the currents meet</p>
           <Link href="/contact" className={styles.ctaLink}>
-            Start a <em className="serif">conversation</em>
+            Start a conversation
             <span className="arrow" aria-hidden="true" />
           </Link>
         </div>

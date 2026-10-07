@@ -52,7 +52,6 @@ export default async function ArticlePage({ params }: PageProps<"/journal/[slug]
       />
       <article>
         <header className={`container ${styles.head}`}>
-          <span className={styles.anchor} data-line-anchor data-line-x="0.5" aria-hidden="true" />
           <p className={`label muted ${styles.meta}`}>
             <Link href="/journal">Journal</Link>
             <span aria-hidden="true">·</span>
@@ -69,7 +68,7 @@ export default async function ArticlePage({ params }: PageProps<"/journal/[slug]
           ) : (
             <div
               className={styles.coverFrame}
-              data-reveal="tide"
+              data-reveal="window"
               style={{ aspectRatio: `${a.cover.width} / ${a.cover.height}`, maxWidth: a.cover.width }}
             >
               <Img media={a.cover} sizes="(max-width: 1179px) 100vw, 1100px" priority="high" />
@@ -110,7 +109,7 @@ export default async function ArticlePage({ params }: PageProps<"/journal/[slug]
       <section className="section theme-bone" aria-labelledby="more">
         <div className="container">
           <h2 id="more" className={`h2 ${styles.moreTitle}`}>
-            More from the <em className="serif">Journal</em>
+            More from the journal
           </h2>
           <div className={styles.more}>
             {more.map((m) => (

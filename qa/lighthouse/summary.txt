@@ -1,22 +1,22 @@
-/|mobile|88|100|100|100|1.8 s|3.4 s|180 ms|0
-/|desktop|100|100|100|100|0.5 s|0.7 s|0 ms|0.001
-/houses|mobile|86|100|100|100|1.2 s|4.0 s|130 ms|0.003
-/houses|desktop|100|100|100|100|0.5 s|0.6 s|0 ms|0.018
-/houses/executive-motors|mobile|95|100|100|100|2.0 s|2.7 s|40 ms|0.005
-/houses/executive-motors|desktop|100|100|100|100|0.5 s|0.7 s|0 ms|0.005
-/houses/sublime-greentex|mobile|95|100|100|100|1.8 s|2.7 s|40 ms|0.005
-/houses/sublime-greentex|desktop|100|100|100|100|0.4 s|0.7 s|0 ms|0.01
-/group|mobile|95|100|100|100|2.0 s|2.7 s|40 ms|0.024
-/group|desktop|100|100|100|100|0.4 s|0.7 s|0 ms|0.02
-/sustainability|mobile|91|100|100|100|1.8 s|3.3 s|40 ms|0.013
-/sustainability|desktop|100|100|100|100|0.4 s|0.7 s|0 ms|0.016
-/responsibility|mobile|90|100|100|100|0.9 s|3.6 s|30 ms|0.012
-/responsibility|desktop|100|100|100|100|0.4 s|0.7 s|0 ms|0.019
-/journal|mobile|94|98|100|100|1.1 s|3.1 s|60 ms|0.004
-/journal|desktop|100|98|100|100|0.3 s|0.7 s|0 ms|0.018
-/journal/retail-next-by-bmw|mobile|95|100|100|100|1.8 s|2.7 s|50 ms|0
-/journal/retail-next-by-bmw|desktop|99|100|100|100|0.5 s|0.9 s|0 ms|0.04
-/careers|mobile|87|100|100|100|1.8 s|3.8 s|100 ms|0.007
-/careers|desktop|100|100|100|100|0.4 s|0.7 s|0 ms|0.018
-/contact|mobile|92|100|100|100|1.8 s|3.2 s|40 ms|0.015
-/contact|desktop|100|100|100|100|0.4 s|0.6 s|0 ms|0.001
+/|mobile|96|100|100|100|1.8 s|2.6 s|60 ms|0|obsLCP 253
+/|desktop|100|100|100|100|0.4 s|0.6 s|0 ms|0.001|obsLCP 252
+/houses|mobile|94|100|100|100|2.0 s|2.8 s|50 ms|0|obsLCP 168
+/houses|desktop|100|100|100|100|0.5 s|0.6 s|0 ms|0.001|obsLCP 219
+/houses/executive-motors|mobile|95|100|100|100|2.0 s|2.7 s|50 ms|0.005|obsLCP 215
+/houses/executive-motors|desktop|100|100|100|100|0.3 s|0.4 s|0 ms|0.005|obsLCP 107
+/houses/sublime-greentex|mobile|91|100|100|100|1.8 s|3.3 s|40 ms|0.005|obsLCP 216
+/houses/sublime-greentex|desktop|100|100|100|100|0.4 s|0.7 s|0 ms|0.011|obsLCP 248
+/group|mobile|98|100|100|100|1.2 s|2.3 s|50 ms|0|obsLCP 158
+/group|desktop|100|100|100|100|0.5 s|0.7 s|0 ms|0.001|obsLCP 213
+/sustainability|mobile|99|100|100|100|1.0 s|2.0 s|70 ms|0|obsLCP 152
+/sustainability|desktop|100|100|100|100|0.4 s|0.7 s|0 ms|0.001|obsLCP 270
+/responsibility|mobile|92|100|100|100|1.8 s|3.2 s|60 ms|0|obsLCP 214
+/responsibility|desktop|99|100|100|100|0.4 s|0.7 s|0 ms|0.001|obsLCP 1232
+/journal|mobile|94|100|100|100|1.8 s|3.0 s|30 ms|0|obsLCP 155
+/journal|desktop|100|100|100|100|0.4 s|0.7 s|0 ms|0.001|obsLCP 229
+/journal/retail-next-by-bmw|mobile|95|100|100|100|2.0 s|2.7 s|50 ms|0|obsLCP 160
+/journal/retail-next-by-bmw|desktop|100|100|100|100|0.5 s|0.7 s|0 ms|0.042|obsLCP 193
+/careers|mobile|95|100|100|100|1.8 s|2.8 s|60 ms|0|obsLCP 174
+/careers|desktop|100|100|100|100|0.4 s|0.7 s|0 ms|0|obsLCP 193
+/contact|mobile|93|100|100|100|1.8 s|3.1 s|50 ms|0|obsLCP 198
+/contact|desktop|100|100|100|100|0.4 s|0.7 s|0 ms|0|obsLCP 241

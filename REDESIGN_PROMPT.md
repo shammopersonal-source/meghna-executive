@@ -3,6 +3,8 @@
 > Paste everything below the line into your design or build AI, or hand it to your studio as the brief.
 > It comes with `IMAGE_MANIFEST.md`. That file lists every image, video and SVG on the current site, with its URL and resolution.
 
+> **Errata (7 Oct 2026).** After client review, the build replaced this brief's "Confluence" concept with **"The Monograph"**: a chaptered, editorial presentation. The Meghna Line, route curtain, split confluence hero and horizontal timeline described below were removed. The river idea survives only as the chapter spine in the page margin. See `README.md` for the current design system and motion spec.
+
 > **Errata (found while building it; the build follows these corrections).**
 > 1. **The group has 15 houses, not 16.** The live Brands page lists 15. Read "16" below as 15.
 > 2. **Meghna Bearing Industries now has a description** on its own page (founded 1997). The "gap" in section 1 no longer applies.

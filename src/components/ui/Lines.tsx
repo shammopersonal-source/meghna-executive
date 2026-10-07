@@ -2,7 +2,7 @@ import type { ElementType, ReactNode } from "react";
 
 type Props = {
   as?: ElementType;
-  /** One entry per visual line. Use <em className="serif"> for the single italic word. */
+  /** One entry per visual line. Keep headlines plain; PP Migra is reserved for numerals, years and house names. */
   lines: ReactNode[];
   className?: string;
   id?: string;

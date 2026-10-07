@@ -1,0 +1,70 @@
+.plates {
+  position: relative;
+}
+.plate {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  min-height: 560px;
+  overflow: hidden;
+  isolation: isolate;
+}
+.media {
+  position: absolute;
+  inset: 0;
+  transform-origin: 50% 40%;
+}
+.media img {
+  object-fit: cover;
+}
+.shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgb(25 29 28 / 0.7) 0%, rgb(25 29 28 / 0.15) 55%, rgb(25 29 28 / 0) 100%),
+    linear-gradient(0deg, rgb(25 29 28 / 0.6) 0%, rgb(25 29 28 / 0) 45%);
+}
+.dim {
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+  opacity: 0;
+  pointer-events: none;
+}
+.caption {
+  position: absolute;
+  z-index: 2;
+  left: var(--gutter);
+  bottom: clamp(48px, 9vh, 110px);
+  width: min(560px, calc(100% - var(--gutter) * 2));
+  display: grid;
+  gap: 14px;
+  color: var(--pure);
+}
+.count {
+  font-family: var(--font-serif-stack);
+  font-style: italic;
+  font-feature-settings: "lnum" 1;
+  font-size: 0.9375rem;
+  opacity: 0.75;
+}
+.count span {
+  color: var(--silt-light);
+}
+.name {
+  font-size: clamp(2.6rem, 1.4rem + 4.2vw, 6rem);
+  font-weight: 300;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+}
+.line {
+  font-size: var(--fs-lead);
+  font-weight: 300;
+  line-height: 1.4;
+  max-width: 36ch;
+  opacity: 0.9;
+}
+.link {
+  justify-self: start;
+  color: var(--pure);
+}

@@ -26,12 +26,7 @@ export default async function JournalPage() {
       />
       <PageHero
         kicker="Journal"
-        lines={[
-          "Insights from",
-          <>
-            the <em className="serif">houses.</em>
-          </>,
-        ]}
+        lines={["News from", "the houses."]}
         lead="A resource for journalists, partners and anyone following the group: our portfolio, our practices and our people."
       />
       <section className="theme-bone" aria-label="Articles">

@@ -1,11 +1,6 @@
-.anchor {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 .grid {
   display: grid;
-  gap: 40px var(--col-gap);
+  gap: 56px var(--col-gap);
 }
 @media (min-width: 768px) {
   .grid {
@@ -19,40 +14,29 @@
 }
 .card {
   display: grid;
-  gap: 16px;
+  gap: 10px;
 }
 .media {
   position: relative;
   aspect-ratio: 4 / 5;
   overflow: hidden;
-  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--fg) 8%, var(--bg));
 }
 .media img {
   object-fit: cover;
-  transition: transform 1400ms var(--ease-out);
+  transition: transform 1600ms var(--ease-out);
 }
 .card:hover .media img {
-  transform: scale(1.05);
-}
-.cardText {
-  display: grid;
-  gap: 8px;
+  transform: scale(1.04);
 }
 .name {
   font-size: var(--fs-h3);
   font-weight: 300;
   letter-spacing: -0.02em;
   line-height: 1.1;
+  margin-top: 6px;
   transition: color var(--dur-ui) var(--ease-out);
 }
 .card:hover .name {
   color: var(--accent);
-}
-.meta {
-  display: flex;
-  gap: 16px;
-  font-size: var(--fs-label);
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
 }

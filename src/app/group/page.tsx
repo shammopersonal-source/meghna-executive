@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import Img from "@/components/ui/Img";
-import Words from "@/components/ui/Words";
 import PageHero from "@/components/page/PageHero";
 import SectionHead from "@/components/page/SectionHead";
-import Timeline from "@/components/home/Timeline";
-import Ledger from "@/components/home/Ledger";
+import ChapterSpine from "@/components/monograph/ChapterSpine";
+import Figures from "@/components/monograph/Figures";
+import Figure from "@/components/monograph/Figure";
+import Years from "@/components/monograph/Years";
 import JsonLd from "@/components/seo/JsonLd";
-import { groupStory, mission, vision } from "@/content/group";
+import { figures, groupStory, mission, timeline, vision } from "@/content/group";
 import { media } from "@/content/media";
 import { site } from "@/content/site";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -19,11 +19,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/group" },
 };
 
-const heroImage = media(
-  "17376645482MKBG",
-  "The BMW Retail.Next lounge at Meghna Tower, with sculptural yellow chairs.",
-  { partner: true },
-);
+const chapters = [
+  { id: "story", numeral: "I", title: "The story" },
+  { id: "purpose", numeral: "II", title: "Purpose" },
+  { id: "register", numeral: "III", title: "The register" },
+  { id: "people", numeral: "IV", title: "The people" },
+  { id: "office", numeral: "V", title: "Head office" },
+];
 
 export default function GroupPage() {
   return (
@@ -34,74 +36,55 @@ export default function GroupPage() {
           { name: "The Group", path: "/group" },
         ])}
       />
+      <ChapterSpine chapters={chapters} />
       <PageHero
-        kicker="The Group · Since 1965"
-        lines={[
-          "A pioneer in",
-          <>
-            Bangladesh’s <em className="serif">luxury</em>
-          </>,
-          "landscape.",
-        ]}
-        lead="Six decades, fifteen houses and one standard: the partner’s, the buyer’s, and our own."
-        image={heroImage}
+        kicker="The Group · Est. 1965"
+        lines={["A pioneer in", "Bangladesh’s luxury", "landscape."]}
+        lead="Six decades, fifteen houses and one standard: the partner’s, the buyer’s and our own."
+        image={media("17376645482MKBG", "The BMW Retail.Next lounge at Meghna Tower.", { partner: true })}
+        caption="BMW Retail.Next at Meghna Tower, Tejgaon. The showroom opened in 2023."
       />
 
       <section className="section theme-bone" aria-labelledby="story">
-        <div className={`container ${styles.story}`}>
-          <h2 id="story" className="label muted">
-            Our story
-          </h2>
-          <div className={styles.storyText}>
-            <Words text={groupStory[0]} className={styles.big} />
-            <p className="muted" data-reveal="fade">
+        <div className="container">
+          <SectionHead numeral="I" kicker="The story" id="story" lines={["Since 1965"]} />
+          <div className={styles.story}>
+            <p className={styles.lead} data-reveal="fade">
+              {groupStory[0]}
+            </p>
+            <p className={`muted ${styles.body}`} data-reveal="fade" data-delay="0.1">
               {groupStory[1]}
             </p>
           </div>
+          <Figures items={figures} />
         </div>
       </section>
 
-      <section className="section theme-ink grain" aria-labelledby="purpose">
+      <section className="section theme-paper" aria-labelledby="purpose">
         <div className="container">
-          <SectionHead
-            kicker="Purpose"
-            id="purpose"
-            lines={[
-              <>
-                Mission &amp; <em className="serif">vision.</em>
-              </>,
-            ]}
-          />
+          <SectionHead numeral="II" kicker="Purpose" id="purpose" lines={["Mission and vision"]} />
           <div className={styles.mv}>
             <article data-reveal="fade">
-              <h3 className="label">Mission</h3>
-              <p className="lead">{mission}</p>
+              <h3 className="smallcaps muted">Mission</h3>
+              <p className={styles.mvText}>{mission}</p>
             </article>
             <article data-reveal="fade" data-delay="0.1">
-              <h3 className="label">Vision</h3>
-              <p className="lead">{vision}</p>
+              <h3 className="smallcaps muted">Vision</h3>
+              <p className={styles.mvText}>{vision}</p>
             </article>
           </div>
         </div>
       </section>
 
-      <Ledger />
-      <Timeline id="group-timeline" />
+      <div id="register">
+        <Years items={timeline} id="group-years" />
+      </div>
 
-      <section className="section theme-bone" aria-labelledby="leadership">
+      <section className="section theme-bone" aria-labelledby="people">
         <div className="container">
-          <SectionHead
-            kicker="Leadership"
-            id="leadership"
-            lines={[
-              <>
-                The people <em className="serif">behind</em> the houses.
-              </>,
-            ]}
-          />
+          <SectionHead numeral="IV" kicker="The people" id="people" lines={["Leadership"]} />
           <p className={styles.placeholder} role="note">
-            Leadership profiles to come. Names, roles, portraits and short biographies will be added once the group
-            supplies them (see CLIENT_QUESTIONS.md).
+            Leadership portraits and biographies will appear here once the group supplies them. See CLIENT_QUESTIONS.md.
           </p>
         </div>
       </section>
@@ -109,7 +92,7 @@ export default function GroupPage() {
       <section className="section theme-ink grain" aria-labelledby="office">
         <div className={`container ${styles.office}`}>
           <div>
-            <SectionHead kicker="Head office" id="office" lines={["Nikunja-2, Dhaka."]} />
+            <SectionHead numeral="V" kicker="Head office" id="office" lines={["Nikunja-2, Dhaka"]} />
             <address className={styles.address}>
               {site.address.lines.map((l) => (
                 <span key={l}>{l}</span>
@@ -127,10 +110,12 @@ export default function GroupPage() {
               </a>
             </p>
           </div>
-          <div className={styles.officeMedia} data-reveal="tide">
-            <Img
+          <div className={styles.officeMedia}>
+            <Figure
               media={media("1729596289Iz5If", "The group’s head-office tower lit at dusk.")}
-              sizes="(max-width: 1179px) 100vw, 40vw"
+              fig="II"
+              caption="The head office, Nikunja-2."
+              sizes="(max-width: 1179px) 100vw, 530px"
             />
           </div>
         </div>

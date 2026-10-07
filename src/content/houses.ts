@@ -873,13 +873,13 @@ export const materials: Record<
   { bg: string; fg: string; muted: string; accent: string; dark: boolean; name: string }
 > = {
   graphite: { name: "Graphite", bg: "#1e2122", fg: "#eceae6", muted: "#a3a7a6", accent: "#b9a37c", dark: true },
-  aluminium: { name: "Aluminium", bg: "#dfe0df", fg: "#191d1c", muted: "#555a58", accent: "#6d6f70", dark: false },
+  aluminium: { name: "Aluminium", bg: "#dfe0df", fg: "#191d1c", muted: "#555a58", accent: "#4f5355", dark: false },
   porcelain: {
     name: "Porcelain & brass",
     bg: "#efebe4",
     fg: "#191d1c",
     muted: "#5f5a50",
-    accent: "#8c7a5b",
+    accent: "#735f3e",
     dark: false,
   },
   walnut: { name: "Walnut & velvet", bg: "#2a211b", fg: "#efe7dc", muted: "#b5a796", accent: "#c4a27a", dark: true },
@@ -889,7 +889,7 @@ export const materials: Record<
     bg: "#e6e3dc",
     fg: "#1d1f1c",
     muted: "#5a5c55",
-    accent: "#8c7a5b",
+    accent: "#735f3e",
     dark: false,
   },
   olive: { name: "Olive & terracotta", bg: "#2b2e22", fg: "#efe9dd", muted: "#b5b39d", accent: "#c97f5a", dark: true },

@@ -1,0 +1,42 @@
+.origins {
+  padding-bottom: clamp(96px, 12vw, 180px);
+}
+.story {
+  display: grid;
+  gap: 32px;
+  margin-bottom: clamp(64px, 8vw, 120px);
+}
+.storyLead {
+  font-size: clamp(1.6rem, 1rem + 2vw, 3rem);
+  font-weight: 300;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  max-width: 30ch;
+  text-wrap: pretty;
+}
+.storyBody {
+  font-size: var(--fs-lead);
+  font-weight: 300;
+  line-height: 1.45;
+  max-width: 46ch;
+}
+@media (min-width: 1180px) {
+  .story {
+    grid-template-columns: 8fr 4fr;
+    column-gap: var(--col-gap);
+    align-items: end;
+  }
+}
+.index {
+  padding-block: clamp(96px, 12vw, 180px);
+}
+.indexHead {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.indexTitle {
+  font-size: clamp(2rem, 1.2rem + 2.6vw, 3.6rem);
+  font-weight: 300;
+  letter-spacing: -0.035em;
+}

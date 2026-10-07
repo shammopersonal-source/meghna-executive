@@ -1,0 +1,40 @@
+.figures {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--line);
+}
+.figure {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  padding: 28px 20px 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+.value {
+  margin: 0;
+  font-family: var(--font-serif-stack);
+  font-style: italic;
+  font-feature-settings: "lnum" 1;
+  font-size: clamp(2.6rem, 1.6rem + 3vw, 4.6rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.note {
+  margin: 0;
+  font-size: var(--fs-small);
+}
+@media (min-width: 1180px) {
+  .figures {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .figure + .figure {
+    padding-left: 24px;
+    border-left: 1px solid var(--line);
+  }
+}
+@media (min-width: 768px) and (max-width: 1179px) {
+  .figure:nth-child(even) {
+    padding-left: 24px;
+    border-left: 1px solid var(--line);
+  }
+}

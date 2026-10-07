@@ -16,17 +16,7 @@ export default function NotFound() {
     >
       <div style={{ display: "grid", gap: 28, justifyItems: "center" }}>
         <p className="label muted">404</p>
-        <Lines
-          as="h1"
-          immediate
-          className="display"
-          lines={[
-            "This stream",
-            <>
-              runs <em className="serif">dry.</em>
-            </>,
-          ]}
-        />
+        <Lines as="h1" immediate className="display" lines={["This stream", <>runs dry.</>]} />
         <p className="lead muted">The page you were looking for has moved or no longer exists.</p>
         <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
           <Link href="/" className="btn">

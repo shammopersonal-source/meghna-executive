@@ -225,3 +225,19 @@
 .nextArrow :global(.arrow) {
   width: 1.4em;
 }
+.numeral {
+  font-family: var(--font-serif-stack);
+  font-style: italic;
+  font-size: 1.125rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--accent);
+  margin-right: 10px;
+}
+.stat dd {
+  font-family: var(--font-serif-stack);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  font-feature-settings: "lnum" 1;
+}

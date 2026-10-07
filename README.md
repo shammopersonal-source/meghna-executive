@@ -1,11 +1,13 @@
-# Meghna Executive Holdings: "The Confluence"
+# Meghna Executive Holdings: "The Monograph"
 
 The rebuilt corporate website for **Meghna Executive Holdings** (meghna-executive.com), built from the brief in [`REDESIGN_PROMPT.md`](./REDESIGN_PROMPT.md).
 
-- **Concept.** The group is named after the Meghna, the river where the Padma and the Jamuna meet. Its fifteen houses are separate currents in one river. A single 1px line, the **Meghna Line**, runs the length of every page and draws itself as you scroll. It splits into four tributaries for the sectors and comes to rest in the footer.
+- **Concept.** A sixty-year group presented like a bound monograph, not a landing page. Every page is a sequence of numbered chapters, each opened by a Roman numeral, and built from large plates of the client's own photography with figure captions. Type is quiet, brass is rare, and motion is slow and scroll-driven with a few signature moments. The river idea from the first concept survives only as the **chapter spine** in the left margin. Nothing is ever drawn across the content.
 - **Stack.** Next.js 16 (App Router, React Server Components) and TypeScript, styled with CSS Modules on design tokens. GSAP + ScrollTrigger and Lenis provide motion.
 - **Media.** The client's own CMS imagery. Videos are re-encoded from the CMS originals.
 - **Pages.** Home, Houses index, 15 house pages, The Group, Sustainability, Responsibility, Journal (index and 7 articles), Careers, Contact and 404. Every legacy URL redirects.
+
+> **Direction change.** The first build ("The Confluence") ran a 1px river line across every page. After client review it was replaced by the Monograph. The line, the route curtain, the split hero and the horizontal timeline are gone; `REDESIGN_PROMPT.md` still describes them as originally briefed.
 
 ---
 
@@ -33,40 +35,53 @@ Node 20.9+ is required. There are no environment variables to set for a local pr
 ```
 src/
   app/                    routes (App Router)
-    layout.tsx            fonts, pre-paint motion flag, header/menu, river + footer, JSON-LD
-    page.tsx              Home
+    layout.tsx            fonts, pre-paint motion flag, header/menu, footer, JSON-LD
+    page.tsx              Home: the monograph in five chapters
     houses/[slug]/        one flexible template → 15 house pages (+ share cards)
     group/ sustainability/ responsibility/ journal/ careers/ contact/
     contact/actions.ts    enquiry server action (works without JS)
     opengraph-image.tsx   designed 1200×630 share cards (per page)
     sitemap.ts robots.ts icon.png apple-icon.png not-found.tsx
   components/
-    home/                 Confluence hero, manifesto + film, Ledger, House Index, spreads, Made in Bangladesh, Timeline …
+    monograph/            ChapterSpine, Opening (+ film, motion), ChapterOpener, Figure, Figures,
+                          Years (odometer register), Plates, Made, Stewardship, Correspondence
+    home/                 House Index
     house/                house hero, offerings rail, gallery
+    page/                 PageHero (title + frontispiece), SectionHead (numeral + rule)
     shell/                Header (+ phone pill), Menu overlay, Footer, Dhaka clock
-    motion/               MotionRoot (declarative effects), MeghnaLine, RouteCurtain
-    ui/                   Img, Lines, Words, Count, Logo, Icons
+    motion/               MotionRoot (declarative effects)
+    ui/                   Img, Lines, Logo, Icons
   content/                typed content snapshot of the live site (see "CMS integration")
   lib/                    cms.ts (data access), motion.ts (lazy GSAP/Lenis), schema.ts (JSON-LD), og.tsx
   og/                     TTF copies of the licensed fonts for share-card rendering only
 public/
   brand/                  official logo artwork (logo.svg is used as a CSS mask)
   media/                  re-encoded films: AV1 + H.264 + posters (≤3.5 MB each, from 20–41 MB)
-qa/                       QA scripts, Lighthouse JSON, axe report, curated screenshots
+                          + opening-river.jpg, the home page's LCP still (a frame of the client's film)
+qa/                       QA scripts, Lighthouse scores, axe report, curated screenshots
 ```
 
 ---
 
 ## Design system
 
-**Colour.** Colours are tokens in `src/app/globals.css`. Sections alternate dark and light like magazine spreads (`.theme-ink`, `.theme-bone`, `.theme-material`).
+**Structure.** Every page is a monograph:
+
+- **Chapters.** Each major section is a chapter with a Roman numeral, a title and one sentence. On the home page the chapters are I Origins, II The Houses, III Made in Bangladesh, IV Stewardship and V Correspondence. Inner pages build their chapters from the sections they actually have.
+- **Plates.** Photography runs large, as plates, never as thumbnails in cards.
+- **Figures.** Every editorial image is a numbered figure with a caption (`Fig. 04 · …`). Alt text describes the picture; the caption gives the fact.
+- **Spine.** The chapter spine (`monograph/ChapterSpine.tsx`) is the page's only persistent ornament. It lives in the left margin like the spine of a book.
+
+**Colour.** Colours are tokens in `src/app/globals.css`. Chapters alternate surfaces (`.theme-ink`, `.theme-bone`, `.theme-paper`, `.theme-material`).
 
 | Token | Value | Use |
 |---|---|---|
 | `--ink` | `#191D1C` | Main dark surface and text (existing brand colour) |
 | `--bone` | `#F1F0EE` | Main light surface (existing) |
-| `--mist` | `#BEC5BD` | Hairlines, quiet UI, the Meghna Line (existing) |
-| `--silt` / `--silt-light` | `#8C7A5B` / `#B9A37C` | The single accent: focus rings, active states, the line's tip |
+| `--paper` | `#EBE6DD` | Warmer light surface for the "Made" and "Stewardship" chapters |
+| `--mist` | `#BEC5BD` | Hairlines and quiet UI (existing) |
+| `--silt` / `--silt-light` | `#8C7A5B` / `#B9A37C` | Brass, the single accent: focus rings, the spine's fill, active numerals. Used sparingly. |
+| `--silt-text` | `#735F3E` | Brass for text and small marks on light surfaces (≥ 4.7:1, WCAG AA) |
 
 **Material palettes.** Each house page takes a material sampled from its own photography (`materials` in `src/content/houses.ts`):
 
@@ -80,15 +95,15 @@ qa/                       QA scripts, Lighthouse JSON, axe report, curated scree
 
 **Type.** The fonts are the client's licensed, self-hosted faces, loaded with `next/font/local` and metric-matched fallbacks (no layout shift on swap):
 
-- **Banana Grotesk** (Light / Regular / Medium) carries all structure.
-- **PP Migra Italic** (Pangram Pangram) is reserved for **one emotive word per headline**. It uses its discretionary ligatures and old-style figures for years.
-- Banana Grotesk has proportional digits and no `tnum` feature. The Ledger therefore counts in fixed-width digit cells so numbers never jitter.
+- **Banana Grotesk** (Light / Regular / Medium) carries all structure: titles, text and small capitals (`.smallcaps`).
+- **PP Migra Italic** (Pangram Pangram) appears only in numerals: chapter numerals, years and figures. Chapter numerals are drawn as outlines and fill with ink (`.numeral`).
+- Migra has proportional digits. The year odometer therefore sizes each digit column from measured glyph widths (`monograph/digits.ts`) so numbers never jitter.
 
 **Layout.**
 - Grid: 4 / 8 / 12 columns.
-- Gutters: `clamp(16px, 4vw, 80px)`.
-- Content is capped at 1600px; imagery bleeds to the edges.
-- Section rhythm: `clamp(96px, 14vw, 240px)`.
+- Gutters: `clamp(18px, 5vw, 104px)`, wide enough to hold the spine on desktop.
+- Content is capped at 1600px; plates bleed to the edges.
+- Section rhythm: `clamp(96px, 14vw, 240px)`. Chapter openers take at least 76% of the viewport, so each chapter begins on its own "page".
 
 **Imagery.**
 - Everything renders through `components/ui/Img.tsx` (next/image, AVIF/WebP).
@@ -100,45 +115,35 @@ qa/                       QA scripts, Lighthouse JSON, axe report, curated scree
 
 ## Motion spec
 
-Motion is a **progressive enhancement**. Every page is complete and readable with JavaScript off, and fully static under `prefers-reduced-motion`. QA verified both.
+Motion is a **progressive enhancement**. Every page is complete and readable with JavaScript off, and fully static under `prefers-reduced-motion`. QA verified both. The rule is *few effects, slow and deliberate*.
 
 **Boot sequence**
 1. An inline script in `<head>` adds `html.motion` before first paint, unless reduced motion is on. This arms the below-the-fold entrance states.
 2. After `load` plus an idle callback, `lib/motion.ts` lazy-loads GSAP and ScrollTrigger. Lenis is added on fine-pointer devices only; touch keeps native momentum.
 3. If motion hasn't booted within 4 s, the class is removed and nothing is ever hidden.
-4. Above-the-fold headlines reveal with CSS from first paint (`data-reveal="lines-now"`). They are transform-only, so they never delay LCP.
+4. Above-the-fold titles reveal with CSS from first paint (`data-reveal="lines-now"` / `"fade-now"`). They are transform-only, so they never delay LCP.
 
-**Declarative effects** (`components/motion/MotionRoot.tsx`). These are set up in small batches that yield to the main thread:
+**Declarative effects** (`components/motion/MotionRoot.tsx`). These are set up in small batches that yield to the main thread, and every tween states its start values explicitly:
 
 | Attribute | Effect | Timing |
 |---|---|---|
-| `data-reveal="lines"` | Masked line slide-up | 1.15 s, `expo.out`, 85 ms stagger, at 86% viewport |
-| `data-reveal="fade"` | Rise + fade | 1 s, `power3.out` |
-| `data-reveal="tide"` | Clip-path "tide" wipe + image 1.08 → 1 | 1.3 s `expo.inOut` / 1.8 s |
-| `data-scrub-words` | Words fill from 16% to 100% opacity as the block passes | scrubbed |
-| `data-parallax="0.14"` | Gentle vertical drift (fraction of height) | scrubbed |
-| `data-drift="-12"` | Oversized partner name drifts horizontally | scrubbed |
-| `data-scale-in` | Media grows from an inset rounded frame to full-bleed | scrubbed, top 85% → 15% |
-| `data-count` | Ledger figures count up once (years start from 1900) | 2.2 s `expo.out` |
+| `data-reveal="lines"` | Masked line rise | 1.4 s, `power4.out`, 100 ms stagger, at 88% viewport |
+| `data-reveal="fade"` | Quiet rise + fade (18px) | 1.3 s, `power3.out` |
+| `data-reveal="window"` | The image opens like a window: inset 7% frame → full plate, image 1.06 → 1 | 1.8 s `power3.inOut` / 2.2 s |
+| `data-parallax="0.05"` | Gentle vertical drift, capped at 8% | scrubbed |
+| `data-recede` | A plate settles back (scale 1 → 0.92, shade to 65%) as the next covers it | scrubbed |
+| `data-fill` | An outlined numeral fills with ink as it crosses the screen | scrubbed, top 85% → centre 45% |
 
-**Signature scenes**
+**Signature moments**
 
-- **Confluence hero** (`home/HeroMotion.tsx`). It pins for one viewport (70% on phones). The four streams' clip-paths close into one surface, the headline parts like water around a stone, a veil deepens, and the monogram surfaces.
-  - Its entrance is CSS-only: a veil lifts off the images like mist. The images never move on load, which keeps LCP at first paint.
-  - Desktop has four vertical streams; phones get four horizontal bands.
-- **Meghna Line** (`motion/MeghnaLine.tsx`). It is built from `data-line-anchor` points as vertical S-curves (`data-line-x`, `data-line-x-sm`, `data-line-split`, `data-line-merge`).
-  - The tip tracks 62% of the viewport through a length lookup table.
-  - It blends with `mix-blend-mode: difference`, so it reads on ink, bone and photography alike.
-  - It is decorative (`aria-hidden`), drawn in full under reduced motion, and built in an idle callback.
-- **1965 → Now** (`home/TimelineMotion.tsx`). On screens ≥1024px it pins and scrubs horizontally, and each outlined PP Migra year fills with ink as it crosses the centre.
-  - Tablets get a river timeline that alternates around the centre line.
-  - Phones get a vertical list with the line on the left.
+- **The opening** (`monograph/Opening*.tsx`). The LCP is a still frame of the client's river film, served at high priority. On desktop the film fades in over it after idle (never on phones, Save-Data or reduced motion). On screens ≥1024px the opening pins: the plate closes into a framed window on the right, the title recedes and the foreword rises beside it.
+- **The chapter spine** (`monograph/ChapterSpine.tsx`). On screens ≥1180px, each chapter's numeral sits in the left margin at its proportional place in the page (at least 44px apart). A brass rule fills as you read, the current numeral lights, and the current chapter's title is set vertically at the foot. The spine reads the surface behind it and switches between dark and light ink. Below 1180px it becomes a brass hairline of reading progress at the top of the screen.
+- **The register, 1965 → 2025** (`monograph/Years*.tsx`). On screens ≥1024px (motion allowed) it pins and the year turns like an odometer, digit by digit, while each milestone and its photograph crossfade in place; scroll snaps to each year. Elsewhere it is a calm vertical register.
+- **The houses as plates** (`monograph/Plates.tsx`). Each house is a full-screen sticky plate. As the next plate slides over, the previous one recedes into shade.
 - **House Index.**
   - Filters are pure CSS (radio + `:has`).
-  - On fine pointers the house image follows the cursor with lerped, magnetic easing and a slight skew. Images are fetched only after first hover.
+  - On fine pointers the house image follows the cursor with lerped, magnetic easing. Images are fetched only after first hover.
   - On touch, rows expand in place.
-  - iPad portrait shows a two-column index with thumbnails.
-- **Route curtain.** On navigation, a curtain in the material of the page you left tides away (1.1 s, `cubic-bezier(0.65, 0, 0.35, 1)`).
 - **Films.**
   - Each film is AV1 with an H.264 fallback and has a pause control.
   - The poster is fetched about 150px before the film enters view; the video bytes only once 25% of it is visible.
@@ -156,13 +161,16 @@ Easing tokens: `--ease-out: cubic-bezier(0.22, 1, 0.36, 1)` and `--ease-io: cubi
 | `.link` + `.arrow` | Underline sweeps in from the left on hover; arrow extends |
 | Header | Hides on scroll down, returns on scroll up; `mix-blend-mode: difference` over any section. Phones use a bottom-right thumb-zone pill (hotline + menu). |
 | Menu overlay | Focus-trapped dialog with Esc to close, inert when closed, live image preview; without JS falls back to `:target` |
+| ChapterSpine | Numerals as links to each chapter; active / passed / upcoming; dark or light tone; hairline progress below 1180px |
+| ChapterOpener | Outlined numeral (fills on scroll), "Chapter X", title, one sentence |
+| Figure | Window reveal + slight parallax, numbered caption; `still` variant for above-the-fold frontispieces |
+| Figures | A short ledger of facts with Migra values and small-capital labels |
+| Plate | Sticky full-screen house plate: count, name, sector · partner · year, one line, "Enter" |
 | House Index row | default / hover (fine pointer) / expanded (touch) / filtered out |
-| Ledger stat | Server-rendered final value; counts once in view |
-| Timeline node | Outlined year → filled; card with image and link to the house |
-| Gallery | Masonry (2–3 columns), swipe with scroll-snap on phones; tiles never exceed the source width |
+| Gallery | Alternating 12-column plates with numbered captions; swipe with scroll-snap on phones; tiles never exceed the source width |
 | Offerings rail | Horizontal snap rail with partner images (`object-fit: contain`, never cropped); typographic list when there are no images |
 | Enquiry form | idle / field errors (`aria-invalid`, described-by, focused alert) / sending / sent; honeypot + minimum fill time |
-| Footer | Edge-to-edge MEGHNA wordmark (letters rise), live Dhaka time, one-tap hotline, the line's resting point |
+| Footer | Edge-to-edge MEGHNA wordmark (letters rise), live Dhaka time, one-tap hotline |
 
 ---
 
@@ -179,7 +187,7 @@ To connect the live CMS at `cms.meghna-executive.com`:
 3. Regenerate `src/content/media-registry.ts` from the CMS, or switch `media()` to take dimensions from the CMS response.
 4. Optionally move the films in `public/media/` into the CMS or a CDN, and update `videos` in `src/content/media.ts`.
 
-Everything else (ledger figures, timeline, careers roles, sustainability log) lives in `src/content/group.ts` and should move to the CMS on the same pattern.
+Everything else (figures, the 1965–2025 register, house plates, careers roles, sustainability log) lives in `src/content/group.ts` and should move to the CMS on the same pattern.
 
 ---
 
