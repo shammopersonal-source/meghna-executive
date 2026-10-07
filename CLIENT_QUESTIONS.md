@@ -14,6 +14,9 @@ Items the rebuild needs the group to confirm or supply. Nothing on the new site 
 | 6 | Executive Greentex | "LEED **Platinum**" | LEED Platinum | Confirm, and the year awarded |
 | 7 | "The Evolution of MEH" article | Mentions "real estate, packaging, and logistics" | Article kept verbatim | These sectors appear nowhere else on the site. Keep, edit or retire the article? |
 | 8 | BMW i7 article | Two sections repeat the same two paragraphs | Duplicate removed | OK? |
+| 9 | **Executive Motors phone** | The page **shows 16765** but the link **dials 01886000555** | **16765** shown and dialled | Which number should BMW customers call? |
+| 10 | Broken contact links | `tel:undefined` and `mailto:undefined` links on 30 of 33 pages (empty CMS fields) | Not reproduced | None needed; listed so your team knows |
+| 11 | Sustainability "initiative" articles | Five general essays (solar power, transport carbon, green supply chain, water harvesting, zero-waste garments) with no MEH-specific facts | Kept verbatim at their old addresses, linked from Sustainability | Can you add what MEH actually did for each (sites, dates, results)? That would turn them into proof. |
 
 ## B. Content to supply
 
@@ -24,6 +27,12 @@ Items the rebuild needs the group to confirm or supply. Nothing on the new site 
 5. **Executive Machines' public email**, for enquiry routing.
 6. **Enquiry delivery.** Where should website enquiries go: a CRM, a shared inbox or Slack? We need a webhook URL (`ENQUIRY_WEBHOOK_URL`).
 7. **Penthouse Livings brands.** The live pages name 8 brands but also say "50+". Do you want the full list on the site?
+8. **WhatsApp.** The current site publishes no WhatsApp number, so the redesign shows none. If showrooms answer on WhatsApp, send the numbers and we add one-tap WhatsApp next to each phone.
+9. **Google Business Profiles.** Links to the profiles for the group office and each showroom, so maps and reviews can be linked from each house page.
+10. **Testimonials.** Any buyer, customer or partner quotes you have permission to publish. None are on the current site, and we will not write any.
+11. **Apparel certifications** beyond LEED (for example BSCI, WRAP, OEKO-TEX, GOTS), only if held, with certificate numbers.
+12. **CMS access.** The current site is edited in an admin panel at cms.meghna-executive.com. To keep your team editing there, we need API access (from you or Dcastalia). The redesign reads all content through one data layer (`src/lib/cms.ts`), so this is a contained job.
+13. **Search Console.** Access to Google Search Console for meghna-executive.com, to confirm what is indexed today and to submit the new sitemap at launch. Note: the current `robots.txt` tells all search engines not to crawl the site (`Disallow: /`).
 
 ## C. Imagery: please send originals
 

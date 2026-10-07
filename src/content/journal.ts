@@ -3,13 +3,14 @@ import { media, type Media } from "./media";
 /**
  * Journal articles migrated verbatim from meghna-executive.com/media-center.
  * Headings and paragraphs only; duplicated paragraphs on the live site were removed.
+ * The five "Initiative" pieces were listed under Sustainability on the live site.
  */
 export type Block = { type: "h2"; text: string } | { type: "p"; text: string } | { type: "ul"; items: string[] };
 
 export type Article = {
   slug: string;
   title: string;
-  category: "Blog" | "Video" | "News";
+  category: "Blog" | "Video" | "News" | "Initiative";
   date: string;
   house: string | null;
   cover: Media;
@@ -397,6 +398,79 @@ export const articles: Article[] = [
         type: "p",
         text: "Meghna Executive Holdings (MEH) has undergone a remarkable transformation since its inception, emerging as a leader across various industries. From its humble beginnings focused on manufacturing, MEH has embraced innovation and diversification, expanding into sectors such as textiles, real estate, packaging, and logistics. Central to its evolution is a commitment to quality, sustainability, and digital transformation, ensuring that every product and service meets the highest standards while minimizing environmental impact. MEH’s strategic investments in technology and a customer-centric approach have allowed it to adapt to changing market demands and enhance operational efficiency. As MEH continues to grow, its legacy of excellence and responsibility remains at the forefront, paving the way for a promising future in the global marketplace.",
       },
+    ],
+  },
+  {
+    slug: "solar-power-implementation-in-manufacturing-units",
+    title: "Solar Power Implementation in Manufacturing Units",
+    category: "Initiative",
+    date: "2024-11-12",
+    house: null,
+    cover: media("1730724700sLxre", "An engineer with a tablet walking between rows of solar panels."),
+    body: [
+      { type: "p", text: "As industries increasingly seek sustainable solutions to reduce their carbon footprint and energy costs, the implementation of solar power in manufacturing units has emerged as a pivotal strategy. This approach harnesses renewable energy to power operations, aligning with global efforts to combat climate change while enhancing efficiency." },
+      { type: "p", text: "The integration of solar power in manufacturing not only provides a clean energy source but also offers significant financial benefits through reduced electricity bills and potential government incentives. By installing solar panels on rooftops or unused land, manufacturing units can generate a substantial portion of their energy needs, creating a more self-sufficient and resilient energy model." },
+      { type: "p", text: "Moreover, the shift to solar energy fosters innovation and can improve a company’s brand image, appealing to environmentally conscious consumers and stakeholders. This transition not only supports corporate social responsibility goals but also prepares businesses for a future where sustainability is increasingly prioritized." },
+      { type: "p", text: "In this discussion, we will explore best practices for implementing solar power in manufacturing units, including site assessments, financing options, and maintenance considerations. By embracing solar energy, manufacturers can lead the way in sustainable practices, contributing to a greener planet while achieving long-term operational savings." },
+    ],
+  },
+  {
+    slug: "carbon-footprint-reduction-in-transportation",
+    title: "Carbon Footprint Reduction in Transportation",
+    category: "Initiative",
+    date: "2024-11-08",
+    house: null,
+    cover: media("173072483093ZPR", "A lorry on a forest road seen from above at dusk."),
+    body: [
+      { type: "p", text: "The transportation sector is a significant contributor to global carbon emissions, making the reduction of its carbon footprint a critical challenge for achieving sustainability goals. As awareness of climate change grows, companies and individuals are increasingly seeking innovative strategies to minimize their environmental impact while maintaining efficiency and productivity in logistics and travel." },
+      { type: "p", text: "To reduce carbon emissions in transportation, several strategies can be implemented. Transitioning to electric and hybrid vehicles is one of the most effective ways to lower emissions, significantly cutting down reliance on fossil fuels. Additionally, optimizing routes and improving logistics management through advanced software and real-time data analysis can reduce fuel consumption and enhance operational efficiency." },
+      { type: "p", text: "Moreover, promoting public transportation, carpooling, and the use of non-motorized modes such as cycling can further decrease the carbon footprint associated with daily commutes. Implementing sustainable practices, such as the use of biofuels and investing in carbon offset programs, also contributes to emissions reduction efforts." },
+      { type: "p", text: "In this exploration, we will delve into the various approaches to carbon footprint reduction in transportation, highlighting successful case studies and innovative technologies that can drive change. By prioritizing sustainable transportation solutions, businesses and communities can play a pivotal role in mitigating climate change and moving towards a more sustainable future." },
+    ],
+  },
+  {
+    slug: "green-supply-chain-development-in-bangladesh",
+    title: "Green Supply Chain Development in Bangladesh",
+    category: "Initiative",
+    date: "2024-10-10",
+    house: null,
+    cover: media("1730725145w67HY", "Aerial view of a factory surrounded by green fields."),
+    body: [
+      { type: "p", text: "As Bangladesh continues to emerge as a key player in the global manufacturing and export markets, the importance of developing a green supply chain has never been more critical. The concept of a green supply chain emphasizes sustainability by integrating environmentally friendly practices throughout the entire supply chain, from raw material sourcing to production, distribution, and waste management." },
+      { type: "p", text: "In Bangladesh, the need for a green supply chain is driven by both environmental challenges and market demands. Rapid industrialization has led to significant environmental concerns, including pollution and resource depletion. By adopting green supply chain practices, businesses can minimize their ecological footprint, enhance operational efficiency, and improve compliance with international environmental standards." },
+      { type: "p", text: "Key strategies for developing a green supply chain in Bangladesh include implementing sustainable sourcing practices, optimizing logistics to reduce carbon emissions, and investing in cleaner technologies. Encouraging suppliers to adopt sustainable practices, such as reducing waste and utilizing renewable resources, is essential for creating a holistic approach to sustainability." },
+      { type: "p", text: "Moreover, government policies and initiatives play a crucial role in facilitating green supply chain development. Incentives for adopting eco-friendly technologies and regulations promoting sustainable practices can drive industry-wide change." },
+      { type: "p", text: "In this discussion, we will explore the current state of green supply chain development in Bangladesh, highlighting successful initiatives and case studies from various sectors. By embracing sustainability in their supply chains, businesses in Bangladesh can not only contribute to environmental conservation but also enhance their competitiveness in the global market." },
+    ],
+  },
+  {
+    slug: "local-water-conservation-and-harvesting-project",
+    title: "Local Water Conservation and Harvesting Project",
+    category: "Initiative",
+    date: "2024-10-04",
+    house: null,
+    cover: media("1730725506c8MxK", "Hands cupping clean water under a running tap."),
+    body: [
+      { type: "p", text: "The Local Water Conservation and Harvesting Project aims to address the growing challenges of water scarcity and environmental degradation through sustainable practices at the community level. With increasing pressures on water resources due to climate change, population growth, and industrialization, this project seeks to empower local communities by promoting efficient water management techniques and conservation methods." },
+      { type: "p", text: "Central to the project is the implementation of rainwater harvesting systems, which capture and store rainwater for various uses, such as irrigation, drinking water, and sanitation. By leveraging local knowledge and resources, the project encourages communities to design and install their systems tailored to their specific needs, thereby enhancing their resilience to water shortages." },
+      { type: "p", text: "Additionally, the project focuses on educating community members about the importance of water conservation, sustainable agricultural practices, and the benefits of maintaining healthy ecosystems. Workshops, training sessions, and awareness campaigns will be conducted to equip individuals with the knowledge and tools needed to effectively manage their water resources." },
+      { type: "p", text: "The Local Water Conservation and Harvesting Project also aims to foster partnerships with local governments, NGOs, and environmental organizations to amplify its impact. Collaborative efforts can help secure funding, resources, and technical expertise necessary for the project's success." },
+      { type: "p", text: "By promoting water conservation and harvesting techniques, this project not only aims to ensure a sustainable water supply for communities but also contributes to broader environmental goals, such as reducing runoff, preventing soil erosion, and protecting local ecosystems. Ultimately, the initiative seeks to create a culture of sustainability, empowering communities to take charge of their water resources and secure their future." },
+    ],
+  },
+  {
+    slug: "zero-waste-garment-production-initiative",
+    title: "Zero-Waste Garment Production Initiative",
+    category: "Initiative",
+    date: "2024-09-12",
+    house: null,
+    cover: media("1730522664dKB0O", "A cotton tote printed with the recycling symbol."),
+    body: [
+      { type: "p", text: "The Zero-Waste Garment Production Initiative is a groundbreaking effort aimed at revolutionizing the fashion and textile industry by eliminating waste at every stage of garment production. With the global fashion industry being one of the largest contributors to environmental pollution, this initiative seeks to foster sustainable practices that not only minimize waste but also promote ethical production methods." },
+      { type: "p", text: "At the core of the initiative is the adoption of innovative design strategies that prioritize efficiency and sustainability. By utilizing advanced techniques such as pattern-making optimization and resource-efficient cutting methods, designers can create garments that make full use of available fabric, leaving little to no material waste. This approach not only conserves resources but also reduces production costs." },
+      { type: "p", text: "In addition to design innovations, the initiative emphasizes the importance of recycling and upcycling in garment production. By encouraging manufacturers to repurpose leftover materials into new products, the initiative aims to create a circular economy where every piece of fabric is valued and utilized effectively." },
+      { type: "p", text: "Education and collaboration are key components of the Zero-Waste Garment Production Initiative. Workshops and training sessions will be conducted for designers, manufacturers, and workers to raise awareness about sustainable practices and the benefits of zero-waste production. Furthermore, partnerships with industry stakeholders, including fabric suppliers, retailers, and NGOs, will be established to create a comprehensive network that supports sustainable fashion." },
+      { type: "p", text: "By implementing the Zero-Waste Garment Production Initiative, the fashion industry can significantly reduce its environmental impact while setting a new standard for responsible production. This initiative not only strives to protect the planet but also aims to inspire consumers to embrace sustainable fashion choices, ultimately leading to a more sustainable and ethical industry for future generations." },
     ],
   },
 ];

@@ -60,6 +60,10 @@ export default function Header({ houses }: { houses: MenuHouse[] }) {
     };
   }, []);
 
+  // On a house page the pill calls that house directly; elsewhere, the group hotline.
+  const here = houses.find((h) => pathname === `/houses/${h.slug}`);
+  const call = here?.phone ? { label: here.phone, href: `tel:${here.phone.replace(/[^\d+]/g, "")}` } : null;
+
   const onToggle = (e: React.MouseEvent) => {
     e.preventDefault();
     setOpen((o) => !o);
@@ -108,9 +112,14 @@ export default function Header({ houses }: { houses: MenuHouse[] }) {
 
       {/* Phone: thumb-zone pill */}
       <div className={styles.pill} data-open={open ? "" : undefined}>
-        <a href={site.hotlineHref} className={styles.pillCall} data-cta="hotline" aria-label={`Call ${site.hotline}`}>
+        <a
+          href={call?.href ?? site.hotlineHref}
+          className={styles.pillCall}
+          data-cta="hotline"
+          aria-label={call ? `Call ${here?.name.replace(/ Ltd\.$/, "")}, ${call.label}` : `Call ${site.hotline}`}
+        >
           <PhoneIcon />
-          <span>{site.hotline}</span>
+          <span>{call ? "Call" : site.hotline}</span>
         </a>
         <a
           href="#site-menu"

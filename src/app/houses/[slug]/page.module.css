@@ -187,7 +187,13 @@
   }
 }
 .enquire {
-  margin-top: 40px;
+  margin-top: clamp(48px, 7vw, 96px);
+  padding-top: clamp(32px, 4vw, 48px);
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 12px;
+  max-width: 760px;
+  scroll-margin-top: calc(var(--header-h) + 24px);
 }
 .next {
   position: relative;

@@ -83,6 +83,31 @@
   margin: 0;
   font-size: 1.0625rem;
 }
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.actions .btn {
+  min-height: 48px;
+}
+.call {
+  gap: 10px;
+}
+.call svg {
+  width: 16px;
+  height: 16px;
+}
+@media (max-width: 767px) {
+  /* Phones: the partner is the fact that matters; sector and year live further down. */
+  .copy {
+    gap: 20px;
+    padding-bottom: var(--pill-clear);
+  }
+  .facts div:not(.keep) {
+    display: none;
+  }
+}
 .anchor {
   position: absolute;
   bottom: 0;

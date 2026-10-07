@@ -2,15 +2,17 @@
 import { chromium } from "/opt/node22/lib/node_modules/playwright/index.mjs";
 const [, , path = "/", prefix = "home", ...flags] = process.argv;
 const base = process.env.QA_BASE ?? "http://localhost:3100";
-const vps = { phone: { width: 390, height: 844 }, ipad: { width: 834, height: 1194 }, desktop: { width: 1440, height: 900 } };
-const only = process.env.QA_VP?.split(",");
-const browser = await chromium.launch();
+const vps = { phone360: { width: 360, height: 780 }, phone: { width: 390, height: 844 }, ipad: { width: 834, height: 1194 }, desktop: { width: 1440, height: 900 } };
+const only = process.env.QA_VP?.split(",") ?? ["phone", "ipad", "desktop"];
+// Live sites go through the sandbox proxy; localhost does not.
+const proxy = process.env.HTTPS_PROXY && !base.includes("localhost") ? { server: process.env.HTTPS_PROXY } : undefined;
+const browser = await chromium.launch({ proxy });
 for (const [name, vp] of Object.entries(vps)) {
   if (only && !only.includes(name)) continue;
   const ctx = await browser.newContext({
     viewport: vp,
     deviceScaleFactor: 1,
-    isMobile: name === "phone",
+    isMobile: name.startsWith("phone"),
     hasTouch: name !== "desktop",
     reducedMotion: flags.includes("--reduced") ? "reduce" : "no-preference",
     javaScriptEnabled: !flags.includes("--nojs"),

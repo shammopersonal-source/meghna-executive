@@ -7,7 +7,7 @@ const log = (...a) => console.log(...a);
 {
   const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } });
   const p = await ctx.newPage();
-  await p.goto(base + "/", { waitUntil: "networkidle" });
+  await p.goto(base + "/", { waitUntil: "load" });
   await p.waitForTimeout(1500);
   await p.click("header a[aria-controls='site-menu']");
   await p.waitForTimeout(1200);
@@ -24,7 +24,7 @@ const log = (...a) => console.log(...a);
 {
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
   const p = await ctx.newPage();
-  await p.goto(base + "/houses/executive-motors", { waitUntil: "networkidle" });
+  await p.goto(base + "/houses/executive-motors", { waitUntil: "load" });
   await p.waitForTimeout(1200);
   await p.tap("div[class*='pill'] a[aria-controls='site-menu']");
   await p.waitForTimeout(1300);
@@ -47,7 +47,7 @@ const log = (...a) => console.log(...a);
 {
   const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } });
   const p = await ctx.newPage();
-  await p.goto(base + "/contact?house=executive-motors", { waitUntil: "networkidle" });
+  await p.goto(base + "/contact?house=executive-motors", { waitUntil: "load" });
   log("preselected house:", await p.inputValue("#house"));
   await p.waitForTimeout(3000);
   await p.click("button[type=submit]");
@@ -74,6 +74,22 @@ const log = (...a) => console.log(...a);
   await Promise.all([p.waitForLoadState("load"), p.click("button[type=submit]")]);
   await p.waitForTimeout(800);
   log("no-JS submit result:", (await p.textContent("main")).match(/Thank you[^.]*\.[^.]*\./)?.[0] ?? "NO CONFIRMATION FOUND");
+  await ctx.close();
+}
+// Inline enquiry on a house page (phone, with and without JS): preset to that house
+for (const js of [true, false]) {
+  const ctx = await b.newContext({ viewport: { width: 360, height: 780 }, isMobile: true, hasTouch: true, javaScriptEnabled: js });
+  const p = await ctx.newPage();
+  await p.goto(base + "/houses/executive-lifestyles#enquire", { waitUntil: "load" });
+  await p.waitForTimeout(800);
+  const preset = await p.inputValue("#enquire #house");
+  await p.waitForTimeout(3500); // the form ignores submissions faster than a person can type
+  await p.fill("#enquire #name", "Nusrat Jahan");
+  await p.fill("#enquire #email", "nusrat@example.com");
+  await p.fill("#enquire #message", "Do you have the KOHLER Veil toilet in stock at Uttara?");
+  await Promise.all([js ? p.waitForSelector("[role=status]") : p.waitForLoadState("load"), p.click("#enquire button[type=submit]")]);
+  await p.waitForTimeout(800);
+  log(`house inline form (${js ? "JS" : "no-JS"}): preset=${preset} →`, (await p.textContent("main")).match(/Thank you[^.]*\.[^.]*\./)?.[0] ?? "NO CONFIRMATION FOUND");
   await ctx.close();
 }
 await b.close();

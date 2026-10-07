@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-/** Old /units/* slugs → new /houses/* slugs. Every legacy URL keeps working (301). */
+/** Old /units/* slugs → new /houses/* slugs. Every legacy URL keeps working (301, single hop). */
 const houseSlugs: Record<string, string> = {
   "executive-motors-ltd": "executive-motors",
   "executive-machines-ltd": "executive-machines",
@@ -50,22 +50,22 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      { source: "/about", destination: "/group", permanent: true },
-      { source: "/units", destination: "/houses", permanent: true },
+      { source: "/about", destination: "/group", statusCode: 301 },
+      { source: "/units", destination: "/houses", statusCode: 301 },
       ...Object.entries(houseSlugs).map(([from, to]) => ({
         source: `/units/${from}`,
         destination: `/houses/${to}`,
-        permanent: true,
+        statusCode: 301,
       })),
-      { source: "/csr", destination: "/responsibility", permanent: true },
-      { source: "/career", destination: "/careers", permanent: true },
-      { source: "/media-center", destination: "/journal", permanent: true },
+      { source: "/csr", destination: "/responsibility", statusCode: 301 },
+      { source: "/career", destination: "/careers", statusCode: 301 },
+      { source: "/media-center", destination: "/journal", statusCode: 301 },
       ...Object.entries(journalSlugs).map(([from, to]) => ({
         source: `/media-center/${from}`,
         destination: `/journal/${to}`,
-        permanent: true,
+        statusCode: 301,
       })),
-      { source: "/media-center/:slug", destination: "/journal/:slug", permanent: true },
+      { source: "/media-center/:slug", destination: "/journal/:slug", statusCode: 301 },
     ];
   },
   async headers() {

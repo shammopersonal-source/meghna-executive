@@ -12,6 +12,8 @@ export type MenuHouse = {
   name: string;
   sector: Sector;
   partner?: string;
+  /** The house's own first published number; the phone pill dials it on that house's page. */
+  phone?: string;
   image: { src: string; alt: string };
 };
 

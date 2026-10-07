@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/journal" },
 };
 
-const cats = ["All", "Blog", "Video", "News"] as const;
+const cats = ["All", "Blog", "Video", "News", "Initiative"] as const;
 
 export default async function JournalPage() {
   const articles = await getArticles();
@@ -36,7 +36,7 @@ export default async function JournalPage() {
             {cats.map((c) => (
               <label key={c} className={styles.filter}>
                 <input type="radio" name="journal-cat" value={c} defaultChecked={c === "All"} />
-                <span>{c}</span>
+                <span>{c === "Initiative" ? "Sustainability" : c}</span>
               </label>
             ))}
           </fieldset>

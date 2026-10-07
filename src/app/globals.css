@@ -46,6 +46,8 @@
   --s7: 6rem;
   --s8: 8rem;
   --gutter: clamp(18px, 5vw, 104px);
+  /* Room kept clear above the phone pill (52px + 16px inset + breathing space). */
+  --pill-clear: 0px;
   --section: clamp(96px, 14vw, 240px);
   --maxw: 1600px;
   --cols: 4;
@@ -416,6 +418,12 @@ a:focus-visible .arrow {
   background: var(--accent);
   border-color: var(--accent);
   color: var(--bone);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --pill-clear: calc(92px + env(safe-area-inset-bottom));
+  }
 }
 
 /* ---------- Focus & a11y ---------- */

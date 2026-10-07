@@ -68,3 +68,8 @@
   justify-self: start;
   color: var(--pure);
 }
+@media (max-width: 767px) {
+  .caption {
+    bottom: var(--pill-clear);
+  }
+}

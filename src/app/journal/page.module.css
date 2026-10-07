@@ -40,7 +40,8 @@
 }
 .wrap:has(input[value="Blog"]:checked) li:not([data-cat="Blog"]),
 .wrap:has(input[value="Video"]:checked) li:not([data-cat="Video"]),
-.wrap:has(input[value="News"]:checked) li:not([data-cat="News"]) {
+.wrap:has(input[value="News"]:checked) li:not([data-cat="News"]),
+.wrap:has(input[value="Initiative"]:checked) li:not([data-cat="Initiative"]) {
   display: none;
 }
 .grid {

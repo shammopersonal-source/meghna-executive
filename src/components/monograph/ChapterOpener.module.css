@@ -40,3 +40,13 @@
     padding-bottom: 2.2rem;
   }
 }
+@media (max-width: 767px) {
+  /* Phones: a chapter break, not an empty screen. */
+  .opener {
+    min-height: 0;
+    padding-block: 88px 72px;
+  }
+  .inner {
+    gap: 24px;
+  }
+}

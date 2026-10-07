@@ -59,7 +59,20 @@
   text-wrap: balance;
 }
 .sub {
-  opacity: 0.85;
+  max-width: 44ch;
+  font-size: var(--fs-lead);
+  font-weight: 300;
+  line-height: 1.35;
+  opacity: 0.9;
+  text-wrap: pretty;
+}
+.actions {
+  margin: 0;
+}
+.actions .btn-solid {
+  background: var(--pure);
+  border-color: var(--pure);
+  color: var(--ink);
 }
 .cue {
   position: absolute;
@@ -132,6 +145,6 @@
     display: none;
   }
   .title {
-    bottom: 48px;
+    bottom: var(--pill-clear);
   }
 }

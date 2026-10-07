@@ -9,6 +9,7 @@ import HouseHero from "@/components/house/HouseHero";
 import Gallery from "@/components/house/Gallery";
 import Offerings from "@/components/house/Offerings";
 import SectionHead from "@/components/page/SectionHead";
+import EnquiryForm from "@/components/contact/EnquiryForm";
 import JsonLd from "@/components/seo/JsonLd";
 import { houses, materials, nextHouse, sectorLabel } from "@/content/houses";
 import { getHouse } from "@/lib/cms";
@@ -25,8 +26,15 @@ export async function generateMetadata({ params }: PageProps<"/houses/[slug]">):
   const h = await getHouse(slug);
   if (!h) return {};
   const desc = `${h.positioning} ${h.intro[0]}`.slice(0, 300);
+  // Lead with what people search for: the partner brand, or the sector.
+  const short = h.name.replace(/ (Ltd\.|Limited)$/, "");
+  const searchTitle: Record<string, string> = {
+    BMW: `${short}: BMW in Bangladesh`,
+    KOHLER: `${short}: KOHLER in Bangladesh`,
+    Apple: `${short}: Apple Authorised Reseller`,
+  };
   return {
-    title: h.name,
+    title: (h.partner && searchTitle[h.partner]) || `${short}: ${sectorLabel(h.sector)}`,
     description: desc,
     alternates: { canonical: `/houses/${h.slug}` },
     openGraph: { title: `${h.name} · Meghna Executive Holdings`, description: h.positioning },
@@ -38,6 +46,7 @@ export default async function HousePage({ params }: PageProps<"/houses/[slug]">)
   const house = await getHouse(slug);
   if (!house) notFound();
   const mat = materials[house.material];
+  const enquiryOptions = houses.map((h) => ({ value: h.slug, label: h.name, group: sectorLabel(h.sector) }));
   const roman = ["I", "II", "III", "IV", "V", "VI"];
   const sections: [string, string, boolean][] = [
     ["overview", "Overview", true],
@@ -218,11 +227,11 @@ export default async function HousePage({ params }: PageProps<"/houses/[slug]">)
               </li>
             ))}
           </ul>
-          <p className={styles.enquire}>
-            <Link href={`/contact?house=${house.slug}`} className="btn btn-solid">
-              Send an enquiry to {house.name.replace(/ Ltd\.$/, "")}
-            </Link>
-          </p>
+          <div className={styles.enquire} id="enquire">
+            <h3 className="h3">Write to {house.name.replace(/ Ltd\.$/, "")}</h3>
+            <p className="muted">Your message goes straight to this house.</p>
+            <EnquiryForm options={enquiryOptions} defaultHouse={house.slug} />
+          </div>
         </div>
       </section>
 
@@ -231,7 +240,7 @@ export default async function HousePage({ params }: PageProps<"/houses/[slug]">)
           <Img media={next.card} sizes="100vw" quality={60} />
         </div>
         <div className={`container ${styles.nextCopy}`}>
-          <p className="label">Next in the river</p>
+          <p className="label">Next house</p>
           <Lines as="p" className="display" lines={[next.name.replace(/ Ltd\.$/, "")]} />
           <span className={styles.nextArrow} aria-hidden="true">
             <span className="arrow" />

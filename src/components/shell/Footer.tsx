@@ -36,6 +36,15 @@ export default function Footer() {
             <a href={site.address.mapUrl} className="link" target="_blank" rel="noopener noreferrer">
               Open in Maps <span className="arrow" aria-hidden="true" />
             </a>
+            <ul role="list" className={styles.social} aria-label="Follow the group">
+              {site.social.map((s) => (
+                <li key={s.href}>
+                  <a href={s.href} className="link" target="_blank" rel="noopener noreferrer">
+                    {s.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
             <p className="muted">
               <DhakaTime />
             </p>

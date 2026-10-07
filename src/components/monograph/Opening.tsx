@@ -45,8 +45,13 @@ export default function Opening() {
               <span className="line-inner">Executive Holdings</span>
             </span>
           </h1>
-          <p className={`smallcaps ${styles.sub}`} data-reveal="fade-now">
-            Fifteen houses <span aria-hidden="true">·</span> Four sectors <span aria-hidden="true">·</span> One group
+          <p className={styles.sub} data-reveal="fade-now">
+            Bangladesh’s home of BMW and KOHLER, an authorised Apple partner, and a maker for Europe’s high streets.
+          </p>
+          <p className={styles.actions} data-reveal="fade-now">
+            <a href="#contents" className="btn btn-solid">
+              Find a house
+            </a>
           </p>
         </div>
 

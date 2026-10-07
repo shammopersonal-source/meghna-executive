@@ -75,6 +75,7 @@
   border-top: 1px solid var(--line);
 }
 .logItem {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 96px;
   grid-template-areas: "date media" "title media";
@@ -94,6 +95,23 @@
   font-weight: 300;
   letter-spacing: -0.02em;
   line-height: 1.15;
+}
+/* The whole row opens the article. */
+.logLink::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.logLink {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-color 0.4s var(--ease-out);
+}
+.logItem:hover .logLink,
+.logLink:focus-visible {
+  text-decoration-color: currentColor;
 }
 .logMedia {
   grid-area: media;

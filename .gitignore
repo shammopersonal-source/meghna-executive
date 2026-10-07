@@ -12,3 +12,7 @@ next-env.d.ts
 /qa/lighthouse/*-mobile-[0-9].json
 /qa/lighthouse/*.json
 !/qa/lighthouse/scores.json
+
+# Raw Lighthouse reports (~1 MB each); medians are committed
+docs/audit/lh/*.json
+!docs/audit/lh/*-medians.json

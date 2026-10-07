@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import Img from "@/components/ui/Img";
 import PageHero from "@/components/page/PageHero";
@@ -89,7 +90,11 @@ export default function SustainabilityPage() {
                 <time dateTime={it.date} className={`smallcaps ${styles.logDate}`}>
                   {fmt.format(new Date(it.date))}
                 </time>
-                <h3 className={styles.logTitle}>{it.title}</h3>
+                <h3 className={styles.logTitle}>
+                  <Link href={`/journal/${it.slug}`} className={styles.logLink}>
+                    {it.title}
+                  </Link>
+                </h3>
                 <div className={styles.logMedia}>
                   <Img media={it.image} sizes="(max-width: 767px) 40vw, 200px" quality={60} />
                 </div>

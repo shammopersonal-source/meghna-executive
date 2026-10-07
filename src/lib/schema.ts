@@ -16,6 +16,7 @@ export function organizationSchema() {
     foundingDate: String(site.founded),
     email: site.email,
     telephone: site.hotline,
+    sameAs: site.social.map((s) => s.href),
     address: {
       "@type": "PostalAddress",
       streetAddress: site.address.street,

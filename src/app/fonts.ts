@@ -3,13 +3,16 @@ import localFont from "next/font/local";
 /**
  * The client's licensed, self-hosted typefaces.
  * Banana Grotesk carries all structure; PP Migra Italic (Pangram Pangram) is
- * reserved for a single emotive word per headline.
+ * reserved for numerals, years and a single word per headline.
+ *
+ * Only Light and Regular are loaded: weight 500 in the CSS renders with Regular
+ * (browsers do not synthesise bold below 600). The Medium file stays in
+ * ./fonts but is not served, which keeps ~21 KB off every page's critical path.
  */
 export const banana = localFont({
   src: [
     { path: "./fonts/BananaGrotesk-Light.woff2", weight: "300", style: "normal" },
     { path: "./fonts/BananaGrotesk-Regular.woff2", weight: "400", style: "normal" },
-    { path: "./fonts/BananaGrotesk-Medium.woff2", weight: "500", style: "normal" },
   ],
   variable: "--font-sans",
   display: "swap",

@@ -27,16 +27,8 @@
     align-items: end;
   }
 }
-.index {
-  padding-block: clamp(96px, 12vw, 180px);
-}
-.indexHead {
-  display: grid;
-  gap: 12px;
-  margin-bottom: 40px;
-}
-.indexTitle {
-  font-size: clamp(2rem, 1.2rem + 2.6vw, 3.6rem);
-  font-weight: 300;
-  letter-spacing: -0.035em;
+.allHouses {
+  padding: 0 var(--gutter) clamp(56px, 8vw, 112px);
+  margin: 0;
+  text-align: center;
 }

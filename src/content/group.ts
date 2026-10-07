@@ -172,30 +172,36 @@ export const sustainabilityPillars = [
   },
 ];
 
-export const initiatives: { date: string; title: string; image: Media }[] = [
+/** Each initiative links to its article in the journal (migrated from /media-center). */
+export const initiatives: { date: string; title: string; slug: string; image: Media }[] = [
   {
     date: "2024-11-12",
     title: "Solar power in our manufacturing units",
+    slug: "solar-power-implementation-in-manufacturing-units",
     image: media("1730724700sLxre", "An engineer with a tablet walking between rows of solar panels."),
   },
   {
     date: "2024-11-08",
     title: "Cutting the carbon footprint of transportation",
+    slug: "carbon-footprint-reduction-in-transportation",
     image: media("173072483093ZPR", "A lorry on a forest road seen from above at dusk."),
   },
   {
     date: "2024-10-10",
     title: "A green supply chain for Bangladesh",
+    slug: "green-supply-chain-development-in-bangladesh",
     image: media("1730725145w67HY", "Aerial view of a factory surrounded by green fields."),
   },
   {
     date: "2024-10-04",
     title: "Local water conservation and harvesting",
+    slug: "local-water-conservation-and-harvesting-project",
     image: media("1730725506c8MxK", "Hands cupping clean water under a running tap."),
   },
   {
     date: "2024-09-12",
     title: "Zero-waste garment production",
+    slug: "zero-waste-garment-production-initiative",
     image: media("1730522664dKB0O", "A cotton tote printed with the recycling symbol."),
   },
 ];

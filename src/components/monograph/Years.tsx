@@ -46,7 +46,7 @@ export default function Years({ items, id = "years" }: { items: Milestone[]; id?
           <li key={m.year + m.title} className={styles.item} data-year-item={i} data-on={i === 0 ? "" : undefined}>
             <p className={styles.year}>{m.year}</p>
             <div className={styles.media}>
-              <Img media={m.image} sizes="(max-width: 1023px) 90vw, 44vw" quality={75} />
+              <Img media={m.image} sizes="(max-width: 767px) 104px, (max-width: 1023px) 90vw, 44vw" quality={75} />
             </div>
             <div className={styles.text}>
               <h4 className={styles.title}>

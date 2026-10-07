@@ -17,6 +17,13 @@ export const site = {
     mapUrl: "https://www.google.com/maps/search/?api=1&query=Le+Meridien+Dhaka+Nikunja-2",
   },
   timeZone: "Asia/Dhaka",
+  /** The group's public profiles, as linked from the current site's footer. */
+  social: [
+    { label: "Facebook", href: "https://www.facebook.com/meghnaexecutiveholdings/" },
+    { label: "Instagram", href: "https://www.instagram.com/meghna.executive.holdings/" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/company/meghna-executive" },
+    { label: "YouTube", href: "https://www.youtube.com/@MeghnaExecutiveHoldings" },
+  ],
 } as const;
 
 export type NavItem = { href: string; label: string };

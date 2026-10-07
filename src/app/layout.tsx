@@ -39,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     name: h.name,
     sector: h.sector,
     partner: h.partner,
+    phone: h.locations.find((l) => l.phone)?.phone,
     image: { src: h.card.src, alt: h.card.alt },
   }));
 
